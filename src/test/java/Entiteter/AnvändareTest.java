@@ -15,6 +15,7 @@ class AnvändareTest {
                 "0808120833",
                 "666",
                 "Student",
-                29);
+                29,
+                "David123!");
     }
 }

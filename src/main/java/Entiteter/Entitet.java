@@ -15,6 +15,9 @@ public abstract class Entitet {
         this.email = email;
         this.telefonNr = telefonNr;
     }
+    protected void loggaIn(){
+
+    }
 
     public void setAdress(String adress) {
         this.adress = adress;
