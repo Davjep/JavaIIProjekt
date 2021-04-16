@@ -1,5 +1,4 @@
-import javafx.application.Application;
-import javafx.scene.Scene;
+
 
 public class Main {
 
@@ -8,3 +7,4 @@ public class Main {
         //Start of program
     }
 }
+// Linn kommenterar

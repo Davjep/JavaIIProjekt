@@ -59,3 +59,5 @@ public abstract class Entitet {
         this.telefonNr = telefonNr;
     }
 }
+
+
