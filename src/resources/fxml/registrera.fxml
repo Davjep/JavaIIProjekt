@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegistreraController">
+    <children>
+        <Label alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" text="Registrera Användare">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <GridPane layoutY="34.0" prefHeight="366.0" prefWidth="600.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="236.79998779296875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="10.0" prefWidth="363.20001220703125" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="förnamnText" text="Förnamn" GridPane.halignment="RIGHT" />
+                <Label fx:id="EfternamnText" text="Efternamn" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                <Label fx:id="emailText" text="Email" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                <TextField fx:id="förnamnTextFält" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="efternamnTextFält" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="emailTextFält" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                    </GridPane.margin>
+                </TextField>
+            <Label fx:id="telefonNrText" text="TelefonNr" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Label fx:id="adressText" text="Adress" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Label fx:id="personNrText" text="PersonNr" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <Label fx:id="AnvändartypText" text="Användartyp" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <TextField fx:id="telefonNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="adressTextFält" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="personNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="lösenordText" text="Lösenord" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <PasswordField fx:id="lösenordTextFält" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </PasswordField>
+            <SplitMenuButton fx:id="användartypDropDown" mnemonicParsing="false" prefHeight="25.0" prefWidth="391.0" text="Välj Användartyp..." GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+              <items>
+                <MenuItem fx:id="studentVal" mnemonicParsing="false" onAction="#studentValTryck" text="Student" />
+                <MenuItem fx:id="forskareVal" mnemonicParsing="false" onAction="#forskareValTryck" text="Forskare" />
+                  <MenuItem fx:id="övrigaUniversitetsanställdaVal" mnemonicParsing="false" onAction="#övrigaUniversitetsanställdaValTryck" text="Övriga Universitetsanställda" />
+                  <MenuItem fx:id="allmänhetenVal" mnemonicParsing="false" onAction="#allmänhetenValTryck" text="Allmänheten" />
+              </items>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </SplitMenuButton>
+            <Button fx:id="registreraKnapp" mnemonicParsing="false" onAction="#RegistreraKnappTryck" text="Registrera" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="avbrytKnapp" mnemonicParsing="false" onAction="#avbrytKnappTryck" text="Avbryt" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Button>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
