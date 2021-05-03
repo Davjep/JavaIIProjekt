@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/AnvändareInserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/AnvändareInserts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +21,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -138,6 +138,7 @@
       <workItem from="1619695496403" duration="1580000" />
       <workItem from="1619708606547" duration="1766000" />
       <workItem from="1619961000674" duration="6173000" />
+      <workItem from="1620023206810" duration="571000" />
     </task>
     <task id="LOCAL−00001" summary="Adding javafx to project. Created first .fxml file with Controller //DJ">
       <created>1619965739765</created>
@@ -145,7 +146,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1619965739765</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Skapat sql connection klass med metod//DJ">
+      <created>1620023483478</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1620023483478</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +160,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding javafx to project. Created first .fxml file with Controller //DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding javafx to project. Created first .fxml file with Controller //DJ" />
+    <MESSAGE value="Skapat sql connection klass med metod//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat sql connection klass med metod//DJ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
