@@ -19,5 +19,18 @@ public class ControllerConnector {
             System.exit(1);
         }
     }
+    //Metod som skapar ett mindre fönster, "popup"
+    public void popupConnector (String fxml) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/" + fxml + ".fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root, 200  ,150));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+            System.exit(1);
+        }
+    }
 
 }

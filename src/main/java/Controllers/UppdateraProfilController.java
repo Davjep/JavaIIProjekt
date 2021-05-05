@@ -86,6 +86,7 @@ public class UppdateraProfilController {
         stage.close();
     }
 
+    //Metoder som sätter val på dropdown menyn.
     @FXML
     void allmänhetenValTryck(ActionEvent event) {
         användartypDropDown.setText("Allmänheten");

@@ -4,23 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Experimenterar i pom">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Session/SessionsAnvändare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/loggaIn.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/minProfil.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/registrera.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" afterDir="false" />
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Updateringar 2021-05-03">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/successPopUp.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Controllers/RegistreraControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareInsertsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/StartsidaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/StartsidaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/AnvändareInserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/AnvändareInserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/registrera.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/registrera.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="module-info" />
         <option value="XML Properties File" />
+        <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Class" />
       </list>
@@ -62,6 +59,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -74,6 +72,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -89,10 +88,12 @@
       <recent name="C:\Users\Jepsson\IdeaProjects\JavaIIProjekt\src\main\resources" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Controllers" />
+      <recent name="Databas" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NewMain">
+  <component name="RunManager" selected="JUnit.AnvändareTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="JavaIIProjekt" />
@@ -124,6 +125,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AnvändareInsertsTest.beräknaÅlderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Databas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareInsertsTest" />
+      <option name="METHOD_NAME" value="beräknaÅlderTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnvändareTest" type="JUnit" factoryName="JUnit">
+      <module name="JavaIIProjekt" />
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareInsertsTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistreraControllerTest.registrera" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Controllers" />
+      <option name="MAIN_CLASS_NAME" value="Controllers.RegistreraControllerTest" />
+      <option name="METHOD_NAME" value="registrera" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <option name="PACKAGE_NAME" value="" />
@@ -133,9 +176,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.NewMain" />
+      <item itemvalue="JUnit.AnvändareTest" />
+      <item itemvalue="JUnit.StudentTest" />
+      <item itemvalue="JUnit.RegistreraControllerTest.registrera" />
+      <item itemvalue="JUnit.AnvändareInsertsTest.beräknaÅlderTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnvändareInsertsTest.beräknaÅlderTest" />
         <item itemvalue="Application.NewMain" />
+        <item itemvalue="JUnit.RegistreraControllerTest.registrera" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.StudentTest" />
       </list>
@@ -168,7 +221,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1620023483478</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Updateringar 2021-05-03">
+      <created>1620061296231</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1620061296232</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +248,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding javafx to project. Created first .fxml file with Controller //DJ" />
     <MESSAGE value="Skapat sql connection klass med metod//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skapat sql connection klass med metod//DJ" />
+    <MESSAGE value="Updateringar 2021-05-03" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updateringar 2021-05-03" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
