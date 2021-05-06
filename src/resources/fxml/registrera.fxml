@@ -35,6 +35,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <Label fx:id="förnamnText" text="Förnamn" GridPane.halignment="RIGHT" />
@@ -56,31 +57,31 @@
                     </GridPane.margin>
                 </TextField>
             <Label fx:id="telefonNrText" text="TelefonNr" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-            <Label fx:id="adressText" text="Adress" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-            <Label fx:id="personNrText" text="PersonNr" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-            <Label fx:id="AnvändartypText" text="Användartyp" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Label fx:id="gatuadressText" text="Gatuadress" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Label fx:id="personNrText" text="PersonNr" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Label fx:id="AnvändartypText" text="Användartyp" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
             <TextField fx:id="telefonNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="adressTextFält" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TextField fx:id="gatuadressTextFält" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="personNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <TextField fx:id="personNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </TextField>
-            <Label fx:id="lösenordText" text="Lösenord" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
-            <PasswordField fx:id="lösenordTextFält" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Label fx:id="lösenordText" text="Lösenord" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+            <PasswordField fx:id="lösenordTextFält" GridPane.columnIndex="1" GridPane.rowIndex="8">
                <GridPane.margin>
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </PasswordField>
-            <SplitMenuButton fx:id="användartypDropDown" mnemonicParsing="false" prefHeight="25.0" prefWidth="391.0" text="Välj Användartyp..." GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+            <SplitMenuButton fx:id="användartypDropDown" mnemonicParsing="false" prefHeight="25.0" prefWidth="391.0" text="Välj Användartyp..." GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7">
               <items>
                 <MenuItem fx:id="studentVal" mnemonicParsing="false" onAction="#studentValTryck" text="Student" />
                 <MenuItem fx:id="forskareVal" mnemonicParsing="false" onAction="#forskareValTryck" text="Forskare" />
@@ -94,16 +95,23 @@
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </SplitMenuButton>
-            <Button fx:id="registreraKnapp" mnemonicParsing="false" onAction="#RegistreraKnappTryck" text="Registrera" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <Button fx:id="registreraKnapp" mnemonicParsing="false" onAction="#RegistreraKnappTryck" text="Registrera" GridPane.columnIndex="1" GridPane.rowIndex="9">
                <GridPane.margin>
-                  <Insets left="5.0" />
+                  <Insets bottom="5.0" left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="avbrytKnapp" mnemonicParsing="false" onAction="#avbrytKnappTryck" text="Avbryt" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+            <Button fx:id="avbrytKnapp" mnemonicParsing="false" onAction="#avbrytKnappTryck" text="Avbryt" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
                <GridPane.margin>
-                  <Insets right="5.0" />
+                  <Insets bottom="5.0" right="5.0" />
                </GridPane.margin>
             </Button>
+            <Label fx:id="postnummerText" text="Postnummer" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <TextField fx:id="postnummerTextFält" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="errorText" textFill="RED" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
             </children>
         </GridPane>
     </children>
