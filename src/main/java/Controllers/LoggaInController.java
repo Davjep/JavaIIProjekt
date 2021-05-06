@@ -58,7 +58,8 @@ public class LoggaInController {
                     String lösenordResultat = sqlQueryLösenord.getString("lösenord");
                     if (email.equals(emailResultat) && lösenord.equals(lösenordResultat)) {
                         SessionsAnvändare sessionsAnvändare = new SessionsAnvändare();
-                        SessionsAnvändare.setInloggad();
+                        sessionsAnvändare.setInloggad();
+                        sessionsAnvändare.setInloggadEmail(emailResultat);
                         ControllerConnector controllerConnector = new ControllerConnector();
                         controllerConnector.connector("minProfil");
                         Stage stage = (Stage) loggaInKnapp.getScene().getWindow();

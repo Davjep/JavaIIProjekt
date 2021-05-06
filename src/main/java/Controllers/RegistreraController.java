@@ -9,7 +9,6 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -95,16 +94,14 @@ public class RegistreraController {
         String dataInput[] = {
                 förnamnTextFält.getText(),
                 efternamnTextFält.getText(),
-                emailTextFält.getText(),
                 telefonNrTextFält.getText(),
                 gatuadressTextFält.getText(),
                 postnummerTextFält.getText(),
+                emailTextFält.getText(),
                 personNrTextFält.getText(),
                 användartypDropDown.getText(),
                 lösenordTextFält.getText()
         };
-        System.out.printf(dataInput[0] + dataInput[1] + dataInput[2] + dataInput[3] +
-                dataInput[4] + dataInput[5] + dataInput[6] + dataInput[7] + dataInput[8]);
 
         for (int i = 0; i < dataInput.length; i++) {
             if (dataInput[i].isEmpty()) {
@@ -116,7 +113,7 @@ public class RegistreraController {
             Connection connection = databasConnector.getConnection();
             AnvändareInserts användareInserts = new AnvändareInserts();
             Statement statement = connection.createStatement();
-            ResultSet sqlRegistrera = statement.executeQuery(användareInserts.sqlInsertAnvändare(dataInput[0], dataInput[1],dataInput[2], dataInput[3],
+            statement.executeUpdate(användareInserts.sqlInsertAnvändare(dataInput[0], dataInput[1],dataInput[2], dataInput[3],
                     dataInput[4], dataInput[5] ,dataInput[6], dataInput[7], dataInput[8]));
             errorText.setText("");
             ControllerConnector controllerConnector = new ControllerConnector();

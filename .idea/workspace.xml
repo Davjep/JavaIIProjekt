@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Updateringar 2021-05-03">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/successPopUp.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Controllers/RegistreraControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareInsertsTest.java" afterDir="false" />
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="May the 4th be with you//Laget">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Session/SessionsAnvändareTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Databas/AnvändareInserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/AnvändareInserts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/registrera.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/registrera.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Session/SessionsAnvändare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Session/SessionsAnvändare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/successPopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/successPopUp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +29,9 @@
       <list>
         <option value="module-info" />
         <option value="XML Properties File" />
-        <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -45,6 +42,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -88,12 +93,13 @@
       <recent name="C:\Users\Jepsson\IdeaProjects\JavaIIProjekt\src\main\resources" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Session" />
       <recent name="Controllers" />
       <recent name="Databas" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AnvändareTest">
+  <component name="RunManager" selected="Application.NewMain">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="JavaIIProjekt" />
@@ -167,11 +173,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SessionsAnvändareTest.getInloggadEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Session.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Session" />
+      <option name="MAIN_CLASS_NAME" value="Session.SessionsAnvändareTest" />
+      <option name="METHOD_NAME" value="getInloggadEmail" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,17 +193,17 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.NewMain" />
       <item itemvalue="JUnit.AnvändareTest" />
-      <item itemvalue="JUnit.StudentTest" />
       <item itemvalue="JUnit.RegistreraControllerTest.registrera" />
       <item itemvalue="JUnit.AnvändareInsertsTest.beräknaÅlderTest" />
+      <item itemvalue="JUnit.SessionsAnvändareTest.getInloggadEmail" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AnvändareInsertsTest.beräknaÅlderTest" />
         <item itemvalue="Application.NewMain" />
+        <item itemvalue="JUnit.SessionsAnvändareTest.getInloggadEmail" />
+        <item itemvalue="JUnit.AnvändareInsertsTest.beräknaÅlderTest" />
         <item itemvalue="JUnit.RegistreraControllerTest.registrera" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.StudentTest" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +240,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1620061296232</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="May the 4th be with you//Laget">
+      <created>1620205243831</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1620205243832</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +268,8 @@
     <MESSAGE value="Adding javafx to project. Created first .fxml file with Controller //DJ" />
     <MESSAGE value="Skapat sql connection klass med metod//DJ" />
     <MESSAGE value="Updateringar 2021-05-03" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updateringar 2021-05-03" />
+    <MESSAGE value="May the 4th be with you//Laget" />
+    <option name="LAST_COMMIT_MESSAGE" value="May the 4th be with you//Laget" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

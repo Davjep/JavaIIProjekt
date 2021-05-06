@@ -15,15 +15,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UppdateraProfilController">
     <children>
-        <Label alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" text="Uppdatera Användare">
+        <Label alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="242.0" layoutY="4.0" text="Uppdatera Användare">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <GridPane layoutY="34.0" prefHeight="366.0" prefWidth="600.0">
+        <GridPane layoutY="24.0" prefHeight="366.0" prefWidth="600.0">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="236.79998779296875" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="10.0" prefWidth="363.20001220703125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="109.3999755859375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="560.5999755859375" minWidth="10.0" prefWidth="459.00002441406247" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="490.40002441406244" minWidth="10.0" prefWidth="68.5999755859375" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -31,6 +32,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -56,9 +58,14 @@
                     </GridPane.margin>
                 </TextField>
                 <Label fx:id="telefonNrText" text="TelefonNr" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-                <Label fx:id="adressText" text="Adress" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-                <Label fx:id="personNrText" text="PersonNr" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-                <Label fx:id="AnvändartypText" text="Användartyp" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                <Label fx:id="adressText" text="Gatuadress" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Label fx:id="postNrText" text="PostNr" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+                <Label fx:id="personNrText" text="PersonNr" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                <Label fx:id="AnvändartypText" text="Användartyp" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
                 <TextField fx:id="telefonNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
@@ -69,18 +76,18 @@
                         <Insets left="5.0" right="5.0" />
                     </GridPane.margin>
                 </TextField>
-                <TextField fx:id="personNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <TextField fx:id="personNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="6">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                     </GridPane.margin>
                 </TextField>
-                <Label fx:id="lösenordText" text="Lösenord" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
-                <PasswordField fx:id="lösenordTextFält" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                <Label fx:id="lösenordText" text="Lösenord" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+                <PasswordField fx:id="lösenordTextFält" GridPane.columnIndex="1" GridPane.rowIndex="8">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                     </GridPane.margin>
                 </PasswordField>
-                <SplitMenuButton fx:id="användartypDropDown" mnemonicParsing="false" prefHeight="25.0" prefWidth="391.0" text="Välj Användartyp..." GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+                <SplitMenuButton fx:id="användartypDropDown" mnemonicParsing="false" prefHeight="26.0" prefWidth="453.0" text="Välj Användartyp..." GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7">
                     <items>
                         <MenuItem fx:id="studentVal" mnemonicParsing="false" onAction="#studentValTryck" text="Student" />
                         <MenuItem fx:id="forskareVal" mnemonicParsing="false" onAction="#forskareValTryck" text="Forskare" />
@@ -94,16 +101,32 @@
                         <Insets left="5.0" right="5.0" />
                     </GridPane.margin>
                 </SplitMenuButton>
-                <Button fx:id="uppdateraKnapp" mnemonicParsing="false" onAction="#uppdateraKnappTryck" text="Uppdatera" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                <Button fx:id="uppdateraKnapp" mnemonicParsing="false" onAction="#uppdateraKnappTryck" text="Spara" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
                     <GridPane.margin>
-                        <Insets left="5.0" />
+                        <Insets right="80.0" />
                     </GridPane.margin>
                 </Button>
-                <Button fx:id="avbrytKnapp" mnemonicParsing="false" onAction="#avbrytKnappTryck" text="Avbryt" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                <Button fx:id="avbrytKnapp" mnemonicParsing="false" onAction="#avbrytKnappTryck" text="Avbryt" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
                     <GridPane.margin>
                         <Insets right="5.0" />
                     </GridPane.margin>
                 </Button>
+            <TextField fx:id="postNrTextFält" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="förnamnÄndraKnapp" mnemonicParsing="false" onAction="#förnamnÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" />
+            <Button fx:id="efternamnÄndraKnapp" mnemonicParsing="false" onAction="#efternamnÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="emailÄndraKnapp" mnemonicParsing="false" onAction="#emailÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="telefonNrÄndraKnapp" mnemonicParsing="false" onAction="#telefonNrÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="gatuadressÄndraKnapp" mnemonicParsing="false" onAction="#gatuadressÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="postNrÄndraKnapp" mnemonicParsing="false" onAction="#postNrÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button fx:id="personNrÄndraKnapp" mnemonicParsing="false" onAction="#personNrÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button fx:id="användartypÄndraKnapp" mnemonicParsing="false" onAction="#användartypÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Button fx:id="lösenordÄndraKnapp" mnemonicParsing="false" onAction="#lösenordÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Button fx:id="hämtaMinaUppgifterKnapp" mnemonicParsing="false" onAction="#hämtaMinaUppgifterKnappTryck" text="Hämta Mina Uppgifter" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
+            <Label fx:id="errorText" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
             </children>
         </GridPane>
     </children>
