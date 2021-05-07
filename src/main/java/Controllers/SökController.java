@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 public class SökController {
 
+    private static ArrayList<String> ISBN = new ArrayList();
+
     @FXML
     private TextField sökFält;
 
@@ -78,6 +80,7 @@ public class SökController {
                     String ISBNresultat = resultSet.getString("ISBN");
                     String ämnesordResultat = resultSet.getString("Ämnesord");
                     resultatLista.getItems().add("ISBN: " + ISBNresultat + ", Titel: " + titelResultat + ", Författare: " + författareResultat + ", Ämne: " + ämnesordResultat);
+                    ISBN.add(ISBNresultat);
                 }
             }catch (SQLException e) {
                 e.getCause();
@@ -115,24 +118,29 @@ public class SökController {
 
     @FXML
     void väljKnappTryck(ActionEvent event) {
-        //resultatLista.getSelectionModel().getSelectedItem();
-
         String x = resultatLista.getSelectionModel().getSelectedItem();
 
-        //System.out.println(getISBN());
+
 
         //Variabler för att identifiera ISBN i resultatlista Stringen
         int förstaIndex = resultatLista.getSelectionModel().getSelectedItem().indexOf(" ");
         int sistaIndex = resultatLista.getSelectionModel().getSelectedItem().indexOf(",");
-        String ISBNarray;
         ArrayList<Character> ISBNarray2 = new ArrayList();
         for (int i = (förstaIndex + 1); i < sistaIndex; i++){
             //ArrayList<> ISBNarray = new ArrayList();
             char ISBN = resultatLista.getSelectionModel().getSelectedItem().charAt(i);
             ISBNarray2.add(ISBN);
         }
-        System.out.println(ISBNarray2);
-        //String test = ISBNarray2.get(0)
+
+        //if (ISBN.equals(ISBNarray2.toString()))
+        System.out.println(ISBNarray2.toString());
+        int abc = 0;
+        for (int i = 0; i < ISBNarray2.toArray().length; i++){
+            int resultat = ISBNarray2.get(i);
+            System.out.println(resultat);
+            abc =+ resultat;
+        }
+        System.out.print(abc);
         System.out.println("Siffra 1 är: " + ISBNarray2.get(0) + "siffra 2 är " + ISBNarray2.get(1));
 
     }

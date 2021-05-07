@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Updates 2021-05-05">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/taBortProfilPopUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/bokDetaljer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/taBortBekräftelsePopUp.fxml" afterDir="false" />
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Updates 2021-05-06">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/EjTillgängligPopUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Session/SessionsObjekt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/ejTillgängligPopUp.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/lånaBekräftelsePopUp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Session/SessionsAnvändare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Session/SessionsAnvändare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/minProfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/minProfil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareInsertsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareInsertsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +250,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1620288267572</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Updates 2021-05-06">
+      <created>1620374990160</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1620374990160</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +280,8 @@
     <MESSAGE value="Updateringar 2021-05-03" />
     <MESSAGE value="May the 4th be with you//Laget" />
     <MESSAGE value="Updates 2021-05-05" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates 2021-05-05" />
+    <MESSAGE value="Updates 2021-05-06" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates 2021-05-06" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
