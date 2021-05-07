@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="May the 4th be with you//Laget">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Session/SessionsAnvändareTest.java" afterDir="false" />
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Updates 2021-05-05">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/taBortProfilPopUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/bokDetaljer.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/taBortBekräftelsePopUp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/AnvändareInserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/AnvändareInserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Session/SessionsAnvändare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Session/SessionsAnvändare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/successPopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/successPopUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/minProfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/minProfil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareInsertsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareInsertsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +30,9 @@
       <list>
         <option value="module-info" />
         <option value="XML Properties File" />
+        <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -246,7 +247,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1620205243832</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Updates 2021-05-05">
+      <created>1620288267572</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1620288267572</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +276,8 @@
     <MESSAGE value="Skapat sql connection klass med metod//DJ" />
     <MESSAGE value="Updateringar 2021-05-03" />
     <MESSAGE value="May the 4th be with you//Laget" />
-    <option name="LAST_COMMIT_MESSAGE" value="May the 4th be with you//Laget" />
+    <MESSAGE value="Updates 2021-05-05" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates 2021-05-05" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -13,8 +13,6 @@ public class SessionsAnvändare {
         this.inloggadEmail = inloggadEmail;
     }
 
-
-
     public static void setInloggad() {
         inloggad = true;
     }

@@ -22,6 +22,20 @@ public class MinProfilController {
     private Button sökKnapp;
 
     @FXML
+    private Button taBortProfilKnapp;
+
+    @FXML
+    void taBortProfilKnappTryck(ActionEvent event) {
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.popupConnector("taBortBekräftelsePopUp");
+        Stage stage = (Stage) taBortProfilKnapp.getScene().getWindow();
+        stage.close();
+
+
+    }
+
+
+    @FXML
     void minaLånKnappTryck(ActionEvent event) {
 
     }
