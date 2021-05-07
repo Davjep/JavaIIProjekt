@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BokDetaljerController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="43.0" prefHeight="350.0" prefWidth="582.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.20001220703125" minWidth="10.0" prefWidth="83.20001220703125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.79998779296875" minWidth="10.0" prefWidth="500.79998779296875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" text="ISBN" textAlignment="RIGHT" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" text="Titel" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" text="Författare" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" text="Ämnesord" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" text="Kategori" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" text="Utgivningsår" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ISBNTextFält" editable="false" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="titelTextFält" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="författareTextFält" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="ämnesordTextFält" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="kategoriTextFält" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="utgivningsårTextFält" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="gåTillbakaKnapp" mnemonicParsing="false" onAction="#gåTillbakaKnappTryck" text="Gå tillbaka" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="lånaBokKnapp" mnemonicParsing="false" onAction="#lånaBokKnappTryck" text="Låna bok" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Label layoutX="232.0" layoutY="14.0" text="Bokdetaljer">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
