@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/filmDetaljer.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Controllers/SökControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -74,10 +66,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Controllers" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AnvändareTest.hämtaAnvändareTest">
+  <component name="RunManager" selected="Application.NewMain">
     <configuration name="NewMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewMain.NewMain" />
       <module name="JavaIIProjekt" />
@@ -150,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistreraControllerTest.registrera" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SökControllerTest.sök" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -159,8 +152,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Controllers" />
-      <option name="MAIN_CLASS_NAME" value="Controllers.RegistreraControllerTest" />
-      <option name="METHOD_NAME" value="registrera" />
+      <option name="MAIN_CLASS_NAME" value="Controllers.SökControllerTest" />
+      <option name="METHOD_NAME" value="sök" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NewMain" />
+        <item itemvalue="JUnit.SökControllerTest.sök" />
         <item itemvalue="JUnit.AnvändareTest.hämtaAnvändareTest" />
         <item itemvalue="JUnit.AnvändareTest.uppdateraAnvändare" />
         <item itemvalue="JUnit.AnvändareTest.läggaTillAnvändareTest" />
-        <item itemvalue="Application.NewMain" />
-        <item itemvalue="JUnit.RegistreraControllerTest.registrera" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +180,7 @@
       <workItem from="1618228916922" duration="776000" />
       <workItem from="1618573986195" duration="641000" />
       <workItem from="1620646249802" duration="1124000" />
-      <workItem from="1620647992882" duration="3550000" />
+      <workItem from="1620647992882" duration="9809000" />
     </task>
     <task id="LOCAL−00001" summary="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ">
       <created>1620636349103</created>
@@ -207,7 +200,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1620645410646</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Skapat fxml och controller för skapa film lån//DJ">
+      <created>1620662032958</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1620662032958</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +216,7 @@
     <MESSAGE value="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ" />
     <MESSAGE value="Flyttat metoder till relevanta klasser, städat upp i koden//DJ" />
     <MESSAGE value="Lagt till att ålder uppdateras automatiskt i Användare.uppdateraAnvändareSQL//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lagt till att ålder uppdateras automatiskt i Användare.uppdateraAnvändareSQL//DJ" />
+    <MESSAGE value="Skapat fxml och controller för skapa film lån//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat fxml och controller för skapa film lån//DJ" />
   </component>
 </project>

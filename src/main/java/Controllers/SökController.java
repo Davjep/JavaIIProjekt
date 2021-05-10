@@ -3,6 +3,8 @@ package Controllers;
 import Databas.DatabasConnector;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
+import Objekt.Bok;
+import Objekt.Film;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -17,7 +19,8 @@ import java.util.ArrayList;
 
 public class SökController {
 
-    private static ArrayList<String> ISBN = new ArrayList();
+
+    boolean valdKategori; //variabel för att definiera vilken kategori som är vald. true = bok, false = film
 
     @FXML
     private TextField sökFält;
@@ -79,7 +82,7 @@ public class SökController {
                     String ISBNresultat = resultSet.getString("ISBN");
                     String ämnesordResultat = resultSet.getString("Ämnesord");
                     resultatLista.getItems().add("ISBN: " + ISBNresultat + ", Titel: " + titelResultat + ", Författare: " + författareResultat + ", Ämne: " + ämnesordResultat);
-                    ISBN.add(ISBNresultat);
+                    valdKategori = true;
                 }
             }catch (SQLException e) {
                 e.getCause();
@@ -92,11 +95,12 @@ public class SökController {
                 PreparedStatement statement = connection.prepareStatement(sqlFilmSök);
                 ResultSet resultSet = statement.executeQuery(sqlFilmSök);
                 for (int i = 0; resultSet.next(); i++) {
+                    String filmIDResultat = resultSet.getString("FilmID");
                     String titelResultat = resultSet.getString("Titel");
                     String regissörResultat = resultSet.getString("regissör");
                     String genreResultat = resultSet.getString("genre");
-
-                    resultatLista.getItems().add("Titel: " + titelResultat + ", Regissör: " + regissörResultat + ", Genre: " + genreResultat);
+                    resultatLista.getItems().add("FilmID: " + filmIDResultat + ", Titel: " + titelResultat + ", Regissör: " + regissörResultat + ", Genre: " + genreResultat);
+                    valdKategori = false;
                 }
             }catch (SQLException e) {
                 e.getCause();
@@ -105,6 +109,7 @@ public class SökController {
         } else {
             errorText.setText("Välj kategori innan du söker!");
         }
+        resultatLista.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
     @FXML
@@ -131,32 +136,38 @@ public class SökController {
 
     @FXML
     void väljKnappTryck(ActionEvent event) {
-        //TODO Fixa klassen, måste definiera vald ISBN för BokDetailjer, gärna via bok.setISBN!
-
-        String x = resultatLista.getSelectionModel().getSelectedItem();
-
-
 
         //Variabler för att identifiera ISBN i resultatlista Stringen
         int förstaIndex = resultatLista.getSelectionModel().getSelectedItem().indexOf(" ");
         int sistaIndex = resultatLista.getSelectionModel().getSelectedItem().indexOf(",");
-        ArrayList<Character> ISBNarray2 = new ArrayList();
+
+        ArrayList IDarray = new ArrayList();
+
         for (int i = (förstaIndex + 1); i < sistaIndex; i++){
-            //ArrayList<> ISBNarray = new ArrayList();
-            char ISBN = resultatLista.getSelectionModel().getSelectedItem().charAt(i);
-            ISBNarray2.add(ISBN);
+            char ISBNchar = resultatLista.getSelectionModel().getSelectedItem().charAt(i);
+            IDarray.add(ISBNchar);
         }
 
-        //if (ISBN.equals(ISBNarray2.toString()))
-        System.out.println(ISBNarray2.toString());
-        int abc = 0;
-        for (int i = 0; i < ISBNarray2.toArray().length; i++){
-            int resultat = ISBNarray2.get(i);
-            System.out.println(resultat);
-            abc =+ resultat;
+        String ISBNoutput = "0";
+        for (int i = 0; i < IDarray.toArray().length; i++){
+            ISBNoutput += IDarray.get(i);
         }
-        System.out.print(abc);
-        System.out.println("Siffra 1 är: " + ISBNarray2.get(0) + "siffra 2 är " + ISBNarray2.get(1));
+
+        StringBuilder fullID = new StringBuilder(ISBNoutput).deleteCharAt(0);
+
+        if (valdKategori) {
+            Bok.setISBN(fullID.toString());
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("bokDetaljer");
+            Stage stage = (Stage) resultatLista.getScene().getWindow();
+            stage.close();
+        } else {
+            Film.setFilmID(fullID.toString());
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("filmDetaljer");
+            Stage stage = (Stage) resultatLista.getScene().getWindow();
+            stage.close();
+        }
 
     }
 }
