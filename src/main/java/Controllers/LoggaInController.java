@@ -1,8 +1,8 @@
 package Controllers;
 
 import Databas.DatabasConnector;
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
-import Session.SessionsAnvändare;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -57,9 +57,8 @@ public class LoggaInController {
                 if (sqlQueryLösenord.next()) {
                     String lösenordResultat = sqlQueryLösenord.getString("lösenord");
                     if (email.equals(emailResultat) && lösenord.equals(lösenordResultat)) {
-                        SessionsAnvändare sessionsAnvändare = new SessionsAnvändare();
-                        sessionsAnvändare.setInloggad();
-                        sessionsAnvändare.setInloggadEmail(emailResultat);
+                        Användare.setInloggad();
+                        Användare.setInloggadEmail(emailResultat);
                         ControllerConnector controllerConnector = new ControllerConnector();
                         controllerConnector.connector("minProfil");
                         Stage stage = (Stage) loggaInKnapp.getScene().getWindow();

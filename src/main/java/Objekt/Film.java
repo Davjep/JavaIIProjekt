@@ -7,8 +7,8 @@ public class Film extends Objekt {
     private String skådespelare;
     private String produktionsBolag;
 
-    public Film(String ISBN, String titel, String genre, String plats, String utgivningsÅr, String lånedatum, String slutDatum, boolean tillgänglig, int lånePeriod, String regissör, int åldersBegränsning, String produktionsLand, String skådespelare, String produktionsBolag) {
-        super(ISBN, titel, genre, plats, utgivningsÅr, lånedatum, slutDatum, tillgänglig, lånePeriod);
+    public Film(String titel, String genre, String plats, String utgivningsÅr, String lånedatum, String slutDatum, boolean tillgänglig, int lånePeriod, String regissör, int åldersBegränsning, String produktionsLand, String skådespelare, String produktionsBolag) {
+        super(titel, genre, plats, utgivningsÅr, lånedatum, slutDatum, tillgänglig, lånePeriod);
         this.regissör = regissör;
         this.åldersBegränsning = åldersBegränsning;
         this.produktionsLand = produktionsLand;

@@ -1,8 +1,8 @@
 package Controllers;
 
 import Databas.DatabasConnector;
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
-import Session.SessionsAnvändare;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -104,9 +104,8 @@ public class SökController {
 
     @FXML
     void hemKnappTryck(ActionEvent event) {
-        SessionsAnvändare sessionsAnvändare = new SessionsAnvändare();
         ControllerConnector controllerConnector = new ControllerConnector();
-        if (sessionsAnvändare.isInloggad()) {
+        if (Användare.isInloggad()) {
             controllerConnector.connector("minProfil");
         } else {
             controllerConnector.connector("startsida");

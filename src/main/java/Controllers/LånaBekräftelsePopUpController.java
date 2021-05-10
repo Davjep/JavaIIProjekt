@@ -1,9 +1,9 @@
 package Controllers;
 
 import Databas.DatabasConnector;
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
-import Session.SessionsAnvändare;
-import Session.SessionsObjekt;
+import Objekt.Bok;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -25,12 +25,12 @@ public class LånaBekräftelsePopUpController {
 
     @FXML
     void jaKnappTryck(ActionEvent event) {
-        SessionsObjekt.getISBN();
+        Bok.getISBN();
 
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
-            String getAnvändarID = "SELECT användarID FROM användare WHERE Email = '" + SessionsAnvändare.getInloggadEmail() + "';";
+            String getAnvändarID = "SELECT användarID FROM användare WHERE Email = '" + Användare.getInloggadEmail() + "';";
             Statement sqlgetAnvändarID = connection.createStatement();
 
             ResultSet användarIDResult = sqlgetAnvändarID.executeQuery(getAnvändarID);

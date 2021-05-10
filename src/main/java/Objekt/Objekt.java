@@ -1,7 +1,6 @@
 package Objekt;
 
 public abstract class Objekt {
-    protected String ISBN;
     protected String titel;
     protected String genre;
     protected String plats;
@@ -11,8 +10,7 @@ public abstract class Objekt {
     protected boolean tillgänglig;
     protected int lånePeriod;
 
-    public Objekt(String ISBN, String titel, String genre, String plats, String utgivningsÅr, String lånedatum, String slutDatum, boolean tillgänglig, int lånePeriod) {
-        this.ISBN = ISBN;
+    public Objekt(String titel, String genre, String plats, String utgivningsÅr, String lånedatum, String slutDatum, boolean tillgänglig, int lånePeriod) {
         this.titel = titel;
         this.genre = genre;
         this.plats = plats;
@@ -21,10 +19,6 @@ public abstract class Objekt {
         this.slutDatum = slutDatum;
         this.tillgänglig = tillgänglig;
         this.lånePeriod = lånePeriod;
-    }
-
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
     }
 
     public void setTitel(String titel) {
@@ -57,10 +51,6 @@ public abstract class Objekt {
 
     public void setLånePeriod(int lånePeriod) {
         this.lånePeriod = lånePeriod;
-    }
-
-    public String getISBN() {
-        return ISBN;
     }
 
     public String getTitel() {

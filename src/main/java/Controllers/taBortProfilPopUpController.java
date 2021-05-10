@@ -1,8 +1,8 @@
 package Controllers;
 
 import Databas.DatabasConnector;
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
-import Session.SessionsAnvändare;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -25,7 +25,7 @@ public class taBortProfilPopUpController {
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
-            String sqlTaBortAnvändare = "DELETE FROM användare WHERE email = '" + SessionsAnvändare.getInloggadEmail() + "';";
+            String sqlTaBortAnvändare = "DELETE FROM användare WHERE email = '" + Användare.getInloggadEmail() + "';";
             Statement statement = connection.createStatement();
             statement.executeUpdate(sqlTaBortAnvändare);
             Stage stage = (Stage) jaKnapp.getScene().getWindow();

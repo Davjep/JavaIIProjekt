@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 public class DatabasConnector {
     private String url = "jdbc:mysql://localhost/";
-    private static final String USERNAME = "Jepsson";
-    private static final String PASSWORD = "Ol@f4lif3";
+    private static final String USERNAME = "jepsson";
+    private static final String PASSWORD = "David123!";
     private PreparedStatement selectUser;
     private Connection connection;
     private String databaseName;

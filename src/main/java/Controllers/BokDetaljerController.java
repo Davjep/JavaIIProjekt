@@ -2,7 +2,6 @@ package Controllers;
 
 import Databas.DatabasConnector;
 import JavaFXConnector.ControllerConnector;
-import Session.SessionsObjekt;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -75,8 +74,6 @@ public class BokDetaljerController implements Initializable {
 
             ResultSet statusResultat = statusStatement.executeQuery(sqlStatus);
             statusResultat.next();
-
-            SessionsObjekt.setISBN(ISBN);
 
             if (!statusResultat.getString("status").equals("Tillgänglig")) {
                 ControllerConnector controllerConnector = new ControllerConnector();

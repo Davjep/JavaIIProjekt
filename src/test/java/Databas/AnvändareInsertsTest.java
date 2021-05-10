@@ -1,5 +1,6 @@
 package Databas;
 
+import Entiteter.Användare;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
@@ -11,12 +12,12 @@ public class AnvändareInsertsTest {
 
     @Test
     public void beräknaÅlderTest() {
-        AnvändareInserts användareInserts = new AnvändareInserts();
+        Användare användareLaggaTill = new Användare();
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
-            statement.executeUpdate(användareInserts.sqlInsertAnvändare(
+            statement.executeUpdate(användareLaggaTill.läggaTillAnvändareSQL(
                     "Test",
                     "Testson",
                     "012345",

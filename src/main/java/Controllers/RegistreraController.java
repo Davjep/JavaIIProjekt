@@ -1,7 +1,7 @@
 package Controllers;
 
-import Databas.AnvändareInserts;
 import Databas.DatabasConnector;
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -111,9 +111,9 @@ public class RegistreraController {
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
-            AnvändareInserts användareInserts = new AnvändareInserts();
+            Användare läggaTillAnvändare = new Användare();
             Statement statement = connection.createStatement();
-            statement.executeUpdate(användareInserts.sqlInsertAnvändare(dataInput[0], dataInput[1],dataInput[2], dataInput[3],
+            statement.executeUpdate(läggaTillAnvändare.läggaTillAnvändareSQL(dataInput[0], dataInput[1],dataInput[2], dataInput[3],
                     dataInput[4], dataInput[5] ,dataInput[6], dataInput[7], dataInput[8]));
             errorText.setText("");
             ControllerConnector controllerConnector = new ControllerConnector();
