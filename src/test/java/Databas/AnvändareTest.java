@@ -22,7 +22,7 @@ public class AnvändareTest {
     public void uppdateraAnvändare() {
         Användare användare = new Användare();
         Användare.setInloggadEmail("testmail@test.se");
-        användare.uppdateraAnvändareSQL("Testbert", "Testgren", "078659984", "Testroad 1", "78456", "testmail@test.se", "199201014578", "Forskare", "test");
+        användare.uppdateraAnvändareSQL("Testbertat", "Testgren", "078659984", "Testroad 1", "78456", "testmail@test.se", "196801014578", "Forskare", "test");
     }
 
     @Test

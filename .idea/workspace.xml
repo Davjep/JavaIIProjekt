@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ">
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/taBortProfilPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/taBortProfilPopUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Tidskrift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Tidskrift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/minProfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/minProfil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareInsertsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +185,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1620636349103</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Flyttat metoder till relevanta klasser, städat upp i koden//DJ">
+      <created>1620644261407</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1620644261407</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +199,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ" />
+    <MESSAGE value="Flyttat metoder till relevanta klasser, städat upp i koden//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flyttat metoder till relevanta klasser, städat upp i koden//DJ" />
   </component>
 </project>
