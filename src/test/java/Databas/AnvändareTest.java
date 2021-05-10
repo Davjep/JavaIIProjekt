@@ -8,8 +8,10 @@ public class AnvändareTest {
     @Test
     public void hämtaAnvändareTest() {
         Användare användare = new Användare();
-        Användare.setInloggadEmail("fel");
-        System.out.println(användare.hämtaFörnamnSQL());
+        Användare.setInloggadEmail("Jorsan");
+        System.out.printf(användare.hämtaFörnamnSQL() + "%n" +
+                användare.hämtaEfternamnSQL() + "%n" +
+                användare.hämtaAnvändarTypSQL());
     }
 
     @Test

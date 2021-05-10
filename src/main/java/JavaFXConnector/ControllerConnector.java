@@ -6,7 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class ControllerConnector {
-//Klass som används för att gå från en ruta till en annan
+
+    //Klass som används för att gå från ett fönster till ett annat
     public void connector(String fxml) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/" + fxml + ".fxml"));
@@ -19,7 +20,7 @@ public class ControllerConnector {
             System.exit(1);
         }
     }
-    //Metod som skapar ett mindre fönster, "popup"
+    //Metod som skapar ett mindre fönster, en "popup"
     public void popupConnector (String fxml) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/" + fxml + ".fxml"));

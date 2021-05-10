@@ -130,7 +130,7 @@ public class UppdateraProfilController implements Initializable {
         användartypDropDown.setText(användare.hämtaAnvändarTypSQL());
         lösenordTextFält.setText(användare.hämtalösenordSQL());
 
-        //Låser alla fält så att användaren inte kan ändra. Detta går sedan att låsa upp via "ändra" knappen
+        //Låser alla fält så att användaren inte kan ändra. Detta går sedan att låsa upp via "ändra" knapparna, se metoder nedan
         förnamnTextFält.setEditable(false);
         efternamnTextFält.setEditable(false);
         telefonNrTextFält.setEditable(false);

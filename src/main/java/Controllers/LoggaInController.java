@@ -52,6 +52,7 @@ public class LoggaInController {
             ResultSet sqlQueryEmail = emailStatement.executeQuery(sqlEmailSök);
             ResultSet sqlQueryLösenord = lösenordStatement.executeQuery(sqlLösenordSök);
 
+            //Dubbla if satser som kollar ifall queryn har fått resultat. Kollar sedan ifall resultatet matchar med det som användaren har angett
             if (sqlQueryEmail.next()){
                 String emailResultat = sqlQueryEmail.getString("email");
                 if (sqlQueryLösenord.next()) {
@@ -68,7 +69,6 @@ public class LoggaInController {
             } else {
                 errorText.setText("Felaktig email och/eller lösenord. Vänligen prova igen...");
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
             e.getCause();

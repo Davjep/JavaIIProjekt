@@ -11,6 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
+        //Main klass som öppnar startsidan och sätter parametrarna
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/startsida.fxml"));
             primaryStage.setTitle("Startsida");
