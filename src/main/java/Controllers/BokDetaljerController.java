@@ -2,6 +2,7 @@ package Controllers;
 
 import Databas.DatabasConnector;
 import JavaFXConnector.ControllerConnector;
+import Objekt.Bok;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,8 +18,6 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class BokDetaljerController implements Initializable {
-
-    private String ISBN;
 
     @FXML
     private TextField ISBNTextFält;
@@ -44,14 +43,6 @@ public class BokDetaljerController implements Initializable {
     @FXML
     private Button lånaBokKnapp;
 
-    public String getISBN() {
-        return ISBN;
-    }
-
-    public BokDetaljerController(String ISBN) {
-        this.ISBN = ISBN;
-    }
-
     @FXML
     void gåTillbakaKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
@@ -68,7 +59,7 @@ public class BokDetaljerController implements Initializable {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
 
-            String sqlStatus = "SELECT Status FROM fysiskkopia WHERE ISBN = '" + ISBN + "';";
+            String sqlStatus = "SELECT Status FROM fysiskkopia WHERE ISBN = '" + Bok.getISBN() + "';";
 
             Statement statusStatement = connection.createStatement();
 
@@ -96,43 +87,13 @@ public class BokDetaljerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        String sqlTitelQuery = "SELECT titel FROM bok WHERE ISBN = '" + ISBN + "';";
-        String sqlFörfattareQuery = "SELECT författare FROM bok WHERE ISBN = '" + ISBN + "';";
-        String sqlÄmnesordQuery = "SELECT ämnesord FROM bok WHERE ISBN = '" + ISBN + "';";
-        String sqlKategoriQuery = "SELECT kategori FROM bok WHERE ISBN = '" + ISBN + "';";
-        String sqlUtgivningsårQuery = "SELECT utgivningsår FROM bok WHERE ISBN = '" + ISBN + "';";
-
-        try {
-            DatabasConnector databasConnector = new DatabasConnector();
-            Connection connection = databasConnector.getConnection();
-
-            Statement titelStatement = connection.createStatement();
-            Statement författareStatement = connection.createStatement();
-            Statement ämnesordStatement = connection.createStatement();
-            Statement kategoriStatement = connection.createStatement();
-            Statement utgivningsårStatement = connection.createStatement();
-
-            ResultSet sqlTitelResult = titelStatement.executeQuery(sqlTitelQuery);
-            ResultSet sqlFörfattareResult = författareStatement.executeQuery(sqlFörfattareQuery);
-            ResultSet sqlÄmnesordResult = ämnesordStatement.executeQuery(sqlÄmnesordQuery);
-            ResultSet sqlKategoriResult = kategoriStatement.executeQuery(sqlKategoriQuery);
-            ResultSet sqlUtgivningsårResult = utgivningsårStatement.executeQuery(sqlUtgivningsårQuery);
-
-            sqlTitelResult.next();
-            sqlFörfattareResult.next();
-            sqlÄmnesordResult.next();
-            sqlKategoriResult.next();
-            sqlUtgivningsårResult.next();
-
-            titelTextFält.setText(sqlTitelResult.getString("titel"));
-            författareTextFält.setText(sqlFörfattareResult.getString("författare"));
-            ämnesordTextFält.setText(sqlÄmnesordResult.getString("ämnesord"));
-            kategoriTextFält.setText(sqlKategoriResult.getString("kategori"));
-            utgivningsårTextFält.setText(sqlUtgivningsårResult.getString("utgivningsår"));
-        }catch (SQLException e) {
-            e.getCause();
-            e.getStackTrace();
-        }
+        Bok bok = new Bok();
+        ISBNTextFält.setText(bok.hämtaISBNSQL());
+        titelTextFält.setText(bok.hämtaTitelSQL());
+        författareTextFält.setText(bok.hämtaFörfattareSQL());
+        ämnesordTextFält.setText(bok.hämtaÄmnesordSQL());
+        kategoriTextFält.setText(bok.hämtaKategoriSQL());
+        utgivningsårTextFält.setText(bok.hämtaUtgivningsårSQL());
     }
 }
 

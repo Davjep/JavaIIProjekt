@@ -1,6 +1,5 @@
 package Controllers;
 
-import Databas.DatabasConnector;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
@@ -10,10 +9,6 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class UppdateraProfilController implements Initializable {
@@ -122,75 +117,28 @@ public class UppdateraProfilController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        String sqlFörnamnSök = "SELECT förnamn FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
-        String sqlEfternamnSök = "SELECT efternamn FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
-        String sqlTelefonSök = "SELECT telefon FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
-        String sqlGatuadressSök = "SELECT gatuadress FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
-        String sqlPostNrSök = "SELECT postnummer FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
-        String sqlEmailSök = "SELECT email FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
-        String sqlPersonNrSök = "SELECT personNr FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
-        String sqlAnvändarTypSök = "SELECT typ FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
-        String sqlLösenordSök = "SELECT lösenord FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
 
-        try {
-            DatabasConnector databasConnector = new DatabasConnector();
-            Connection connection = databasConnector.getConnection();
+        //Metod som körs när fönstret öppnas för att fylla i den existerande datan från databasen
+        Användare användare = new Användare();
+        förnamnTextFält.setText(användare.hämtaFörnamnSQL());
+        efternamnTextFält.setText(användare.hämtaEfternamnSQL());
+        telefonNrTextFält.setText(användare.hämtaTelefonNrSQL());
+        adressTextFält.setText(användare.hämtaGatuAdressSQL());
+        postNrTextFält.setText(användare.hämtaPostNrSQL());
+        emailTextFält.setText(användare.hämtaemailSQL());
+        personNrTextFält.setText(användare.hämtaPersonNrSQL());
+        användartypDropDown.setText(användare.hämtaAnvändarTypSQL());
+        lösenordTextFält.setText(användare.hämtalösenordSQL());
 
-            //Skapar SQLquery och hämtar data från databasen
-            Statement förnamnStatement = connection.createStatement();
-            Statement efternamnStatement = connection.createStatement();
-            Statement telefonNrStatement = connection.createStatement();
-            Statement gatuadressStatement = connection.createStatement();
-            Statement postNrStatement = connection.createStatement();
-            Statement emailStatement = connection.createStatement();
-            Statement personNrStatement = connection.createStatement();
-            Statement användarTypStatement = connection.createStatement();
-            Statement lösenordStatement = connection.createStatement();
-
-            ResultSet sqlQueryFörnamn = förnamnStatement.executeQuery(sqlFörnamnSök);
-            ResultSet sqlQueryEfternamn = efternamnStatement.executeQuery(sqlEfternamnSök);
-            ResultSet sqlQueryTelefonNr = telefonNrStatement.executeQuery(sqlTelefonSök);
-            ResultSet sqlQueryGatuadress = gatuadressStatement.executeQuery(sqlGatuadressSök);
-            ResultSet sqlQueryPostNr = postNrStatement.executeQuery(sqlPostNrSök);
-            ResultSet sqlQueryEmail = emailStatement.executeQuery(sqlEmailSök);
-            ResultSet sqlQueryPersonNr = personNrStatement.executeQuery(sqlPersonNrSök);
-            ResultSet sqlQueryAnvändarTyp = användarTypStatement.executeQuery(sqlAnvändarTypSök);
-            ResultSet sqlQueryLösenord = lösenordStatement.executeQuery(sqlLösenordSök);
-
-            //Fyller i den hämtade datan i respektive fält i formuläret
-            sqlQueryFörnamn.next();
-            förnamnTextFält.setText(sqlQueryFörnamn.getString("förnamn"));
-            sqlQueryEfternamn.next();
-            efternamnTextFält.setText(sqlQueryEfternamn.getString("efternamn"));
-            sqlQueryTelefonNr.next();
-            telefonNrTextFält.setText(sqlQueryTelefonNr.getString("telefon"));
-            sqlQueryGatuadress.next();
-            adressTextFält.setText(sqlQueryGatuadress.getString("gatuadress"));
-            sqlQueryPostNr.next();
-            postNrTextFält.setText(sqlQueryPostNr.getString("postnummer"));
-            sqlQueryEmail.next();
-            emailTextFält.setText(sqlQueryEmail.getString("email"));
-            sqlQueryPersonNr.next();
-            personNrTextFält.setText(sqlQueryPersonNr.getString("personNr"));
-            sqlQueryAnvändarTyp.next();
-            användartypDropDown.setText(sqlQueryAnvändarTyp.getString("typ"));
-            sqlQueryLösenord.next();
-            lösenordTextFält.setText(sqlQueryLösenord.getString("lösenord"));
-
-            //Låser alla fält så att användaren inte kan ändra. Detta går sedan att låsa upp via "ändra" knappen
-            förnamnTextFält.setEditable(false);
-            efternamnTextFält.setEditable(false);
-            telefonNrTextFält.setEditable(false);
-            adressTextFält.setEditable(false);
-            postNrTextFält.setEditable(false);
-            emailTextFält.setEditable(false);
-            personNrTextFält.setEditable(false);
-            lösenordTextFält.setEditable(false);
-
-        } catch (SQLException e) {
-            e.getCause();
-            e.printStackTrace();
-        }
+        //Låser alla fält så att användaren inte kan ändra. Detta går sedan att låsa upp via "ändra" knappen
+        förnamnTextFält.setEditable(false);
+        efternamnTextFält.setEditable(false);
+        telefonNrTextFält.setEditable(false);
+        adressTextFält.setEditable(false);
+        postNrTextFält.setEditable(false);
+        emailTextFält.setEditable(false);
+        personNrTextFält.setEditable(false);
+        lösenordTextFält.setEditable(false);
     }
 
     @FXML
@@ -258,31 +206,22 @@ public class UppdateraProfilController implements Initializable {
 
     @FXML
     void uppdateraKnappTryck(ActionEvent event) {
-        try {
-            DatabasConnector databasConnector = new DatabasConnector();
-            Connection connection = databasConnector.getConnection();
-            Användare användare = new Användare();
-            Statement statement = connection.createStatement();
-            statement.executeUpdate(användare.uppdateraAnvändareSQL(
-                    förnamnTextFält.getText(),
-                    efternamnTextFält.getText(),
-                    telefonNrTextFält.getText(),
-                    adressTextFält.getText(),
-                    postNrTextFält.getText(),
-                    emailTextFält.getText(),
-                    personNrTextFält.getText(),
-                    användartypDropDown.getText(),
-                    lösenordTextFält.getText()));
-            ControllerConnector controllerConnector = new ControllerConnector();
-            controllerConnector.popupConnector("successPopUp");
-            Stage stage = (Stage) uppdateraKnapp.getScene().getWindow();
-            stage.close();
+        Användare användare = new Användare();
+        användare.uppdateraAnvändareSQL(
+                förnamnTextFält.getText(),
+                efternamnTextFält.getText(),
+                telefonNrTextFält.getText(),
+                adressTextFält.getText(),
+                postNrTextFält.getText(),
+                emailTextFält.getText(),
+                personNrTextFält.getText(),
+                användartypDropDown.getText(),
+                lösenordTextFält.getText());
 
-        } catch (SQLException e) {
-            e.getCause();
-            e.printStackTrace();
-        }
-
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.popupConnector("successPopUp");
+        Stage stage = (Stage) uppdateraKnapp.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

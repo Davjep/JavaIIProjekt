@@ -1,5 +1,6 @@
 package Controllers;
 
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +26,20 @@ public class MinProfilController {
     private Button taBortProfilKnapp;
 
     @FXML
+    private Button loggaUtKnapp;
+
+    @FXML
+    void loggaUtKnappTryck(ActionEvent event) {
+        Användare.loggaUt();
+
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("startsida");
+        Stage stage = (Stage) loggaUtKnapp.getScene().getWindow();
+        stage.close();
+    }
+
+
+        @FXML
     void taBortProfilKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.popupConnector("taBortBekräftelsePopUp");

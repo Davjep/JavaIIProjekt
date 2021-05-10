@@ -1,16 +1,11 @@
 package Controllers;
 
-import Databas.DatabasConnector;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 public class taBortProfilPopUpController {
 
@@ -22,24 +17,12 @@ public class taBortProfilPopUpController {
 
     @FXML
     void jaKnappTryck(ActionEvent event) {
-        try {
-            DatabasConnector databasConnector = new DatabasConnector();
-            Connection connection = databasConnector.getConnection();
-            String sqlTaBortAnvändare = "DELETE FROM användare WHERE email = '" + Användare.getInloggadEmail() + "';";
-            Statement statement = connection.createStatement();
-            statement.executeUpdate(sqlTaBortAnvändare);
-            Stage stage = (Stage) jaKnapp.getScene().getWindow();
-            stage.close();
-            System.exit(0);
+        Användare användare = new Användare();
+        användare.taBortAnvändareSQL();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-            e.getCause();
-        }
-
-
-
-
+        Stage stage = (Stage) jaKnapp.getScene().getWindow();
+        stage.close();
+        System.exit(0);
     }
 
     @FXML
