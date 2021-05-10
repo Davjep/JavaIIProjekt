@@ -1,38 +1,131 @@
 package Objekt;
 
-public class Bok extends Objekt {
-    private String författare;
-    private String utgivare;
-    private String kategori;
+import Databas.DatabasConnector;
 
-    public Bok(String ISBN, String titel, String genre, String plats, String utgivningsÅr, String lånedatum, String slutDatum, boolean tillgänglig, int lånePeriod, String författare, String utgivare, String kategori) {
-        super(ISBN, titel, genre, plats, utgivningsÅr, lånedatum, slutDatum, tillgänglig, lånePeriod);
-        this.författare = författare;
-        this.utgivare = utgivare;
-        this.kategori = kategori;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Bok {
+
+    private static String ISBN;
+
+    public static void setISBN(String ISBN) {
+        Bok.ISBN = ISBN;
     }
 
-    public String getFörfattare() {
-        return författare;
+    public static String getISBN() {
+        return ISBN;
     }
 
-    public String getUtgivare() {
-        return utgivare;
+    public String hämtaTitelSQL() {
+        try{
+            String sqlSök = "SELECT Titel FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("titel");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public String getKategori() {
-        return kategori;
+    public String hämtaFörfattareSQL() {
+        try{
+            String sqlSök = "SELECT Författare FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("författare");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public void setFörfattare(String författare) {
-        this.författare = författare;
+    public String hämtaÄmnesordSQL() {
+        try{
+            String sqlSök = "SELECT ÄmnesOrd FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("ämnesord");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public void setUtgivare(String utgivare) {
-        this.utgivare = utgivare;
+    public String hämtaKategoriSQL() {
+        try{
+            String sqlSök = "SELECT Kategori FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("kategori");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public void setKategori(String kategori) {
-        this.kategori = kategori;
+    public String hämtaUtgivningsårSQL() {
+        try{
+            String sqlSök = "SELECT UtgivningsÅr FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("utgivningsår");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
+
+    public String hämtaISBNSQL() {
+        try{
+            String sqlSök = "SELECT ISBN FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("ISBN");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
+    }
+
 }
+

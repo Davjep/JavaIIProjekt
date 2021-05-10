@@ -4,27 +4,28 @@ public abstract class Entitet {
 
     protected String namn;
     protected String personNr;
-    protected String adress;
+    protected String gatuAdress;
+    protected String postNr;
     protected String email;
     protected String telefonNr;
-
-    public Entitet(String namn, String personNr, String adress, String email, String telefonNr) {
-        this.namn = namn;
-        this.personNr = personNr;
-        this.adress = adress;
-        this.email = email;
-        this.telefonNr = telefonNr;
-    }
     protected void loggaIn(){
 
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public String getPostNr() {
+        return postNr;
     }
 
-    public String getAdress() {
-        return adress;
+    public void setPostNr(String postNr) {
+        this.postNr = postNr;
+    }
+
+    public void setGatuAdress(String adress) {
+        this.gatuAdress = gatuAdress;
+    }
+
+    public String getGatuAdress() {
+        return gatuAdress;
     }
 
     public String getNamn() {

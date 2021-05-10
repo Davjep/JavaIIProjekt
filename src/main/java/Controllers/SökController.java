@@ -1,8 +1,8 @@
 package Controllers;
 
 import Databas.DatabasConnector;
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
-import Session.SessionsAnvändare;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -67,7 +67,6 @@ public class SökController {
         Connection connection = databasConnector.getConnection();
 
         String kategoriVal = kategoriValDropDown.getText();
-        //TODO Fortsätt här!
         if (kategoriVal.equals("Bok")) {
             try {
                 String sqlBokSök = "SELECT * FROM bok WHERE Författare LIKE '%" + sökFält.getText() + "%' OR Titel LIKE '%" + sökFält.getText() +
@@ -87,7 +86,22 @@ public class SökController {
                 e.printStackTrace();
             }
         } else if (kategoriVal.equals("Film")){
+            try {
+                String sqlFilmSök = "SELECT * FROM film WHERE Regissör LIKE '%" + sökFält.getText() + "%' OR Titel LIKE '%" + sökFält.getText() +
+                        "%';";
+                PreparedStatement statement = connection.prepareStatement(sqlFilmSök);
+                ResultSet resultSet = statement.executeQuery(sqlFilmSök);
+                for (int i = 0; resultSet.next(); i++) {
+                    String titelResultat = resultSet.getString("Titel");
+                    String regissörResultat = resultSet.getString("regissör");
+                    String genreResultat = resultSet.getString("genre");
 
+                    resultatLista.getItems().add("Titel: " + titelResultat + ", Regissör: " + regissörResultat + ", Genre: " + genreResultat);
+                }
+            }catch (SQLException e) {
+                e.getCause();
+                e.printStackTrace();
+            }
         } else {
             errorText.setText("Välj kategori innan du söker!");
         }
@@ -104,9 +118,8 @@ public class SökController {
 
     @FXML
     void hemKnappTryck(ActionEvent event) {
-        SessionsAnvändare sessionsAnvändare = new SessionsAnvändare();
         ControllerConnector controllerConnector = new ControllerConnector();
-        if (sessionsAnvändare.isInloggad()) {
+        if (Användare.isInloggad()) {
             controllerConnector.connector("minProfil");
         } else {
             controllerConnector.connector("startsida");
@@ -118,6 +131,8 @@ public class SökController {
 
     @FXML
     void väljKnappTryck(ActionEvent event) {
+        //TODO Fixa klassen, måste definiera vald ISBN för BokDetailjer, gärna via bok.setISBN!
+
         String x = resultatLista.getSelectionModel().getSelectedItem();
 
 

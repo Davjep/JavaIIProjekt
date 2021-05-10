@@ -125,7 +125,6 @@
             <Button fx:id="personNrÄndraKnapp" mnemonicParsing="false" onAction="#personNrÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="6" />
             <Button fx:id="användartypÄndraKnapp" mnemonicParsing="false" onAction="#användartypÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="7" />
             <Button fx:id="lösenordÄndraKnapp" mnemonicParsing="false" onAction="#lösenordÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-            <Button fx:id="hämtaMinaUppgifterKnapp" mnemonicParsing="false" onAction="#hämtaMinaUppgifterKnappTryck" text="Hämta Mina Uppgifter" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
             <Label fx:id="errorText" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
             </children>
         </GridPane>
