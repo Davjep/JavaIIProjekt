@@ -58,7 +58,7 @@ public class Användare {
             Statement statement = connection.createStatement();
             String sqlUpdateQuery = "UPDATE användare SET FörNamn = '" + förNamn + "' , efternamn = '" + efterNamn + "', telefon = '" + telefon
                     + "', gatuadress = '" + gatuAdress + "', postnummer = '" + postNummer + "', email = '" + email + "', personnr = '" + personNr
-                    + "', typ = '" + typ + "', lösenord = '" + lösenord + "' WHERE email = '" + getInloggadEmail() + "'";
+                    + "', Ålder = '" + beräknaÅlder(personNr) + "', typ = '" + typ + "', lösenord = '" + lösenord + "' WHERE email = '" + getInloggadEmail() + "'";
             statement.executeUpdate(sqlUpdateQuery);
         }catch (SQLException e) {
             e.getCause();

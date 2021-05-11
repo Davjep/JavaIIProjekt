@@ -43,6 +43,18 @@ public class BokDetaljerController implements Initializable {
     @FXML
     private Button lånaBokKnapp;
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        Bok bok = new Bok();
+        ISBNTextFält.setText(bok.hämtaISBNSQL());
+        titelTextFält.setText(bok.hämtaTitelSQL());
+        författareTextFält.setText(bok.hämtaFörfattareSQL());
+        ämnesordTextFält.setText(bok.hämtaÄmnesordSQL());
+        kategoriTextFält.setText(bok.hämtaKategoriSQL());
+        utgivningsårTextFält.setText(bok.hämtaUtgivningsårSQL());
+    }
+
     @FXML
     void gåTillbakaKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
@@ -84,16 +96,5 @@ public class BokDetaljerController implements Initializable {
 
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        Bok bok = new Bok();
-        ISBNTextFält.setText(bok.hämtaISBNSQL());
-        titelTextFält.setText(bok.hämtaTitelSQL());
-        författareTextFält.setText(bok.hämtaFörfattareSQL());
-        ämnesordTextFält.setText(bok.hämtaÄmnesordSQL());
-        kategoriTextFält.setText(bok.hämtaKategoriSQL());
-        utgivningsårTextFält.setText(bok.hämtaUtgivningsårSQL());
-    }
 }
 

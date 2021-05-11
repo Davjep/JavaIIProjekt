@@ -1,58 +1,145 @@
 package Objekt;
 
-public class Film extends Objekt {
-    private String regissör;
-    private int åldersBegränsning;
-    private String produktionsLand;
-    private String skådespelare;
-    private String produktionsBolag;
+import Databas.DatabasConnector;
 
-    public Film(String titel, String genre, String plats, String utgivningsÅr, String lånedatum, String slutDatum, boolean tillgänglig, int lånePeriod, String regissör, int åldersBegränsning, String produktionsLand, String skådespelare, String produktionsBolag) {
-        super(titel, genre, plats, utgivningsÅr, lånedatum, slutDatum, tillgänglig, lånePeriod);
-        this.regissör = regissör;
-        this.åldersBegränsning = åldersBegränsning;
-        this.produktionsLand = produktionsLand;
-        this.skådespelare = skådespelare;
-        this.produktionsBolag = produktionsBolag;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Film {
+    private static String filmID;
+
+    public static void setFilmID(String filmID) {
+        Film.filmID = filmID;
     }
 
-    public String getRegissör() {
-        return regissör;
+    public static String getFilmID() {
+        return filmID;
     }
 
-    public void setRegissör(String regissör) {
-        this.regissör = regissör;
+    public String hämtaFilmIDSQL() {
+        try{
+            String sqlSök = "SELECT FilmId FROM film WHERE FilmId = '" + Film.getFilmID() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("filmID");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public int getÅldersBegränsning() {
-        return åldersBegränsning;
+    public String hämtaTitelSQL() {
+        try{
+            String sqlSök = "SELECT Titel FROM film WHERE FilmId = '" + Film.getFilmID() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("titel");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public void setÅldersBegränsning(int åldersBegränsning) {
-        this.åldersBegränsning = åldersBegränsning;
+    public String hämtaRegissörSQL() {
+        try{
+            String sqlSök = "SELECT Regissör FROM film WHERE FilmId = '" + Film.getFilmID() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("regissör");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public String getProduktionsLand() {
-        return produktionsLand;
+    public String hämtaGenreSQL() {
+        try{
+            String sqlSök = "SELECT Genre FROM film WHERE FilmId = '" + Film.getFilmID() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("genre");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
+    }
+    public String hämtaProduktionslandSQL() {
+        try{
+            String sqlSök = "SELECT ProduktionsLand FROM film WHERE FilmId = '" + Film.getFilmID() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("produktionsland");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public void setProduktionsLand(String produktionsLand) {
-        this.produktionsLand = produktionsLand;
+    public String hämtaUtgivningsårSQL() {
+        try{
+            String sqlSök = "SELECT UtgivningsÅr FROM film WHERE FilmId = '" + Film.getFilmID() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("UtgivningsÅr");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
-    public String getSkådespelare() {
-        return skådespelare;
-    }
+    public String hämtaÅldersBegränsningSQL() {
+        try{
+            String sqlSök = "SELECT ÅldersBegränsning FROM film WHERE FilmId = '" + Film.getFilmID() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
 
-    public void setSkådespelare(String skådespelare) {
-        this.skådespelare = skådespelare;
-    }
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
 
-    public String getProduktionsBolag() {
-        return produktionsBolag;
-    }
-
-    public void setProduktionsBolag(String produktionsBolag) {
-        this.produktionsBolag = produktionsBolag;
+            return sqlQuery.getString("ÅldersBegränsning");
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 }
