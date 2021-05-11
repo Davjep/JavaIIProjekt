@@ -19,9 +19,6 @@ import java.util.ArrayList;
 
 public class SökController {
 
-
-    boolean valdKategori; //variabel för att definiera vilken kategori som är vald. true = bok, false = film
-
     @FXML
     private TextField sökFält;
 
@@ -82,7 +79,6 @@ public class SökController {
                     String ISBNresultat = resultSet.getString("ISBN");
                     String ämnesordResultat = resultSet.getString("Ämnesord");
                     resultatLista.getItems().add("ISBN: " + ISBNresultat + ", Titel: " + titelResultat + ", Författare: " + författareResultat + ", Ämne: " + ämnesordResultat);
-                    valdKategori = true;
                 }
             }catch (SQLException e) {
                 e.getCause();
@@ -100,7 +96,6 @@ public class SökController {
                     String regissörResultat = resultSet.getString("regissör");
                     String genreResultat = resultSet.getString("genre");
                     resultatLista.getItems().add("FilmID: " + filmIDResultat + ", Titel: " + titelResultat + ", Regissör: " + regissörResultat + ", Genre: " + genreResultat);
-                    valdKategori = false;
                 }
             }catch (SQLException e) {
                 e.getCause();
@@ -155,7 +150,7 @@ public class SökController {
 
         StringBuilder fullID = new StringBuilder(ISBNoutput).deleteCharAt(0);
 
-        if (valdKategori) {
+        if (kategoriValDropDown.getText().equals("Bok")) {
             Bok.setISBN(fullID.toString());
             ControllerConnector controllerConnector = new ControllerConnector();
             controllerConnector.connector("bokDetaljer");
