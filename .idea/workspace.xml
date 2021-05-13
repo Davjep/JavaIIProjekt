@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/LåneKvittoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/låneKvitto.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Objekt/BokTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +186,7 @@
       <workItem from="1620719846852" duration="1142000" />
       <workItem from="1620747318583" duration="3130000" />
       <workItem from="1620823544924" duration="617000" />
-      <workItem from="1620896257246" duration="12655000" />
+      <workItem from="1620896257246" duration="13019000" />
     </task>
     <task id="LOCAL−00001" summary="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ">
       <created>1620636349103</created>
@@ -234,7 +224,13 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1620720047473</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Skapat Lån, Lånkvitto//DJ">
+      <created>1620911579347</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1620911579347</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +242,7 @@
     <MESSAGE value="Lagt till att ålder uppdateras automatiskt i Användare.uppdateraAnvändareSQL//DJ" />
     <MESSAGE value="Skapat fxml och controller för skapa film lån//DJ" />
     <MESSAGE value="Fixat sökklassen//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixat sökklassen//DJ" />
+    <MESSAGE value="Skapat Lån, Lånkvitto//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat Lån, Lånkvitto//DJ" />
   </component>
 </project>

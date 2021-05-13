@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BokDetaljerController">
    <children>
       <GridPane layoutX="14.0" layoutY="43.0" prefHeight="350.0" prefWidth="582.0">
@@ -94,6 +93,7 @@
                </GridPane.margin>
             </Button>
             <Button fx:id="lånaBokKnapp" mnemonicParsing="false" onAction="#lånaBokKnappTryck" text="Låna bok" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="errorText" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
          </children>
       </GridPane>
       <Label layoutX="232.0" layoutY="14.0" text="Bokdetaljer">

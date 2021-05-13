@@ -70,7 +70,6 @@ public class FilmDetaljerController implements Initializable {
 
     @FXML
     void lånaFilmKnappTryck(ActionEvent event) {
-        // TODO Skapar ett kvitto med lånedetaljer
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();

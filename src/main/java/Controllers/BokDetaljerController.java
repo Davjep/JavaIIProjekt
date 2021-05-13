@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -44,6 +45,9 @@ public class BokDetaljerController implements Initializable {
     @FXML
     private Button lånaBokKnapp;
 
+    @FXML
+    private Label errorText;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -67,35 +71,41 @@ public class BokDetaljerController implements Initializable {
 
     @FXML
     void lånaBokKnappTryck(ActionEvent event) {
-        // TODO Lägg in spärr för referenslitteratur!
-        try {
-            DatabasConnector databasConnector = new DatabasConnector();
-            Connection connection = databasConnector.getConnection();
+        Bok bok = new Bok();
+        if (bok.hämtaKategoriSQL().equalsIgnoreCase("Referenslitteratur")) {
+            errorText.setText("Referenslitteratur kan ej lånas ut! ");
+        } else if (bok.hämtaKategoriSQL().equalsIgnoreCase("Tidsskrift")) {
+            errorText.setText("Tidsskrifter kan ej lånas ut! ");
+        } else {
+            errorText.setText("");
+            try {
+                DatabasConnector databasConnector = new DatabasConnector();
+                Connection connection = databasConnector.getConnection();
 
-            String sqlStatus = "SELECT Status FROM fysiskkopia WHERE ISBN = '" + Bok.getISBN() + "';";
+                String sqlStatus = "SELECT Status FROM fysiskkopia WHERE ISBN = '" + Bok.getISBN() + "';";
 
-            Statement statusStatement = connection.createStatement();
+                Statement statusStatement = connection.createStatement();
 
-            ResultSet statusResultat = statusStatement.executeQuery(sqlStatus);
-            statusResultat.next();
+                ResultSet statusResultat = statusStatement.executeQuery(sqlStatus);
+                statusResultat.next();
 
-            if (!statusResultat.getString("status").equalsIgnoreCase("Tillgänglig")) {
-                ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.popupConnector("ejTillgängligPopUp");
-                Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
-                stage.close();
-            } else {
-                Lån.setLåneTyp("Bok");
-                ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.popupConnector("lånaBekräftelsePopUp");
-                Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
-                stage.close();
+                if (!statusResultat.getString("status").equalsIgnoreCase("Tillgänglig")) {
+                    ControllerConnector controllerConnector = new ControllerConnector();
+                    controllerConnector.popupConnector("ejTillgängligPopUp");
+                    Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
+                    stage.close();
+                } else {
+                    Lån.setLåneTyp("Bok");
+                    ControllerConnector controllerConnector = new ControllerConnector();
+                    controllerConnector.popupConnector("lånaBekräftelsePopUp");
+                    Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
+                    stage.close();
+                }
+            } catch (SQLException e) {
+                e.getCause();
+                e.getStackTrace();
             }
-        }catch (SQLException e) {
-            e.getCause();
-            e.getStackTrace();
         }
-
     }
 
 }
