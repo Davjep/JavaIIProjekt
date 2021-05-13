@@ -8,7 +8,6 @@ import Objekt.Film;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
@@ -107,14 +106,6 @@ public class SökController {
         resultatLista.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
-    @FXML
-    void resultatListaMerInfo(MouseEvent event) {
-        ControllerConnector controllerConnector = new ControllerConnector();
-        controllerConnector.connector("bokDetaljer");
-        Stage stage = (Stage) resultatLista.getScene().getWindow();
-        stage.close();
-
-    }
 
     @FXML
     void hemKnappTryck(ActionEvent event) {

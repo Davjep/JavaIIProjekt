@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/LåneKvittoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/låneKvitto.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Objekt/BokTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/sök.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +75,13 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Objekt" />
+      <recent name="Databas" />
       <recent name="Controllers" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SökControllerTest.sök">
+  <component name="RunManager" selected="Application.NewMain">
     <configuration name="NewMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewMain.NewMain" />
       <module name="JavaIIProjekt" />
@@ -94,7 +106,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnvändareTest.hämtaAnvändareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BokTest.hämtaKategoriSQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Objekt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Objekt" />
+      <option name="MAIN_CLASS_NAME" value="Objekt.BokTest" />
+      <option name="METHOD_NAME" value="hämtaKategoriSQL" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LånTest.hämtaLåneInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -103,14 +131,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
-      <option name="METHOD_NAME" value="hämtaAnvändareTest" />
+      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
+      <option name="METHOD_NAME" value="hämtaLåneInfo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnvändareTest.läggaTillAnvändareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LånTest.låna" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -119,14 +147,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
-      <option name="METHOD_NAME" value="läggaTillAnvändareTest" />
+      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
+      <option name="METHOD_NAME" value="låna" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnvändareTest.uppdateraAnvändare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LånTest.skapaLån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -135,24 +163,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
-      <option name="METHOD_NAME" value="uppdateraAnvändare" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SökControllerTest.sök" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaIIProjekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Controllers" />
-      <option name="MAIN_CLASS_NAME" value="Controllers.SökControllerTest" />
-      <option name="METHOD_NAME" value="sök" />
+      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
+      <option name="METHOD_NAME" value="skapaLån" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SökControllerTest.sök" />
         <item itemvalue="Application.NewMain" />
-        <item itemvalue="JUnit.AnvändareTest.hämtaAnvändareTest" />
-        <item itemvalue="JUnit.AnvändareTest.uppdateraAnvändare" />
-        <item itemvalue="JUnit.AnvändareTest.läggaTillAnvändareTest" />
+        <item itemvalue="JUnit.LånTest.låna" />
+        <item itemvalue="JUnit.LånTest.hämtaLåneInfo" />
+        <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
+        <item itemvalue="JUnit.LånTest.skapaLån" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +193,10 @@
       <workItem from="1620646249802" duration="1124000" />
       <workItem from="1620647992882" duration="10575000" />
       <workItem from="1620714284335" duration="20000" />
+      <workItem from="1620719846852" duration="1142000" />
+      <workItem from="1620747318583" duration="3130000" />
+      <workItem from="1620823544924" duration="617000" />
+      <workItem from="1620896257246" duration="12655000" />
     </task>
     <task id="LOCAL−00001" summary="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ">
       <created>1620636349103</created>
@@ -212,7 +228,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1620684778186</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Fixat sökklassen//DJ">
+      <created>1620720047473</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1620720047473</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

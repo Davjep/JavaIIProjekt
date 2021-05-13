@@ -1,6 +1,7 @@
 package Controllers;
 
 import Databas.DatabasConnector;
+import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import javafx.event.ActionEvent;
@@ -66,7 +67,7 @@ public class BokDetaljerController implements Initializable {
 
     @FXML
     void lånaBokKnappTryck(ActionEvent event) {
-        // TODO Skapar ett kvitto med lånedetaljer
+        // TODO Lägg in spärr för referenslitteratur!
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
@@ -78,14 +79,15 @@ public class BokDetaljerController implements Initializable {
             ResultSet statusResultat = statusStatement.executeQuery(sqlStatus);
             statusResultat.next();
 
-            if (!statusResultat.getString("status").equals("Tillgänglig")) {
+            if (!statusResultat.getString("status").equalsIgnoreCase("Tillgänglig")) {
                 ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.connector("ejTillgängligPopUp");
+                controllerConnector.popupConnector("ejTillgängligPopUp");
                 Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
                 stage.close();
             } else {
+                Lån.setLåneTyp("Bok");
                 ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.connector("ejTillgängligPopUp");
+                controllerConnector.popupConnector("lånaBekräftelsePopUp");
                 Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
                 stage.close();
             }
