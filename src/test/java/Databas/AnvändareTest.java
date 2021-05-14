@@ -31,7 +31,16 @@ public class AnvändareTest {
     }
 
     @Test
-    public void räkna() {
+    public void loggaIn() {
+        Användare.setInloggadEmail("biblan@mail.se");
+        System.out.println(Användare.getInloggadEmail());
+        Användare användare = new Användare();
+        if (användare.hämtaAnvändarTypSQL().equalsIgnoreCase("Biblioteksanställda")) {
+            System.out.println("Ja");
+        } else {
+            System.out.println("Nej");
+        }
+
 
     }
 

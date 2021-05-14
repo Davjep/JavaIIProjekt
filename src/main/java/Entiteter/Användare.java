@@ -70,8 +70,16 @@ public class Användare extends Entitet {
     //Nedan metoder är alla för att hämta användarinformation från databasen
 
     public String hämtaAnvändarID (){
-        try{
-            String sqlSök = "SELECT AnvändarId FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
+        try {
+            String sqlSök = "SELECT AnvändarId FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -88,8 +96,15 @@ public class Användare extends Entitet {
     }
 
     public String hämtaFörnamnSQL () {
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
         try{
-            String sqlSök = "SELECT förnamn FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT förnamn FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -106,8 +121,16 @@ public class Användare extends Entitet {
     }
 
     public String hämtaEfternamnSQL () {
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
         try{
-            String sqlSök = "SELECT EfterNamn FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT EfterNamn FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -124,8 +147,16 @@ public class Användare extends Entitet {
     }
 
     public String hämtaTelefonNrSQL () {
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
         try{
-            String sqlSök = "SELECT Telefon FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT Telefon FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -142,8 +173,16 @@ public class Användare extends Entitet {
     }
 
     public String hämtaGatuAdressSQL () {
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
         try{
-            String sqlSök = "SELECT GatuAdress FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT GatuAdress FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -160,8 +199,16 @@ public class Användare extends Entitet {
     }
 
     public String hämtaPostNrSQL () {
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
         try{
-            String sqlSök = "SELECT Postnummer FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT Postnummer FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -178,8 +225,17 @@ public class Användare extends Entitet {
     }
 
     public String hämtaemailSQL () {
+        String email;
+
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
         try{
-            String sqlSök = "SELECT Email FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT Email FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -196,8 +252,16 @@ public class Användare extends Entitet {
     }
 
     public String hämtaPersonNrSQL () {
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
         try{
-            String sqlSök = "SELECT PersonNr FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT PersonNr FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -214,8 +278,16 @@ public class Användare extends Entitet {
     }
 
     public String hämtaAnvändarTypSQL () {
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
         try{
-            String sqlSök = "SELECT Typ FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT Typ FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -232,8 +304,16 @@ public class Användare extends Entitet {
     }
 
     public String hämtalösenordSQL () {
+        String email;
+        if (Anställd.getAnställd()) {
+            Anställd anställd = new Anställd();
+            email = anställd.hämtaValdEmail();
+        } else {
+            email = Användare.getInloggadEmail();
+        }
+
         try{
-            String sqlSök = "SELECT Lösenord FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            String sqlSök = "SELECT Lösenord FROM användare WHERE email = '" + email + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();

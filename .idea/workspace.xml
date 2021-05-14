@@ -5,23 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/HanteraAnvändareController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Verktyg/VäljIListan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/hanteraAnvändare.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Verktyg/VäljIListanTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Anställd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Anställd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Tidskrift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Tidskrift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/loggaIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/loggaIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXConnector/ControllerConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/admin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Objekt/BokTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Objekt/BokTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +63,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1r4IPPBSf4T0zZH4nWXhYSCFxk6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -91,6 +93,7 @@
       <recent name="Objekt" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Verktyg" />
       <recent name="Objekt" />
       <recent name="Databas" />
       <recent name="Controllers" />
@@ -120,6 +123,22 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnvändareTest.loggaIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Databas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
+      <option name="METHOD_NAME" value="loggaIn" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,33 +175,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LånTest.hämtaLåneInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VäljIListanTest.väljValdRad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Databas.*" />
+          <option name="PATTERN" value="Verktyg.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
-      <option name="METHOD_NAME" value="hämtaLåneInfo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LånTest.låna" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaIIProjekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Databas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
-      <option name="METHOD_NAME" value="låna" />
+      <option name="PACKAGE_NAME" value="Verktyg" />
+      <option name="MAIN_CLASS_NAME" value="Verktyg.VäljIListanTest" />
+      <option name="METHOD_NAME" value="väljValdRad" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,10 +194,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
+        <item itemvalue="JUnit.AnvändareTest.loggaIn" />
+        <item itemvalue="JUnit.VäljIListanTest.väljValdRad" />
         <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
         <item itemvalue="JUnit.AnvändareTest.läggaTillAnvändareTest" />
-        <item itemvalue="JUnit.LånTest.låna" />
-        <item itemvalue="JUnit.LånTest.hämtaLåneInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +218,7 @@
       <workItem from="1620747318583" duration="3130000" />
       <workItem from="1620823544924" duration="617000" />
       <workItem from="1620896257246" duration="17596000" />
-      <workItem from="1620979514065" duration="4315000" />
+      <workItem from="1620979514065" duration="12409000" />
     </task>
     <task id="LOCAL−00001" summary="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ">
       <created>1620636349103</created>
@@ -265,7 +268,13 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1620912032033</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ">
+      <created>1620984165068</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1620984165068</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +288,7 @@
     <MESSAGE value="Fixat sökklassen//DJ" />
     <MESSAGE value="Skapat Lån, Lånkvitto//DJ" />
     <MESSAGE value="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ" />
+    <MESSAGE value="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ" />
   </component>
 </project>

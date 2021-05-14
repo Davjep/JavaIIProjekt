@@ -1,5 +1,6 @@
 package Controllers;
 
+import Entiteter.Anställd;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
@@ -130,6 +131,12 @@ public class RegistreraController {
 
     @FXML
     void avbrytKnappTryck(ActionEvent event) {
+        if (Anställd.getAnställd()) {
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("admin");
+            Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
+            stage.close();
+        }
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("startsida");
         Stage stage = (Stage) avbrytKnapp.getScene().getWindow();

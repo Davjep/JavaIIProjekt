@@ -1,6 +1,7 @@
 package Controllers;
 
 import Databas.DatabasConnector;
+import Entiteter.Anställd;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
@@ -75,10 +76,11 @@ public class LoggaInController {
                         Användare.setInloggadEmail(emailResultat);
                         if (anställd) {
                             Användare användare = new Användare();
-                            if (användare.getTyp().equalsIgnoreCase("Biblioteksanställda")) {
+                            if (användare.hämtaAnvändarTypSQL().equalsIgnoreCase("Biblioteksanställda")) {
                                 Användare.setInloggad();
+                                Anställd.setAnställd();
                                 ControllerConnector controllerConnector = new ControllerConnector();
-                                controllerConnector.connector("minProfil");
+                                controllerConnector.connector("admin");
                                 Stage stage = (Stage) loggaInKnapp.getScene().getWindow();
                                 stage.close();
                             } else {
@@ -92,8 +94,6 @@ public class LoggaInController {
                             Stage stage = (Stage) loggaInKnapp.getScene().getWindow();
                             stage.close();
                         }
-
-
                     }
                 }
             } else {
