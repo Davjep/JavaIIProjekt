@@ -110,7 +110,7 @@ public class SökController {
     @FXML
     void hemKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
-        if (Användare.isInloggad()) {
+        if (Användare.getInloggad()) {
             controllerConnector.connector("minProfil");
         } else {
             controllerConnector.connector("startsida");

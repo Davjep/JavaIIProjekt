@@ -1,6 +1,7 @@
 package Databas;
 
 import Entiteter.Användare;
+import Objekt.Bok;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -68,6 +69,7 @@ public class Lån {
         }
         return null;
     }
+
     public Date hämtaStartDatum (){
         //TODO Måste fixa så att man får rätt datum. Idag får man endast datumet för det första lånet som skapades
         try{
@@ -116,6 +118,27 @@ public class Lån {
         c.setTime(hämtaStartDatum());
         c.add(Calendar.DAY_OF_MONTH, days);
         return c.getTime();
+    }
+
+    public String hämtaLåneStatus() {
+
+        try {
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+
+            String sqlStatus = "SELECT Status FROM fysiskkopia WHERE ISBN = '" + Bok.getISBN() + "';";
+
+            Statement statusStatement = connection.createStatement();
+
+            ResultSet statusResultat = statusStatement.executeQuery(sqlStatus);
+            statusResultat.next();
+
+            return statusResultat.getString("status");
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
     }
 
 }

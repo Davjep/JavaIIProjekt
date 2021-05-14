@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SuccessPopUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SökController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Anställd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Anställd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Tidskrift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Tidskrift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/loggaIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/loggaIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Objekt/BokTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Objekt/BokTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +47,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -64,6 +87,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Objekt" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Objekt" />
       <recent name="Databas" />
@@ -85,13 +111,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnvändareTest.läggaTillAnvändareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Databas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
+      <option name="METHOD_NAME" value="läggaTillAnvändareTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,29 +188,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LånTest.skapaLån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaIIProjekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Databas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
-      <option name="METHOD_NAME" value="skapaLån" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
+        <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
+        <item itemvalue="JUnit.AnvändareTest.läggaTillAnvändareTest" />
         <item itemvalue="JUnit.LånTest.låna" />
         <item itemvalue="JUnit.LånTest.hämtaLåneInfo" />
-        <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
-        <item itemvalue="JUnit.LånTest.skapaLån" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +214,8 @@
       <workItem from="1620719846852" duration="1142000" />
       <workItem from="1620747318583" duration="3130000" />
       <workItem from="1620823544924" duration="617000" />
-      <workItem from="1620896257246" duration="13019000" />
+      <workItem from="1620896257246" duration="17596000" />
+      <workItem from="1620979514065" duration="4315000" />
     </task>
     <task id="LOCAL−00001" summary="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ">
       <created>1620636349103</created>
@@ -230,7 +259,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1620911579347</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ">
+      <created>1620912032033</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1620912032033</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +278,7 @@
     <MESSAGE value="Skapat fxml och controller för skapa film lån//DJ" />
     <MESSAGE value="Fixat sökklassen//DJ" />
     <MESSAGE value="Skapat Lån, Lånkvitto//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skapat Lån, Lånkvitto//DJ" />
+    <MESSAGE value="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ" />
   </component>
 </project>

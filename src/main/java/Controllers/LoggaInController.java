@@ -37,6 +37,20 @@ public class LoggaInController {
     private Label errorText;
 
     @FXML
+    private Label loggaInText;
+
+    @FXML
+    private Button anställdKnapp;
+
+    boolean anställd = false;
+
+    @FXML
+    void anställdKnappTryck(ActionEvent event) {
+        loggaInText.setText("Logga In - Anställd");
+        anställd = true;
+    }
+
+    @FXML
     void loggaInKnappTryck(ActionEvent event) {
         DatabasConnector databasConnector = new DatabasConnector();
         Connection connection = databasConnector.getConnection();
@@ -58,12 +72,28 @@ public class LoggaInController {
                 if (sqlQueryLösenord.next()) {
                     String lösenordResultat = sqlQueryLösenord.getString("lösenord");
                     if (email.equals(emailResultat) && lösenord.equals(lösenordResultat)) {
-                        Användare.setInloggad();
                         Användare.setInloggadEmail(emailResultat);
-                        ControllerConnector controllerConnector = new ControllerConnector();
-                        controllerConnector.connector("minProfil");
-                        Stage stage = (Stage) loggaInKnapp.getScene().getWindow();
-                        stage.close();
+                        if (anställd) {
+                            Användare användare = new Användare();
+                            if (användare.getTyp().equalsIgnoreCase("Biblioteksanställda")) {
+                                Användare.setInloggad();
+                                ControllerConnector controllerConnector = new ControllerConnector();
+                                controllerConnector.connector("minProfil");
+                                Stage stage = (Stage) loggaInKnapp.getScene().getWindow();
+                                stage.close();
+                            } else {
+                                errorText.setText("Endast biblioteksanställda kan logga in som anställd");
+                                Användare.setInloggadEmail("");
+                            }
+                        } else {
+                            Användare.setInloggad();
+                            ControllerConnector controllerConnector = new ControllerConnector();
+                            controllerConnector.connector("minProfil");
+                            Stage stage = (Stage) loggaInKnapp.getScene().getWindow();
+                            stage.close();
+                        }
+
+
                     }
                 }
             } else {
@@ -79,6 +109,7 @@ public class LoggaInController {
     void lösenordInput(ActionEvent event) {
 
     }
+
     @FXML
     void emailInput(ActionEvent event) {
 

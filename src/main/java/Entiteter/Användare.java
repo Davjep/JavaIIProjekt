@@ -8,41 +8,28 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 
-public class Användare {
+public class Användare extends Entitet {
+    String typ;
 
-    private static boolean inloggad = false;
-    private static String inloggadEmail;
-
-    public static String getInloggadEmail() {
-        return inloggadEmail;
+    public Användare() {
+        super();
     }
 
-    public static void setInloggadEmail(String inloggadEmail) {
-        Användare.inloggadEmail = inloggadEmail;
+
+    public Användare(String förNamn, String efterNamn, String telefonNr, String gatuAdress, String postNr,
+                     String email, String personNr, String typ, String lösenord) {
+        super(förNamn, efterNamn, gatuAdress, postNr, email, personNr, telefonNr, lösenord);
+        this.typ = typ;
     }
 
-    public static void setInloggad() {
-        inloggad = true;
-    }
-
-    public static void loggaUt() {
-        inloggad = false;
-        Användare.setInloggadEmail(null);
-    }
-
-    public static boolean isInloggad() {
-        return inloggad;
-    }
-
-    public void läggaTillAnvändareSQL(String förNamn, String efterNamn, String telefon, String gatuAdress, String postNummer,
-                                     String email, String personNr, String typ, String lösenord) {
+    public void läggaTillAnvändareSQL() {
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
             String sqlInsertQuery = "INSERT INTO användare (FörNamn, EfterNamn, Telefon, GatuAdress, postNummer, Email, PersonNr, Ålder, Typ, AntalLåneObjekt, lösenord) " +
-                    "VALUES ('" + förNamn + "','" + efterNamn + "','" + telefon + "','" + gatuAdress + "','" + postNummer + "','" + email + "','" +
-                    personNr + "'," + beräknaÅlder(personNr) + ",'" + typ + "', " + 0 + ", '" + lösenord + "' )";
+                    "VALUES ('" + getFörNamn() + "','" + getEfterNamn() + "','" + getTelefonNr() + "','" + getGatuAdress() + "','" + getPostNr() + "','" + getEmail() + "','" +
+                    getPersonNr() + "'," + beräknaÅlder(personNr) + ",'" + getTyp() + "', " + 0 + ", '" + getLösenord() + "' )";
             statement.executeUpdate(sqlInsertQuery);
         }catch (SQLException e) {
             e.getCause();
@@ -269,5 +256,9 @@ public class Användare {
         LocalDate år = LocalDate.now();
         int nuvarandeÅr = år.getYear();
         return nuvarandeÅr - räknaÅrtal;
+    }
+
+    public String getTyp() {
+        return typ;
     }
 }

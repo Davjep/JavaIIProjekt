@@ -9,6 +9,11 @@ public abstract class Objekt {
     protected String slutDatum;
     protected boolean tillgänglig;
     protected int lånePeriod;
+    protected static String ID;
+
+    public Objekt() {
+
+    }
 
     public Objekt(String titel, String genre, String plats, String utgivningsÅr, String lånedatum, String slutDatum, boolean tillgänglig, int lånePeriod) {
         this.titel = titel;
@@ -19,6 +24,14 @@ public abstract class Objekt {
         this.slutDatum = slutDatum;
         this.tillgänglig = tillgänglig;
         this.lånePeriod = lånePeriod;
+    }
+
+    public static String getID() {
+        return ID;
+    }
+
+    public static void setID(String ID) {
+        Objekt.ID = ID;
     }
 
     public void setTitel(String titel) {

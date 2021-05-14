@@ -19,7 +19,7 @@ public class SuccessPopUpController {
     @FXML
     void okKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
-        if (Användare.isInloggad()) {
+        if (Användare.getInloggad()) {
             controllerConnector.connector("minProfil");
             Stage stage = (Stage) okKnapp.getScene().getWindow();
             stage.close();

@@ -7,12 +7,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Bok {
+public class Bok extends Objekt {
 
     private static String ISBN;
 
-    public static void setISBN(String ISBN) {
-        Bok.ISBN = ISBN;
+    public Bok() {
+        super();
+    }
+
+    public Bok(String titel, String genre, String plats, String utgivningsÅr, String lånedatum, String slutDatum, boolean tillgänglig, int lånePeriod) {
+        super(titel, genre, plats, utgivningsÅr, lånedatum, slutDatum, tillgänglig, lånePeriod);
+    }
+
+    public static void setISBN(String ID) {
+        Bok.ISBN = ID;
     }
 
     public static String getISBN() {

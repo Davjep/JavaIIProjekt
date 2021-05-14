@@ -10,6 +10,10 @@ import java.sql.Statement;
 public class Film {
     private static String filmID;
 
+    public Film() {
+        super();
+    }
+
     public static void setFilmID(String filmID) {
         Film.filmID = filmID;
     }

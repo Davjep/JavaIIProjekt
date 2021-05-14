@@ -108,8 +108,7 @@ public class RegistreraController {
             }
         }
         if (fältIfyllda) {
-            Användare läggaTillAnvändare = new Användare();
-            läggaTillAnvändare.läggaTillAnvändareSQL(förnamnTextFält.getText(),
+            Användare läggaTillAnvändare = new Användare(förnamnTextFält.getText(),
                     efternamnTextFält.getText(),
                     telefonNrTextFält.getText(),
                     gatuadressTextFält.getText(),
@@ -118,6 +117,7 @@ public class RegistreraController {
                     personNrTextFält.getText(),
                     användartypDropDown.getText(),
                     lösenordTextFält.getText());
+            läggaTillAnvändare.läggaTillAnvändareSQL();
 
             errorText.setText("");
 
