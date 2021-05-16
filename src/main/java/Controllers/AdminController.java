@@ -26,15 +26,17 @@ public class AdminController {
 
     @FXML
     void hanteraAnvändareKnappTryck(ActionEvent event) {
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("uppdateraprofil");
+        Stage stage = (Stage) hanteraAnvändareKnapp.getScene().getWindow();
+        stage.close();
 
     }
 
     @FXML
     void hanteraObjektKnappTryck(ActionEvent event) {
-        ControllerConnector controllerConnector = new ControllerConnector();
-        controllerConnector.connector("uppdateraprofil");
-        Stage stage = (Stage) läggTillAnvändareKnapp.getScene().getWindow();
-        stage.close();
+
+
     }
 
     @FXML
