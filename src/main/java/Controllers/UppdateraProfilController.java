@@ -1,5 +1,6 @@
 package Controllers;
 
+import Entiteter.Anställd;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
@@ -226,10 +227,18 @@ public class UppdateraProfilController implements Initializable {
 
     @FXML
     void avbrytKnappTryck(ActionEvent event) {
-        ControllerConnector controllerConnector = new ControllerConnector();
-        controllerConnector.connector("minProfil");
-        Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
-        stage.close();
+        if (Anställd.getAnställd()) {
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("hanteraanvändare");
+            Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
+            stage.close();
+        } else {
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("minProfil");
+            Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
+            stage.close();
+        }
+
     }
 
     //Metoder som sätter val på dropdown menyn.

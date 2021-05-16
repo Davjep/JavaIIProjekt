@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class taBortProfilPopUpController {
+public class TaBortProfilPopUpController {
 
     @FXML
     private Button jaKnapp;

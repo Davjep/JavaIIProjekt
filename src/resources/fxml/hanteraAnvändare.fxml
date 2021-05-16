@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HanteraAnvändareController">
+   <children>
+      <ListView fx:id="resultatLista" layoutX="94.0" layoutY="59.0" prefHeight="292.0" prefWidth="414.0" />
+      <Label layoutX="194.0" layoutY="14.0" text="Välj Användare">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="väljKnapp" layoutX="472.0" layoutY="356.0" mnemonicParsing="false" onAction="#väljKnappTryck" text="Välj" />
+      <Button fx:id="gåTillbakaKnapp" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#gåTillbakaKnappTryck" text="Gå Tillbaka" />
+   </children>
+</AnchorPane>

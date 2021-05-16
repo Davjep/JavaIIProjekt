@@ -7,16 +7,44 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Bok {
+public class Bok extends Objekt {
 
     private static String ISBN;
+    private String författare;
+    private String ämnesord;
+    private String kategori;
 
-    public static void setISBN(String ISBN) {
-        Bok.ISBN = ISBN;
+    public Bok() {
+        super();
+    }
+
+    public Bok(String titel, String författare, String ämnesord, String kategori, String utgivningsÅr, boolean tillgänglig, String plats) {
+        super(titel, plats, utgivningsÅr, tillgänglig);
+        this.författare = författare;
+        this.ämnesord = ämnesord;
+        this.kategori = kategori;
+    }
+
+    public static void setISBN(String ID) {
+        Bok.ISBN = ID;
     }
 
     public static String getISBN() {
         return ISBN;
+    }
+
+    public void läggTillBokSQL() {
+        try {
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+            String sqlInsertQuery = "INSERT INTO bok (Titel, Författare, ÄmnesOrd, Kategori, UtgivningsÅr) " +
+                    "VALUES ('" + getTitel() + "','" + getFörfattare() + "','" + getÄmnesord() + "','" + getKategori() + "','" + getUtgivningsÅr() + "' )";
+            statement.executeUpdate(sqlInsertQuery);
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
     }
 
     public String hämtaTitelSQL() {
@@ -127,5 +155,28 @@ public class Bok {
         return null;
     }
 
+    public String getFörfattare() {
+        return författare;
+    }
+
+    public void setFörfattare(String författare) {
+        this.författare = författare;
+    }
+
+    public String getÄmnesord() {
+        return ämnesord;
+    }
+
+    public void setÄmnesord(String ämnesord) {
+        this.ämnesord = ämnesord;
+    }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
 }
 
