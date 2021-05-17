@@ -6,11 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DatabasConnector {
-
-    //Klass och metod som kopplar till den lokala databasen
     private String url = "jdbc:mysql://localhost/";
-    private static final String USERNAME = "jepsson";
-    private static final String PASSWORD = "David123!";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "root";
     private PreparedStatement selectUser;
     private Connection connection;
     private String databaseName;

@@ -52,6 +52,10 @@ public class MinProfilController {
 
     @FXML
     void minaLånKnappTryck(ActionEvent event) {
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("Minalån");
+        Stage stage = (Stage) minaLånKnapp.getScene().getWindow();
+        stage.close();
 
     }
 
