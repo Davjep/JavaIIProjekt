@@ -1,19 +1,12 @@
 package Controllers;
 
-import Databas.DatabasConnector;
+import Databas.Lån;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
-import Objekt.Bok;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.time.LocalDate;
 
 public class LånaBekräftelsePopUpController {
 
@@ -25,27 +18,13 @@ public class LånaBekräftelsePopUpController {
 
     @FXML
     void jaKnappTryck(ActionEvent event) {
-        Bok.getISBN();
-
-        try {
-            DatabasConnector databasConnector = new DatabasConnector();
-            Connection connection = databasConnector.getConnection();
-            String getAnvändarID = "SELECT användarID FROM användare WHERE Email = '" + Användare.getInloggadEmail() + "';";
-            Statement sqlgetAnvändarID = connection.createStatement();
-
-            ResultSet användarIDResult = sqlgetAnvändarID.executeQuery(getAnvändarID);
-
-            String insertLån = "INSERT INTO lån (StartDatum, AnvändarId) VALUES ('" + LocalDate.now() + "', '" + användarIDResult.getString("användarID" + "';");
-
-
-            Statement sqlSkapaLån = connection.createStatement();
-            sqlSkapaLån.executeUpdate(insertLån);
-        }catch (SQLException e) {
-            e.getStackTrace();
-            e.getCause();
-        }
-
-
+        Användare användare = new Användare();
+        Lån lån = new Lån();
+        lån.skapaLån(användare.hämtaAnvändarID());
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("låneKvitto");
+        Stage stage = (Stage) jaKnapp.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

@@ -20,6 +20,7 @@ public class ControllerConnector {
             System.exit(1);
         }
     }
+
     //Metod som skapar ett mindre fönster, en "popup"
     public void popupConnector (String fxml) {
         try {

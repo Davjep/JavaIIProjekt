@@ -5,17 +5,16 @@ import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import Objekt.Film;
+import Verktyg.VäljIListan;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class SökController {
 
@@ -107,19 +106,11 @@ public class SökController {
         resultatLista.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
-    @FXML
-    void resultatListaMerInfo(MouseEvent event) {
-        ControllerConnector controllerConnector = new ControllerConnector();
-        controllerConnector.connector("bokDetaljer");
-        Stage stage = (Stage) resultatLista.getScene().getWindow();
-        stage.close();
-
-    }
 
     @FXML
     void hemKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
-        if (Användare.isInloggad()) {
+        if (Användare.getInloggad()) {
             controllerConnector.connector("minProfil");
         } else {
             controllerConnector.connector("startsida");
@@ -131,33 +122,17 @@ public class SökController {
 
     @FXML
     void väljKnappTryck(ActionEvent event) {
-
-        //Variabler för att identifiera ISBN i resultatlista Stringen
-        int förstaIndex = resultatLista.getSelectionModel().getSelectedItem().indexOf(" ");
-        int sistaIndex = resultatLista.getSelectionModel().getSelectedItem().indexOf(",");
-
-        ArrayList IDarray = new ArrayList();
-
-        for (int i = (förstaIndex + 1); i < sistaIndex; i++){
-            char ISBNchar = resultatLista.getSelectionModel().getSelectedItem().charAt(i);
-            IDarray.add(ISBNchar);
-        }
-
-        String ISBNoutput = "0";
-        for (int i = 0; i < IDarray.toArray().length; i++){
-            ISBNoutput += IDarray.get(i);
-        }
-
-        StringBuilder fullID = new StringBuilder(ISBNoutput).deleteCharAt(0);
+        VäljIListan valdRad = new VäljIListan();
+        String fullID = valdRad.väljValdRad(resultatLista.getSelectionModel().getSelectedItem());
 
         if (kategoriValDropDown.getText().equals("Bok")) {
-            Bok.setISBN(fullID.toString());
+            Bok.setISBN(fullID);
             ControllerConnector controllerConnector = new ControllerConnector();
             controllerConnector.connector("bokDetaljer");
             Stage stage = (Stage) resultatLista.getScene().getWindow();
             stage.close();
         } else {
-            Film.setFilmID(fullID.toString());
+            Film.setFilmID(fullID);
             ControllerConnector controllerConnector = new ControllerConnector();
             controllerConnector.connector("filmDetaljer");
             Stage stage = (Stage) resultatLista.getScene().getWindow();

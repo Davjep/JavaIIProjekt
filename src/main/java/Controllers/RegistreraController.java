@@ -1,5 +1,6 @@
 package Controllers;
 
+import Entiteter.Anställd;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
@@ -108,8 +109,7 @@ public class RegistreraController {
             }
         }
         if (fältIfyllda) {
-            Användare läggaTillAnvändare = new Användare();
-            läggaTillAnvändare.läggaTillAnvändareSQL(förnamnTextFält.getText(),
+            Användare läggaTillAnvändare = new Användare(förnamnTextFält.getText(),
                     efternamnTextFält.getText(),
                     telefonNrTextFält.getText(),
                     gatuadressTextFält.getText(),
@@ -118,6 +118,7 @@ public class RegistreraController {
                     personNrTextFält.getText(),
                     användartypDropDown.getText(),
                     lösenordTextFält.getText());
+            läggaTillAnvändare.läggaTillAnvändareSQL();
 
             errorText.setText("");
 
@@ -130,6 +131,12 @@ public class RegistreraController {
 
     @FXML
     void avbrytKnappTryck(ActionEvent event) {
+        if (Anställd.getAnställd()) {
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("admin");
+            Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
+            stage.close();
+        }
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("startsida");
         Stage stage = (Stage) avbrytKnapp.getScene().getWindow();

@@ -1,20 +1,17 @@
 package Controllers;
 
-import Databas.DatabasConnector;
+import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class BokDetaljerController implements Initializable {
@@ -43,6 +40,9 @@ public class BokDetaljerController implements Initializable {
     @FXML
     private Button lånaBokKnapp;
 
+    @FXML
+    private Label errorText;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -66,34 +66,27 @@ public class BokDetaljerController implements Initializable {
 
     @FXML
     void lånaBokKnappTryck(ActionEvent event) {
-        // TODO Skapar ett kvitto med lånedetaljer
-        try {
-            DatabasConnector databasConnector = new DatabasConnector();
-            Connection connection = databasConnector.getConnection();
-
-            String sqlStatus = "SELECT Status FROM fysiskkopia WHERE ISBN = '" + Bok.getISBN() + "';";
-
-            Statement statusStatement = connection.createStatement();
-
-            ResultSet statusResultat = statusStatement.executeQuery(sqlStatus);
-            statusResultat.next();
-
-            if (!statusResultat.getString("status").equals("Tillgänglig")) {
+        Bok bok = new Bok();
+        if (bok.hämtaKategoriSQL().equalsIgnoreCase("Referenslitteratur")) {
+            errorText.setText("Referenslitteratur kan ej lånas ut! ");
+        } else if (bok.hämtaKategoriSQL().equalsIgnoreCase("Tidsskrift")) {
+            errorText.setText("Tidsskrifter kan ej lånas ut! ");
+        } else {
+            errorText.setText("");
+            Lån lån = new Lån();
+            if (!lån.hämtaLåneStatus().equalsIgnoreCase("Tillgänglig")) {
                 ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.connector("ejTillgängligPopUp");
+                controllerConnector.popupConnector("ejTillgängligPopUp");
                 Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
                 stage.close();
             } else {
+                Lån.setLåneTyp("Bok");
                 ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.connector("ejTillgängligPopUp");
+                controllerConnector.popupConnector("lånaBekräftelsePopUp");
                 Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
                 stage.close();
             }
-        }catch (SQLException e) {
-            e.getCause();
-            e.getStackTrace();
         }
-
     }
 
 }

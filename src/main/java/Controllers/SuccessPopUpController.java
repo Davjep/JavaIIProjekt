@@ -1,5 +1,6 @@
 package Controllers;
 
+import Entiteter.Anställd;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import javafx.event.ActionEvent;
@@ -19,10 +20,16 @@ public class SuccessPopUpController {
     @FXML
     void okKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
-        if (Användare.isInloggad()) {
-            controllerConnector.connector("minProfil");
-            Stage stage = (Stage) okKnapp.getScene().getWindow();
-            stage.close();
+        if (Användare.getInloggad()) {
+            if (Anställd.getAnställd()) {
+                controllerConnector.connector("admin");
+                Stage stage = (Stage) okKnapp.getScene().getWindow();
+                stage.close();
+            } else {
+                controllerConnector.connector("minProfil");
+                Stage stage = (Stage) okKnapp.getScene().getWindow();
+                stage.close();
+            }
         } else {
             controllerConnector.connector("startsida");
             Stage stage = (Stage) okKnapp.getScene().getWindow();

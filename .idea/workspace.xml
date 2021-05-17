@@ -23,11 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/LäggTillObjektController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/läggTillObjekt.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinProfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MinaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinaLånController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/minalån.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/minalån.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/taBortProfilPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/TaBortProfilPopUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/taBortBekräftelsePopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/taBortBekräftelsePopUp.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +44,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="module-info" />
-        <option value="XML Properties File" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,6 +74,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1r4IPPBSf4T0zZH4nWXhYSCFxk6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -100,26 +105,19 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jepsson\IdeaProjects\JavaIIProjekt\src\resources\fxml" />
-      <recent name="C:\Users\Jepsson\IdeaProjects\JavaIIProjekt\src" />
-      <recent name="C:\Users\Jepsson\IdeaProjects\JavaIIProjekt\src\main\resources" />
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Objekt" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="Session" />
+      <recent name="Verktyg" />
+      <recent name="Objekt" />
+      <recent name="Databas" />
       <recent name="Controllers" />
       <recent name="Databas" />
       <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.NewMain">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main.Main" />
-      <module name="JavaIIProjekt" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NewMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewMain.NewMain" />
       <module name="JavaIIProjekt" />
@@ -133,18 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnvändareInsertsTest.beräknaÅlderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnvändareTest.loggaIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -153,8 +140,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareInsertsTest" />
-      <option name="METHOD_NAME" value="beräknaÅlderTest" />
+      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
+      <option name="METHOD_NAME" value="loggaIn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,33 +157,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistreraControllerTest.registrera" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BokTest.hämtaKategoriSQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Controllers.*" />
+          <option name="PATTERN" value="Objekt.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Controllers" />
-      <option name="MAIN_CLASS_NAME" value="Controllers.RegistreraControllerTest" />
-      <option name="METHOD_NAME" value="registrera" />
+      <option name="PACKAGE_NAME" value="Objekt" />
+      <option name="MAIN_CLASS_NAME" value="Objekt.BokTest" />
+      <option name="METHOD_NAME" value="hämtaKategoriSQL" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SessionsAnvändareTest.getInloggadEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VäljIListanTest.väljValdRad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Session.*" />
+          <option name="PATTERN" value="Verktyg.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Session" />
-      <option name="MAIN_CLASS_NAME" value="Session.SessionsAnvändareTest" />
-      <option name="METHOD_NAME" value="getInloggadEmail" />
+      <option name="PACKAGE_NAME" value="Verktyg" />
+      <option name="MAIN_CLASS_NAME" value="Verktyg.VäljIListanTest" />
+      <option name="METHOD_NAME" value="väljValdRad" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -213,10 +200,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
-        <item itemvalue="JUnit.SessionsAnvändareTest.getInloggadEmail" />
-        <item itemvalue="JUnit.AnvändareInsertsTest.beräknaÅlderTest" />
-        <item itemvalue="JUnit.RegistreraControllerTest.registrera" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AnvändareTest.loggaIn" />
+        <item itemvalue="JUnit.VäljIListanTest.väljValdRad" />
+        <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
+        <item itemvalue="JUnit.AnvändareTest.läggaTillAnvändareTest" />
       </list>
     </recent_temporary>
   </component>
@@ -230,10 +217,15 @@
       <updated>1618228913295</updated>
       <workItem from="1618228916922" duration="776000" />
       <workItem from="1618573986195" duration="641000" />
-      <workItem from="1619695496403" duration="1580000" />
-      <workItem from="1619708606547" duration="1766000" />
-      <workItem from="1619961000674" duration="6173000" />
-      <workItem from="1620023206810" duration="571000" />
+      <workItem from="1620646249802" duration="1124000" />
+      <workItem from="1620647992882" duration="10575000" />
+      <workItem from="1620714284335" duration="20000" />
+      <workItem from="1620719846852" duration="1142000" />
+      <workItem from="1620747318583" duration="3130000" />
+      <workItem from="1620823544924" duration="617000" />
+      <workItem from="1620896257246" duration="17596000" />
+      <workItem from="1620979514065" duration="21752000" />
+      <workItem from="1621151168954" duration="2411000" />
     </task>
     <task id="LOCAL−00001" summary="Adding javafx to project. Created first .fxml file with Controller //DJ">
       <created>1619965739765</created>
@@ -265,13 +257,37 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1620288267572</updated>
     </task>
-    <task id="LOCAL−00006" summary="Updates 2021-05-06">
-      <created>1620374990160</created>
+    <task id="LOCAL−00006" summary="Fixat sökklassen//DJ">
+      <created>1620720047473</created>
       <option name="number" value="LOCAL−00006" />
       <option name="presentableId" value="LOCAL−00006" />
-      <updated>1620374990160</updated>
+      <updated>1620720047473</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Skapat Lån, Lånkvitto//DJ">
+      <created>1620911579347</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1620911579347</updated>
+    </task>
+    <task id="LOCAL−00008" summary="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ">
+      <created>1620912032033</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1620912032033</updated>
+    </task>
+    <task id="LOCAL−00009" summary="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ">
+      <created>1620984165068</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1620984165068</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Tillagt funktioner för biblioteksanställda//DJ">
+      <created>1620994574917</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1620994574917</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,64 +306,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding javafx to project. Created first .fxml file with Controller //DJ" />
-    <MESSAGE value="Skapat sql connection klass med metod//DJ" />
-    <MESSAGE value="Updateringar 2021-05-03" />
-    <MESSAGE value="May the 4th be with you//Laget" />
-    <MESSAGE value="Updates 2021-05-05" />
-    <MESSAGE value="Updates 2021-05-06" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates 2021-05-06" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1621151896878">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1621151896878" />
-    <state width="1326" height="131" key="GridCell.Tab.0.bottom" timestamp="1621156249985">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1326" height="131" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1621156249985" />
-    <state width="1326" height="131" key="GridCell.Tab.0.center" timestamp="1621156249984">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1326" height="131" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1621156249984" />
-    <state width="1326" height="131" key="GridCell.Tab.0.left" timestamp="1621156249984">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1326" height="131" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1621156249984" />
-    <state width="1326" height="131" key="GridCell.Tab.0.right" timestamp="1621156249984">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1326" height="131" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1621156249984" />
-    <state x="186" y="81" key="SettingsEditor" timestamp="1621150752896">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1621150752896" />
-    <state x="90" y="128" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1621150857581">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="90" y="128" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1368.872@0.0.1368.872" timestamp="1621150857581" />
-    <state x="502" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621148963407">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="502" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1368.872@0.0.1368.872" timestamp="1621148963407" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.sql.SQLException" package="java.sql" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ" />
+    <MESSAGE value="Flyttat metoder till relevanta klasser, städat upp i koden//DJ" />
+    <MESSAGE value="Lagt till att ålder uppdateras automatiskt i Användare.uppdateraAnvändareSQL//DJ" />
+    <MESSAGE value="Skapat fxml och controller för skapa film lån//DJ" />
+    <MESSAGE value="Fixat sökklassen//DJ" />
+    <MESSAGE value="Skapat Lån, Lånkvitto//DJ" />
+    <MESSAGE value="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ" />
+    <MESSAGE value="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ" />
+    <MESSAGE value="Tillagt funktioner för biblioteksanställda//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tillagt funktioner för biblioteksanställda//DJ" />
   </component>
 </project>
