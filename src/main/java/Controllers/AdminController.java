@@ -27,7 +27,7 @@ public class AdminController {
     @FXML
     void hanteraAnvändareKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
-        controllerConnector.connector("uppdateraprofil");
+        controllerConnector.connector("hanteraAnvändare");
         Stage stage = (Stage) hanteraAnvändareKnapp.getScene().getWindow();
         stage.close();
 
@@ -61,7 +61,10 @@ public class AdminController {
 
     @FXML
     void läggTillObjektKnappTryck(ActionEvent event) {
-
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("läggtillobjekt");
+        Stage stage = (Stage) läggTillAnvändareKnapp.getScene().getWindow();
+        stage.close();
     }
 
 }

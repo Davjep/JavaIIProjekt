@@ -29,7 +29,6 @@ public abstract class Entitet {
         this.lösenord = lösenord;
     }
 
-
     public static String getInloggadEmail() {
         return inloggadEmail;
     }
