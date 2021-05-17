@@ -14,13 +14,13 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class LäggTillObjektController implements Initializable {
+    //TODO Fundera på om vi ska lägga till en ny fysisk kopia via denna sidan, eller ifall vi behöver en separat sida för att lägga till detta??
 
     @FXML
     private Label objektVal;
 
     @FXML
     private SplitMenuButton objektValMeny;
-
 
     @FXML
     private MenuItem bokKategori;
@@ -181,14 +181,16 @@ public class LäggTillObjektController implements Initializable {
 
     @FXML
     void bokKategoriVal(ActionEvent event) {
+        //Visar korrekt fält och text när man väljer bok alternativet
         objektValMeny.setText("Bok");
         for (Label label : Arrays.asList(text1, text2, text3, text4, text5, text6)) {
             label.setVisible(true);
         }
-
+        text7.setVisible(false);
         for (TextField textField : Arrays.asList(textFält1, textFält2, textFält3, textFält4, textFält5, textFält6)) {
             textField.setVisible(true);
         }
+        textFält7.setVisible(false);
 
         text1.setText("Titel");
         text2.setText("Författare");
@@ -201,6 +203,7 @@ public class LäggTillObjektController implements Initializable {
 
     @FXML
     void filmKategoriVal(ActionEvent event) {
+        //Visar korrekt fält och text när man väljer film alternativet
         objektValMeny.setText("Film");
         for (Label label : Arrays.asList(text1, text2, text3, text4, text5, text6, text7)) {
             label.setVisible(true);
