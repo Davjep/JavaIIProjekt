@@ -72,6 +72,8 @@ public class Lån {
 
     public Date hämtaStartDatum (){
         //TODO Måste fixa så att man får rätt datum. Idag får man endast datumet för det första lånet som skapades
+
+        //Databasen är uppdaterad
         try{
             Användare användare = new Användare();
             String sqlSök = "SELECT StartDatum FROM lån WHERE användarId = " + användare.hämtaAnvändarID() + "";

@@ -23,15 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/LäggTillObjektController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/läggTillObjekt.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/taBortProfilPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/TaBortProfilPopUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/taBortBekräftelsePopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/taBortBekräftelsePopUp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +124,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnvändareTest.loggaIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
@@ -190,6 +196,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.NewMain" />
+      <item itemvalue="JUnit.AnvändareTest.loggaIn" />
+      <item itemvalue="JUnit.AnvändareTest.läggaTillAnvändareTest" />
+      <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
+      <item itemvalue="JUnit.VäljIListanTest.väljValdRad" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.NewMain" />
       <item itemvalue="JUnit.AnvändareTest" />
