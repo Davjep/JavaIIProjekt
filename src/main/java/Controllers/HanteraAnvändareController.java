@@ -32,9 +32,9 @@ public class HanteraAnvändareController implements Initializable {
         DatabasConnector databasConnector = new DatabasConnector();
         Connection connection = databasConnector.getConnection();
         try {
-            String sqlBokSök = "SELECT * FROM användare;";
-            PreparedStatement statement = connection.prepareStatement(sqlBokSök);
-            ResultSet resultSet = statement.executeQuery(sqlBokSök);
+            String sqlAnvändareSök = "SELECT * FROM användare;";
+            PreparedStatement statement = connection.prepareStatement(sqlAnvändareSök);
+            ResultSet resultSet = statement.executeQuery(sqlAnvändareSök);
             for (int i = 0; resultSet.next(); i++) {
                 String användarIDResultat = resultSet.getString("användarID");
                 String förNamnResultat = resultSet.getString("förnamn");

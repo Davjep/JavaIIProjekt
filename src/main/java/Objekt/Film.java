@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class Film extends Objekt {
     private static String filmID;
     private String regissör;
-    private String genre;
+    private static String genre;
     private String åldersBegränsning;
     private String produktionsland;
 
@@ -21,7 +21,7 @@ public class Film extends Objekt {
     public Film(String titel, String regissör, String genre, String produktionsland, String utgivningsÅr, boolean tillgänglig, String åldersBegränsning, String plats) {
         super(titel, plats, utgivningsÅr, tillgänglig);
         this.regissör = regissör;
-        this.genre = genre;
+        Film.genre = genre;
         this.åldersBegränsning = åldersBegränsning;
         this.produktionsland = produktionsland;
     }
@@ -186,7 +186,7 @@ public class Film extends Objekt {
     }
 
     public void setGenre(String genre) {
-        this.genre = genre;
+        Film.genre = genre;
     }
 
     public String getÅldersBegränsning() {

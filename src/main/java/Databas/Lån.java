@@ -29,12 +29,12 @@ public class Lån {
 
 
 
-    public void skapaLån(String AnvändarID) {
+    public void skapaLån(String AnvändarID, String fysiskKopiaID, int låneDagar) {
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement sqlSkapaLån = connection.createStatement();
-            String insertLån = "INSERT INTO lån (StartDatum, AnvändarId) VALUES ('" + LocalDate.now() + "', " + AnvändarID + ");";
+            String insertLån = "INSERT INTO lån (StartDatum, AnvändarId, Återlämningsdatum, FysiskkopiaID) VALUES ('" + LocalDate.now() + "', " + AnvändarID + ", '" + beräknaÅterlämningsDatum(låneDagar) + "', '" + fysiskKopiaID + "');";
 
             sqlSkapaLån.executeUpdate(insertLån);
 
@@ -117,7 +117,8 @@ public class Lån {
     public Date beräknaÅterlämningsDatum (int days) {
 
         Calendar c = Calendar.getInstance();
-        c.setTime(hämtaStartDatum());
+        Date date = new Date();
+        c.setTime(date);
         c.add(Calendar.DAY_OF_MONTH, days);
         return c.getTime();
     }

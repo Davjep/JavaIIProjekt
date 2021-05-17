@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
-import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -20,9 +19,9 @@ class LånTest {
         Lån lån = new Lån();
         Användare användare = new Användare();
         Användare.setInloggadEmail("testmail@test.se");
-        System.out.println(LocalDate.now());
+        System.out.println(lån.beräknaÅterlämningsDatum(0));
 
-        lån.skapaLån(användare.hämtaAnvändarID());
+        //lån.skapaLån(användare.hämtaAnvändarID());
     }
 
     @Test

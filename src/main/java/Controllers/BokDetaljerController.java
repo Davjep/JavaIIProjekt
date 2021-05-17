@@ -1,6 +1,5 @@
 package Controllers;
 
-import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import javafx.event.ActionEvent;
@@ -73,6 +72,11 @@ public class BokDetaljerController implements Initializable {
             errorText.setText("Tidsskrifter kan ej lånas ut! ");
         } else {
             errorText.setText("");
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("väljfysiskkopia");
+            Stage stage = (Stage) gåTillbakaKnapp.getScene().getWindow();
+            stage.close();
+            /*
             Lån lån = new Lån();
             if (!lån.hämtaLåneStatus().equalsIgnoreCase("Tillgänglig")) {
                 ControllerConnector controllerConnector = new ControllerConnector();
@@ -85,7 +89,7 @@ public class BokDetaljerController implements Initializable {
                 controllerConnector.popupConnector("lånaBekräftelsePopUp");
                 Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
                 stage.close();
-            }
+            }*/
         }
     }
 

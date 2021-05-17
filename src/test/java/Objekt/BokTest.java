@@ -8,10 +8,9 @@ class BokTest {
     @Test
     void hämtaKategoriSQL() {
         Användare.setInloggadEmail("Jorsan");
-        Bok.setID("1");
-        Bok.setISBN("2");
+        Bok.setFysiskKopiaID("5");
         Bok bok = new Bok();
-        System.out.println(Bok.getISBN());
-        System.out.println(Bok.getID());
+        System.out.println(bok.hämtaStatusSQL());
+        System.out.println(Bok.getFysiskKopiaID());
     }
 }

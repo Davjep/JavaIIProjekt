@@ -3,6 +3,8 @@ package Controllers;
 import Databas.Lån;
 import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
+import Objekt.Bok;
+import Objekt.Objekt;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -18,9 +20,20 @@ public class LånaBekräftelsePopUpController {
 
     @FXML
     void jaKnappTryck(ActionEvent event) {
+        //Skapar ett nytt lån i databasen. Om det är bok räknar vi ut hur många dagar den får lånas. Annars 1 vecka, alltid samma för film.
         Användare användare = new Användare();
         Lån lån = new Lån();
-        lån.skapaLån(användare.hämtaAnvändarID());
+        if (Lån.getLåneTyp().equalsIgnoreCase("Bok")) {
+            Bok bok = new Bok();
+            if (bok.hämtaKategoriSQL().equals("Referenslitteratur")) {
+                lån.skapaLån(användare.hämtaAnvändarID(), Objekt.getFysiskKopiaID(), 14);
+            } else {
+                lån.skapaLån(användare.hämtaAnvändarID(), Objekt.getFysiskKopiaID(), 31);
+            }
+        } else {
+            lån.skapaLån(användare.hämtaAnvändarID(), Objekt.getFysiskKopiaID(), 7);
+        }
+
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("låneKvitto");
         Stage stage = (Stage) jaKnapp.getScene().getWindow();

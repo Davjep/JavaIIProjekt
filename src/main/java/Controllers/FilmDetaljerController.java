@@ -1,7 +1,5 @@
 package Controllers;
 
-import Databas.DatabasConnector;
-import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Film;
 import javafx.event.ActionEvent;
@@ -12,10 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class FilmDetaljerController implements Initializable {
@@ -70,7 +64,12 @@ public class FilmDetaljerController implements Initializable {
 
     @FXML
     void lånaFilmKnappTryck(ActionEvent event) {
-        try {
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("väljfysiskkopia");
+        Stage stage = (Stage) lånaFilmKnapp.getScene().getWindow();
+        stage.close();
+        //TODO Ta bort följande om allt fungerar som de ska med fysisk kopia
+/*        try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
@@ -96,7 +95,7 @@ public class FilmDetaljerController implements Initializable {
         }catch (SQLException e) {
             e.getCause();
             e.getStackTrace();
-        }
+        }*/
 
     }
 }

@@ -118,6 +118,7 @@ public class UppdateraProfilController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //Todo Uppdaterar inte korrekt från admin
 
         //Metod som körs när fönstret öppnas för att fylla i den existerande datan från databasen
         Användare användare = new Användare();
