@@ -5,6 +5,7 @@ import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import Objekt.Objekt;
+import Objekt.FysiskKopia;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,6 +34,9 @@ public class LånaBekräftelsePopUpController {
         } else {
             lån.skapaLån(användare.hämtaAnvändarID(), Objekt.getFysiskKopiaID(), 7);
         }
+
+        FysiskKopia fysiskKopia = new FysiskKopia();
+        fysiskKopia.setStatus(Objekt.getFysiskKopiaID(),"Utlånad");
 
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("låneKvitto");
