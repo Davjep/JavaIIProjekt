@@ -9,7 +9,6 @@ import java.sql.Statement;
 
 public abstract class Objekt {
     protected String titel;
-    protected String plats;
     protected String utgivningsÅr;
     protected boolean tillgänglig;
     protected String status;
@@ -21,9 +20,8 @@ public abstract class Objekt {
 
     }
 
-    public Objekt(String titel, String plats, String utgivningsÅr, boolean tillgänglig) {
+    public Objekt(String titel, String utgivningsÅr, boolean tillgänglig) {
         this.titel = titel;
-        this.plats = plats;
         this.utgivningsÅr = utgivningsÅr;
         this.tillgänglig = tillgänglig;
     }
@@ -74,10 +72,6 @@ public abstract class Objekt {
         this.titel = titel;
     }
 
-    public void setPlats(String plats) {
-        this.plats = plats;
-    }
-
     public void setUtgivningsÅr(String utgivningsÅr) {
         this.utgivningsÅr = utgivningsÅr;
     }
@@ -88,10 +82,6 @@ public abstract class Objekt {
 
     public String getTitel() {
         return titel;
-    }
-
-    public String getPlats() {
-        return plats;
     }
 
     public String getUtgivningsÅr() {

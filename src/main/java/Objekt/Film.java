@@ -18,8 +18,8 @@ public class Film extends Objekt {
         super();
     }
 
-    public Film(String titel, String regissör, String genre, String produktionsland, String utgivningsÅr, boolean tillgänglig, String åldersBegränsning, String plats) {
-        super(titel, plats, utgivningsÅr, tillgänglig);
+    public Film(String titel, String regissör, String genre, String produktionsland, String utgivningsÅr, boolean tillgänglig, String åldersBegränsning) {
+        super(titel, utgivningsÅr, tillgänglig);
         this.regissör = regissör;
         Film.genre = genre;
         this.åldersBegränsning = åldersBegränsning;
