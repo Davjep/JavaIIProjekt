@@ -1,5 +1,6 @@
 package Controllers;
 
+import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import javafx.event.ActionEvent;
@@ -72,6 +73,7 @@ public class BokDetaljerController implements Initializable {
             errorText.setText("Tidsskrifter kan ej lånas ut! ");
         } else {
             errorText.setText("");
+            Lån.setLåneTyp("Bok");
             ControllerConnector controllerConnector = new ControllerConnector();
             controllerConnector.connector("väljfysiskkopia");
             Stage stage = (Stage) gåTillbakaKnapp.getScene().getWindow();

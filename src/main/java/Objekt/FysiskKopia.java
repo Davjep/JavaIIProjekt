@@ -54,6 +54,17 @@ public class FysiskKopia {
 
     public void setStatus(String status) {
         this.status = status;
+        try {
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+            String sqlUpdateStatusQuery = "UPDATE fysiskkopia SET  " +
+                    "";
+            statement.executeUpdate(sqlUpdateStatusQuery);
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
     }
 
     public String getISBN() {

@@ -23,15 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Entiteter/AnvändareTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/HanteraAnvändareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/HanteraAnvändareController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Anställd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Anställd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/VäljFysiskKopiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/VäljFysiskKopiaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +200,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LånTest.skapaLån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LånTest.hämtaDatum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -212,7 +210,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Databas" />
       <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
-      <option name="METHOD_NAME" value="skapaLån" />
+      <option name="METHOD_NAME" value="hämtaDatum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -222,17 +220,17 @@
       <item itemvalue="Application.NewMain" />
       <item itemvalue="JUnit.AnvändareTest" />
       <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
-      <item itemvalue="JUnit.LånTest.skapaLån" />
       <item itemvalue="JUnit.FysiskKopiaTest.läggTillFysiskKopiaSQL" />
       <item itemvalue="JUnit.AnvändareTest.hämtaAnvändarID" />
+      <item itemvalue="JUnit.LånTest.hämtaDatum" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
+        <item itemvalue="JUnit.LånTest.hämtaDatum" />
         <item itemvalue="JUnit.AnvändareTest.hämtaAnvändarID" />
         <item itemvalue="JUnit.FysiskKopiaTest.läggTillFysiskKopiaSQL" />
         <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
-        <item itemvalue="JUnit.LånTest.skapaLån" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +254,7 @@
       <workItem from="1620979514065" duration="21752000" />
       <workItem from="1621151168954" duration="2411000" />
       <workItem from="1621288790752" duration="119000" />
-      <workItem from="1621318040333" duration="11763000" />
+      <workItem from="1621318040333" duration="16595000" />
     </task>
     <task id="LOCAL−00001" summary="Adding javafx to project. Created first .fxml file with Controller //DJ">
       <created>1619965739765</created>
@@ -342,7 +340,13 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1621327043190</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="Fixat UppdateraProfilController så att rätt information hämtas från DB//DJ">
+      <created>1621331683442</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1621331683442</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +378,7 @@
     <MESSAGE value="Lagt till sida för att välja fysiskkopia efter man har valt vilken bok man vill låna//DJ" />
     <MESSAGE value="Ändringar för objekt och admin controllers//DJ" />
     <MESSAGE value="Skapat FysiskKopia klass, uppdaterat LäggTillObjektController//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skapat FysiskKopia klass, uppdaterat LäggTillObjektController//DJ" />
+    <MESSAGE value="Fixat UppdateraProfilController så att rätt information hämtas från DB//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixat UppdateraProfilController så att rätt information hämtas från DB//DJ" />
   </component>
 </project>

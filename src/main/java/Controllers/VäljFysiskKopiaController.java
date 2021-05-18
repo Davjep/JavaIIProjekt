@@ -64,8 +64,8 @@ public class VäljFysiskKopiaController implements Initializable {
     void väljKnappTryck(ActionEvent event) {
         VäljIListan valdRad = new VäljIListan();
         String fullID = valdRad.väljValdRad(resultatLista.getSelectionModel().getSelectedItem());
-        //if / else ifall ISBN är tom eller ej
-        if (Bok.getISBN().equals("")) {
+        //if / else ifall ISBN är null eller ej
+        if (Bok.getISBN() == null) {
             Film film = new Film();
             Film.setFysiskKopiaID(fullID);
             status = film.hämtaStatusSQL();

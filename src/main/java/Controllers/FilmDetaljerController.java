@@ -1,5 +1,6 @@
 package Controllers;
 
+import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Film;
 import javafx.event.ActionEvent;
@@ -64,6 +65,7 @@ public class FilmDetaljerController implements Initializable {
 
     @FXML
     void lånaFilmKnappTryck(ActionEvent event) {
+        Lån.setLåneTyp("Film");
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("väljfysiskkopia");
         Stage stage = (Stage) lånaFilmKnapp.getScene().getWindow();
