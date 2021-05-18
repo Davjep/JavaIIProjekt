@@ -18,6 +18,9 @@ public class StartsidaController {
     private Button registreraKnapp;
 
     @FXML
+    private Button återlämnaLånKnapp;
+
+    @FXML
     void tryckLoggaIn(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("loggaIn");
@@ -39,6 +42,14 @@ public class StartsidaController {
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("sök");
         Stage stage = (Stage) sökKnapp.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    void återlämnaLånKnappTryck(ActionEvent event) {
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("återlämnaLån");
+        Stage stage = (Stage) återlämnaLånKnapp.getScene().getWindow();
         stage.close();
     }
 
