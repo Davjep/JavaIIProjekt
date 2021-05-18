@@ -22,10 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Updates 2021-05-06">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/fxml/återlämnaLån.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LäggTillObjektController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LäggTillObjektController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/StartsidaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/StartsidaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/VäljFysiskKopiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/VäljFysiskKopiaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/startsida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/startsida.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +88,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BookJavaFXTableView" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Minalån.fxml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -121,6 +125,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,22 +182,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LånTest.skapaLån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaIIProjekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Databas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
-      <option name="METHOD_NAME" value="skapaLån" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="VäljIListanTest.väljValdRad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
@@ -205,15 +204,13 @@
       <item itemvalue="JUnit.AnvändareTest.loggaIn" />
       <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
       <item itemvalue="JUnit.VäljIListanTest.väljValdRad" />
-      <item itemvalue="JUnit.LånTest.skapaLån" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
-        <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
-        <item itemvalue="JUnit.LånTest.skapaLån" />
         <item itemvalue="JUnit.AnvändareTest.loggaIn" />
         <item itemvalue="JUnit.VäljIListanTest.väljValdRad" />
+        <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
       </list>
     </recent_temporary>
   </component>
@@ -297,19 +294,7 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1620994574917</updated>
     </task>
-    <task id="LOCAL−00011" summary="Tillagt funktioner för biblioteksanställda//DJ">
-      <created>1621250232220</created>
-      <option name="number" value="LOCAL−00011" />
-      <option name="presentableId" value="LOCAL−00011" />
-      <updated>1621250232221</updated>
-    </task>
-    <task id="LOCAL−00012" summary="Lagt till sida för att välja fysiskkopia efter man har valt vilken bok man vill låna//DJ">
-      <created>1621267416321</created>
-      <option name="number" value="LOCAL−00012" />
-      <option name="presentableId" value="LOCAL−00012" />
-      <updated>1621267416321</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +313,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ" />
     <MESSAGE value="Flyttat metoder till relevanta klasser, städat upp i koden//DJ" />
     <MESSAGE value="Lagt till att ålder uppdateras automatiskt i Användare.uppdateraAnvändareSQL//DJ" />
@@ -338,7 +322,28 @@
     <MESSAGE value="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ" />
     <MESSAGE value="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ" />
     <MESSAGE value="Tillagt funktioner för biblioteksanställda//DJ" />
-    <MESSAGE value="Lagt till sida för att välja fysiskkopia efter man har valt vilken bok man vill låna//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lagt till sida för att välja fysiskkopia efter man har valt vilken bok man vill låna//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tillagt funktioner för biblioteksanställda//DJ" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="277" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621333436384">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="277" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1621333436384" />
+    <state width="1326" height="145" key="GridCell.Tab.0.bottom" timestamp="1621333282866">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1326" height="145" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1621333282866" />
+    <state width="1326" height="145" key="GridCell.Tab.0.center" timestamp="1621333282866">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1326" height="145" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1621333282866" />
+    <state width="1326" height="145" key="GridCell.Tab.0.left" timestamp="1621333282866">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1326" height="145" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1621333282866" />
+    <state width="1326" height="145" key="GridCell.Tab.0.right" timestamp="1621333282866">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1326" height="145" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1621333282866" />
   </component>
 </project>

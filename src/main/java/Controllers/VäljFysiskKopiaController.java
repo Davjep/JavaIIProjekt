@@ -58,6 +58,13 @@ public class VäljFysiskKopiaController implements Initializable {
     @FXML
     void gåTillbakaKnappTryck(ActionEvent event) {
 
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("sök");
+        Stage stage = (Stage) gåTillbakaKnapp.getScene().getWindow();
+        stage.close();
+
+
+
     }
 
     @FXML
