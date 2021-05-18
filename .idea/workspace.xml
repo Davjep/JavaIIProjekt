@@ -22,15 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/VäljFysiskKopiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/VäljFysiskKopiaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
