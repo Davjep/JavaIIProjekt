@@ -101,7 +101,7 @@
                         <Insets left="5.0" right="5.0" />
                     </GridPane.margin>
                 </SplitMenuButton>
-                <Button fx:id="uppdateraKnapp" mnemonicParsing="false" onAction="#uppdateraKnappTryck" text="Spara" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+                <Button fx:id="sparaKnapp" mnemonicParsing="false" onAction="#sparaKnappTryck" text="Spara" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
                     <GridPane.margin>
                         <Insets right="80.0" />
                     </GridPane.margin>

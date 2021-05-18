@@ -33,8 +33,8 @@ public class Anställd extends Entitet {
         return anställd;
     }
 
-    public static void setAnställd() {
-        anställd = true;
+    public static void setAnställd(boolean anställd) {
+        Anställd.anställd = anställd;
     }
 
     public boolean getChef() {
@@ -55,7 +55,9 @@ public class Anställd extends Entitet {
             Statement emailStatement = connection.createStatement();
 
             ResultSet emailQuery = emailStatement.executeQuery(hittaEmail);
-            return emailQuery.toString();
+            emailQuery.next();
+
+            return emailQuery.getString("email");
         } catch (SQLException e) {
             e.getCause();
             e.getStackTrace();

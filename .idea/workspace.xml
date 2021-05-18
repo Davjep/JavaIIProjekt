@@ -23,14 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Objekt/FysiskKopiaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Entiteter/AnvändareTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LäggTillObjektController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LäggTillObjektController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Objekt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/läggTillObjekt.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/läggTillObjekt.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/HanteraAnvändareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/HanteraAnvändareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LoggaInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UppdateraProfilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Anställd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Anställd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/uppdateraProfil.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +110,7 @@
       <recent name="Objekt" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Entiteter" />
       <recent name="Objekt" />
       <recent name="Verktyg" />
       <recent name="Databas" />
@@ -152,17 +154,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnvändareTest.loggaIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnvändareTest.hämtaAnvändarID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Databas.*" />
+          <option name="PATTERN" value="Entiteter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
-      <option name="METHOD_NAME" value="loggaIn" />
+      <option name="PACKAGE_NAME" value="Entiteter" />
+      <option name="MAIN_CLASS_NAME" value="Entiteter.AnvändareTest" />
+      <option name="METHOD_NAME" value="hämtaAnvändarID" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -219,18 +221,18 @@
     <list>
       <item itemvalue="Application.NewMain" />
       <item itemvalue="JUnit.AnvändareTest" />
-      <item itemvalue="JUnit.AnvändareTest.loggaIn" />
       <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
       <item itemvalue="JUnit.LånTest.skapaLån" />
       <item itemvalue="JUnit.FysiskKopiaTest.läggTillFysiskKopiaSQL" />
+      <item itemvalue="JUnit.AnvändareTest.hämtaAnvändarID" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
+        <item itemvalue="JUnit.AnvändareTest.hämtaAnvändarID" />
         <item itemvalue="JUnit.FysiskKopiaTest.läggTillFysiskKopiaSQL" />
         <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
         <item itemvalue="JUnit.LånTest.skapaLån" />
-        <item itemvalue="JUnit.AnvändareTest.loggaIn" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +256,7 @@
       <workItem from="1620979514065" duration="21752000" />
       <workItem from="1621151168954" duration="2411000" />
       <workItem from="1621288790752" duration="119000" />
-      <workItem from="1621318040333" duration="8181000" />
+      <workItem from="1621318040333" duration="11763000" />
     </task>
     <task id="LOCAL−00001" summary="Adding javafx to project. Created first .fxml file with Controller //DJ">
       <created>1619965739765</created>
@@ -334,7 +336,13 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1621288823698</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="Skapat FysiskKopia klass, uppdaterat LäggTillObjektController//DJ">
+      <created>1621327043189</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1621327043190</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,6 +373,7 @@
     <MESSAGE value="Tillagt funktioner för biblioteksanställda//DJ" />
     <MESSAGE value="Lagt till sida för att välja fysiskkopia efter man har valt vilken bok man vill låna//DJ" />
     <MESSAGE value="Ändringar för objekt och admin controllers//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ändringar för objekt och admin controllers//DJ" />
+    <MESSAGE value="Skapat FysiskKopia klass, uppdaterat LäggTillObjektController//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat FysiskKopia klass, uppdaterat LäggTillObjektController//DJ" />
   </component>
 </project>

@@ -84,7 +84,7 @@ public class UppdateraProfilController implements Initializable {
     private MenuItem allmänhetenVal;
 
     @FXML
-    private Button uppdateraKnapp;
+    private Button sparaKnapp;
 
     @FXML
     private Button avbrytKnapp;
@@ -118,7 +118,6 @@ public class UppdateraProfilController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //Todo Uppdaterar inte korrekt från admin
 
         //Metod som körs när fönstret öppnas för att fylla i den existerande datan från databasen
         Användare användare = new Användare();
@@ -207,7 +206,7 @@ public class UppdateraProfilController implements Initializable {
 
 
     @FXML
-    void uppdateraKnappTryck(ActionEvent event) {
+    void sparaKnappTryck(ActionEvent event) {
         Användare användare = new Användare();
         användare.uppdateraAnvändareSQL(
                 förnamnTextFält.getText(),
@@ -222,7 +221,7 @@ public class UppdateraProfilController implements Initializable {
 
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.popupConnector("successPopUp");
-        Stage stage = (Stage) uppdateraKnapp.getScene().getWindow();
+        Stage stage = (Stage) sparaKnapp.getScene().getWindow();
         stage.close();
     }
 
