@@ -3,10 +3,7 @@ package Databas;
 import Entiteter.Användare;
 import Objekt.Bok;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -23,11 +20,6 @@ public class Lån {
     public static void setLåneTyp(String låneTyp) {
         Lån.låneTyp = låneTyp;
     }
-
-
-
-
-
 
     public void skapaLån(String AnvändarID, String fysiskKopiaID, int låneDagar) {
         try {
@@ -73,19 +65,18 @@ public class Lån {
     public Date hämtaStartDatum (){
         //TODO Måste fixa så att man får rätt datum. Idag får man endast datumet för det första lånet som skapades
 
-        //Databasen är uppdaterad
         try{
             Användare användare = new Användare();
-            String sqlSök = "SELECT StartDatum FROM lån WHERE användarId = " + användare.hämtaAnvändarID() + "";
+            String sqlSök = "SELECT LåneId, StartDatum FROM lån WHERE användarId = " + användare.hämtaAnvändarID() + "";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
-            Statement statement = connection.createStatement();
+            PreparedStatement statement = connection.prepareStatement(sqlSök);
 
             ResultSet sqlQuery = statement.executeQuery(sqlSök);
-            sqlQuery.next();
-
-            Date date = new SimpleDateFormat("yyyy-MM-dd").parse(sqlQuery.getString("StartDatum"));
-
+            Date date = new Date();
+            while (sqlQuery.next()) {
+                date = new SimpleDateFormat("yyyy-MM-dd").parse(sqlQuery.getString("StartDatum"));
+            }
             return date;
 
         } catch (SQLException | ParseException e) {

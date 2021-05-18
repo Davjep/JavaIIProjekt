@@ -41,7 +41,7 @@ public class HanteraAnvändareController implements Initializable {
                 String efterNamnresultat = resultSet.getString("efternamn");
                 String emailResultat = resultSet.getString("email");
                 String personNrResultat = resultSet.getString("personNr");
-                resultatLista.getItems().add(" " + användarIDResultat + ", " + förNamnResultat + ", " + efterNamnresultat + ", " + emailResultat + ", " + personNrResultat);
+                resultatLista.getItems().add(" " + användarIDResultat + ", " + förNamnResultat + " " + efterNamnresultat + ", " + emailResultat + ", " + personNrResultat);
             }
         }catch (SQLException e) {
             e.getCause();

@@ -14,6 +14,7 @@ public abstract class Entitet {
 
     private static boolean inloggad = false;
     private static String inloggadEmail;
+    private static String setID;
 
     public Entitet() {
     }
@@ -48,6 +49,7 @@ public abstract class Entitet {
     public static void loggaUt() {
         inloggad = false;
         Entitet.setInloggadEmail(null);
+        Anställd.setAnställd(false);
     }
 
     public String getFörNamn() {

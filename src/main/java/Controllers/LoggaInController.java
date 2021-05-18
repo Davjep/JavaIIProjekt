@@ -78,7 +78,7 @@ public class LoggaInController {
                             Användare användare = new Användare();
                             if (användare.hämtaAnvändarTypSQL().equalsIgnoreCase("Biblioteksanställda")) {
                                 Användare.setInloggad();
-                                Anställd.setAnställd();
+                                Anställd.setAnställd(true);
                                 ControllerConnector controllerConnector = new ControllerConnector();
                                 controllerConnector.connector("admin");
                                 Stage stage = (Stage) loggaInKnapp.getScene().getWindow();

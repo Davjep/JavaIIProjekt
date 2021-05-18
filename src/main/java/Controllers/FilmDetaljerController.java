@@ -1,5 +1,6 @@
 package Controllers;
 
+import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Film;
 import javafx.event.ActionEvent;
@@ -64,38 +65,11 @@ public class FilmDetaljerController implements Initializable {
 
     @FXML
     void lånaFilmKnappTryck(ActionEvent event) {
+        Lån.setLåneTyp("Film");
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("väljfysiskkopia");
         Stage stage = (Stage) lånaFilmKnapp.getScene().getWindow();
         stage.close();
-        //TODO Ta bort följande om allt fungerar som de ska med fysisk kopia
-/*        try {
-            DatabasConnector databasConnector = new DatabasConnector();
-            Connection connection = databasConnector.getConnection();
-            Statement statement = connection.createStatement();
-
-            String sqlStatus = "SELECT Status FROM fysiskkopia WHERE filmid = '" + Film.getFilmID() + "';";
-
-            ResultSet resultat = statement.executeQuery(sqlStatus);
-            resultat.next();
-
-            if (!resultat.getString("status").equals("Tillgänglig")) {
-                ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.connector("ejTillgängligPopUp");
-                Stage stage = (Stage) lånaFilmKnapp.getScene().getWindow();
-                stage.close();
-            } else {
-                Lån.setLåneTyp("Film");
-                ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.connector("lånaBekräftelsePopUp");
-                Stage stage = (Stage) lånaFilmKnapp.getScene().getWindow();
-                stage.close();
-
-            }
-        }catch (SQLException e) {
-            e.getCause();
-            e.getStackTrace();
-        }*/
 
     }
 }

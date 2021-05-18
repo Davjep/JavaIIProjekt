@@ -4,11 +4,9 @@ import Entiteter.Användare;
 import Objekt.Bok;
 import org.junit.jupiter.api.Test;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -71,5 +69,35 @@ class LånTest {
         System.out.println(newDate);
         System.out.println(lån.beräknaÅterlämningsDatum(25));
 
+    }
+    @Test
+    void hämtaDatum() {
+        Användare användare = new Användare();
+        Användare.setInloggadEmail("Jorsan");
+        användare.hämtaAnvändarID();
+        try{
+            String sqlSök = "SELECT StartDatum FROM lån WHERE användarId = " + användare.hämtaAnvändarID() + "";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sqlSök);
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            //sqlQuery.next();
+            Date date = new Date();
+            System.out.println(date);
+            while (sqlQuery.next()) {
+                date = new SimpleDateFormat("yyyy-MM-dd").parse(sqlQuery.getString("StartDatum"));
+
+                System.out.println(date);
+            }
+
+            //date = new SimpleDateFormat("yyyy-MM-dd").parse(sqlQuery.getString("StartDatum"));
+
+            System.out.print("sista " + date);
+
+        } catch (SQLException | ParseException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
     }
 }

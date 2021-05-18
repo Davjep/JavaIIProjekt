@@ -18,8 +18,8 @@ public class Bok extends Objekt {
         super();
     }
 
-    public Bok(String titel, String författare, String ämnesord, String kategori, String utgivningsÅr, boolean tillgänglig, String plats) {
-        super(titel, plats, utgivningsÅr, tillgänglig);
+    public Bok(String titel, String författare, String ämnesord, String kategori, String utgivningsÅr, boolean tillgänglig) {
+        super(titel, utgivningsÅr, tillgänglig);
         this.författare = författare;
         this.ämnesord = ämnesord;
         this.kategori = kategori;

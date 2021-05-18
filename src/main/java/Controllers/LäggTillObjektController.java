@@ -3,6 +3,7 @@ package Controllers;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import Objekt.Film;
+import Objekt.FysiskKopia;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +15,6 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class LäggTillObjektController implements Initializable {
-    //TODO Fundera på om vi ska lägga till en ny fysisk kopia via denna sidan, eller ifall vi behöver en separat sida för att lägga till detta??
 
     @FXML
     private Label objektVal;
@@ -27,6 +27,9 @@ public class LäggTillObjektController implements Initializable {
 
     @FXML
     private MenuItem filmKategori;
+
+    @FXML
+    private MenuItem fysiskKopiaKategori;
 
     @FXML
     private Label text1;
@@ -47,9 +50,6 @@ public class LäggTillObjektController implements Initializable {
     private Label text6;
 
     @FXML
-    private Label text7;
-
-    @FXML
     private TextField textFält1;
 
     @FXML
@@ -68,10 +68,6 @@ public class LäggTillObjektController implements Initializable {
     private TextField textFält6;
 
     @FXML
-    private TextField textFält7;
-
-
-    @FXML
     private Label errorText;
 
     @FXML
@@ -80,15 +76,29 @@ public class LäggTillObjektController implements Initializable {
     @FXML
     private Button avbrytKnapp;
 
+    @FXML
+    private SplitMenuButton statusValMeny;
+
+    @FXML
+    private MenuItem tillgängligVal;
+
+    @FXML
+    private MenuItem utlånadVal;
+
+    @FXML
+    private MenuItem reserveradVal;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        for (Label label : Arrays.asList(text1, text2, text3, text4, text5, text6, text7)) {
+        //Gömmer fält innan val av objekt har gjorts
+        for (Label label : Arrays.asList(text1, text2, text3, text4, text5, text6)) {
             label.setVisible(false);
         }
 
-        for (TextField textField : Arrays.asList(textFält1, textFält2, textFält3, textFält4, textFält5, textFält6, textFält7)) {
+        for (TextField textField : Arrays.asList(textFält1, textFält2, textFält3, textFält4, textFält5, textFält6)) {
             textField.setVisible(false);
         }
+        statusValMeny.setVisible(false);
     }
 
     @FXML
@@ -98,7 +108,6 @@ public class LäggTillObjektController implements Initializable {
 
     @FXML
     void läggTillKnappTryck(ActionEvent event) {
-        boolean fältIfyllda = false;
 
         if (objektValMeny.getText().equals("Bok")) {
 
@@ -111,22 +120,13 @@ public class LäggTillObjektController implements Initializable {
                     textFält6.getText(),
             };
 
-            for (int i = 0; i < dataInputBok.length; i++) {
-                if (dataInputBok[i].isEmpty()) {
-                    errorText.setText("Vänligen fyll i alla fält");
-                    fältIfyllda = false;
-                } else {
-                    fältIfyllda = true;
-                }
-            }
-            if (fältIfyllda) {
+            if (!isEmpty(dataInputBok)) {
                 Bok nyBok = new Bok(textFält1.getText(),
                         textFält2.getText(),
                         textFält3.getText(),
                         textFält4.getText(),
                         textFält5.getText(),
-                        true,
-                        textFält6.getText());
+                        true);
 
                 nyBok.läggTillBokSQL();
 
@@ -137,7 +137,7 @@ public class LäggTillObjektController implements Initializable {
                 Stage stage = (Stage) läggTillKnapp.getScene().getWindow();
                 stage.close();
             }
-        } else {
+        } else if (objektValMeny.getText().equals("Film")) {
 
             String dataInputFilm[] = {
                     textFält1.getText(),
@@ -145,27 +145,16 @@ public class LäggTillObjektController implements Initializable {
                     textFält3.getText(),
                     textFält4.getText(),
                     textFält5.getText(),
-                    textFält6.getText(),
-                    textFält7.getText()
             };
 
-            for (int i = 0; i < dataInputFilm.length; i++) {
-                if (dataInputFilm[i].isEmpty()) {
-                    errorText.setText("Vänligen fyll i alla fält");
-                    fältIfyllda = false;
-                } else {
-                    fältIfyllda = true;
-                }
-            }
-            if (fältIfyllda) {
+            if (!isEmpty(dataInputFilm)) {
                 Film nyFilm = new Film(textFält1.getText(),
                         textFält2.getText(),
                         textFält3.getText(),
                         textFält4.getText(),
                         textFält5.getText(),
                         true,
-                        textFält6.getText(),
-                        textFält7.getText());
+                        textFält6.getText());
 
                 nyFilm.läggTillFilmSQL();
 
@@ -176,6 +165,33 @@ public class LäggTillObjektController implements Initializable {
                 Stage stage = (Stage) läggTillKnapp.getScene().getWindow();
                 stage.close();
             }
+        } else {
+            if (textFält1.getText().isEmpty() && textFält2.getText().isEmpty()) {
+                errorText.setText("Vänligen fyll i antigen ISBN eller FilmID");
+            } else if (!textFält1.getText().isEmpty() && !textFält2.getText().isEmpty()) {
+                errorText.setText("En fysisk kopia kan bara ha angingen ISBN ELLER FilmID, inte båda två...");
+            } else {
+                String dataInputFysiskKopia[] = {
+                        textFält1.getText(),
+                        textFält2.getText(),
+                        textFält3.getText(),
+                        statusValMeny.getText()
+                };
+
+                if (!isEmpty(dataInputFysiskKopia)) {
+                    errorText.setText("");
+
+                    FysiskKopia nyFysiskKopia = new FysiskKopia(textFält1.getText(), textFält2.getText(), textFält3.getText(), statusValMeny.getText());
+
+                    nyFysiskKopia.läggTillFysiskKopiaSQL();
+
+                    ControllerConnector controllerConnector = new ControllerConnector();
+                    controllerConnector.popupConnector("successPopUp");
+                    Stage stage = (Stage) läggTillKnapp.getScene().getWindow();
+                    stage.close();
+
+                }
+            }
         }
     }
 
@@ -183,21 +199,21 @@ public class LäggTillObjektController implements Initializable {
     void bokKategoriVal(ActionEvent event) {
         //Visar korrekt fält och text när man väljer bok alternativet
         objektValMeny.setText("Bok");
-        for (Label label : Arrays.asList(text1, text2, text3, text4, text5, text6)) {
+        for (Label label : Arrays.asList(text1, text2, text3, text4, text5)) {
             label.setVisible(true);
         }
-        text7.setVisible(false);
-        for (TextField textField : Arrays.asList(textFält1, textFält2, textFält3, textFält4, textFält5, textFält6)) {
+        text6.setVisible(false);
+        for (TextField textField : Arrays.asList(textFält1, textFält2, textFält3, textFält4, textFält5)) {
             textField.setVisible(true);
         }
-        textFält7.setVisible(false);
+        textFält6.setVisible(false);
+        statusValMeny.setVisible(false);
 
         text1.setText("Titel");
         text2.setText("Författare");
         text3.setText("Ämnesord");
         text4.setText("Kategori");
         text5.setText("Utgivningsår");
-        text6.setText("Plats");
 
     }
 
@@ -205,13 +221,14 @@ public class LäggTillObjektController implements Initializable {
     void filmKategoriVal(ActionEvent event) {
         //Visar korrekt fält och text när man väljer film alternativet
         objektValMeny.setText("Film");
-        for (Label label : Arrays.asList(text1, text2, text3, text4, text5, text6, text7)) {
+        for (Label label : Arrays.asList(text1, text2, text3, text4, text5, text6)) {
             label.setVisible(true);
         }
 
-        for (TextField textField : Arrays.asList(textFält1, textFält2, textFält3, textFält4, textFält5, textFält6, textFält7)) {
+        for (TextField textField : Arrays.asList(textFält1, textFält2, textFält3, textFält4, textFält5, textFält6)) {
             textField.setVisible(true);
         }
+        statusValMeny.setVisible(false);
 
         text1.setText("Titel");
         text2.setText("Regissör");
@@ -219,9 +236,58 @@ public class LäggTillObjektController implements Initializable {
         text4.setText("Produktionsland");
         text5.setText("Utgivningsår");
         text6.setText("Åldersbegränsning");
-        text7.setText("Plats");
     }
 
+    @FXML
+    void fysiskKopiaKategoriVal(ActionEvent event) {
+        //Visar korrekt fält och text när man väljer fysisk kopia alternativet
+        objektValMeny.setText("Fysisk Kopia");
+        for (Label label : Arrays.asList(text1, text2, text3, text4)) {
+            label.setVisible(true);
+        }
+        for (Label label : Arrays.asList(text5, text6)) {
+            label.setVisible(false);
+        }
+        for (TextField textField : Arrays.asList(textFält1, textFält2, textFält3)) {
+            textField.setVisible(true);
+        }
+        for (TextField textField : Arrays.asList(textFält4, textFält5, textFält6)) {
+            textField.setVisible(false);
+        }
+        statusValMeny.setVisible(true);
+        text1.setText("ISBN");
+        text2.setText("FilmID");
+        text3.setText("Plats");
+        text4.setText("Status");
+    }
+
+    @FXML
+    void reserveradValTryck(ActionEvent event) {
+        statusValMeny.setText("Reserverad");
+    }
+
+    @FXML
+    void tillgängligValTryck(ActionEvent event) {
+        statusValMeny.setText("Tillgänglig");
+    }
+
+    @FXML
+    void utlånadValTryck(ActionEvent event) {
+        statusValMeny.setText("Utlånad");
+    }
+
+    private boolean isEmpty(String[] array) {
+        boolean isEmpty = true;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].isEmpty()) {
+                errorText.setText("Vänligen fyll i alla fält");
+                isEmpty = true;
+            } else {
+                isEmpty = false;
+            }
+        }
+        return isEmpty;
+    }
 
 }
 
