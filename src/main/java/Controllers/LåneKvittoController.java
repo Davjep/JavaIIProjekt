@@ -4,10 +4,12 @@ import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import Objekt.Film;
+import Objekt.Objekt;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -22,25 +24,28 @@ public class LåneKvittoController implements Initializable {
             Bok bok = new Bok();
             Lån lån = new Lån();
             titelFält.setText(bok.hämtaTitelSQL());
-            IDfält.setText(bok.hämtaISBNSQL());
-            lånedatumFält.setText(lån.hämtaStartDatum().toString());
+            IDfält.setText(Objekt.getFysiskKopiaID());
+            lånedatumFält.setText(lån.hämtaStartDatum());
 
             if (bok.hämtaKategoriSQL().equalsIgnoreCase("Kurslitteratur")) {
-                återlämningsdatumFält.setText(lån.beräknaÅterlämningsDatum(14).toString());
+                återlämningsdatumFält.setText(lån.beräknaÅterlämningsDatum(14));
             } else {
-                återlämningsdatumFält.setText(lån.beräknaÅterlämningsDatum(30).toString());
+                återlämningsdatumFält.setText(lån.beräknaÅterlämningsDatum(30));
             }
         } else {
             Film film = new Film();
             Lån lån = new Lån();
             titelFält.setText(film.hämtaTitelSQL());
-            IDfält.setText(film.hämtaFilmIDSQL());
-            lånedatumFält.setText(lån.hämtaStartDatum().toString());
+            IDfält.setText(Objekt.getFysiskKopiaID());
+            lånedatumFält.setText(lån.hämtaStartDatum());
 
-            återlämningsdatumFält.setText(lån.beräknaÅterlämningsDatum(7).toString());
+            återlämningsdatumFält.setText(lån.beräknaÅterlämningsDatum(7));
         }
 
     }
+
+    @FXML
+    private Label IDtext;
 
     @FXML
     private TextField titelFält;

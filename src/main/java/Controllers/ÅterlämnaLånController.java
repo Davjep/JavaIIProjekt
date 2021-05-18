@@ -3,6 +3,7 @@ package Controllers;
 
 import Databas.DatabasConnector;
 import JavaFXConnector.ControllerConnector;
+import Objekt.FysiskKopia;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -43,27 +44,13 @@ public class ÅterlämnaLånController {
         DatabasConnector databasConnector = new DatabasConnector();
         Connection connection = databasConnector.getConnection();
 
-// TODO: Vad händer om den är reserverad , behöver ändra status
+        // TODO: Vad händer om den är reserverad , behöver ändra status
         //Behöver även göra ett felmeddelande ifall att man skriver in fel fysiskaKopiaId
 
         String fysiskKopiaId = textFält.getText();
-        String fysiskKopiaIdUpdate = "UPDATE FysiskKopia SET status = 'Tillgänglig' WHERE FysiskKopiaId = '" + fysiskKopiaId + "'";
 
-
-try {
-    Statement fysiskKopiaIdStatement = connection.createStatement();
-   fysiskKopiaIdStatement.executeUpdate(fysiskKopiaIdUpdate);
-
-
-    ControllerConnector controllerConnector = new ControllerConnector();
-    controllerConnector.popupConnector("successPopup");
-    Stage stage = (Stage) återlämnaKnapp.getScene().getWindow();
-    stage.close();
-
-}catch (SQLException e){
-    e.printStackTrace();
-    e.getCause();
-}
+        FysiskKopia fysiskKopia = new FysiskKopia();
+        fysiskKopia.setStatus(fysiskKopiaId,"Tillgänglig");
     }
 
     @FXML

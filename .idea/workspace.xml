@@ -3,116 +3,31 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="" />
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Updates 2021-05-06">
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LåneKvittoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LåneKvittoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/låneKvitto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/låneKvitto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" afterDir="false" />
     </list>
-
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
-        <option value="JUnit5 Test Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../Limpis/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/202.7660.26/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1r4IPPBSf4T0zZH4nWXhYSCFxk6" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Minalån.fxml" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="Objekt" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="Entiteter" />
-      <recent name="Objekt" />
-      <recent name="Verktyg" />
-      <recent name="Databas" />
-      <recent name="Controllers" />
-      <recent name="Databas" />
-      <recent name="" />
-    </key>
   </component>
   <component name="RunManager" selected="Application.NewMain">
     <configuration name="NewMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -139,48 +54,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnvändareTest" type="JUnit" factoryName="JUnit">
-      <module name="JavaIIProjekt" />
-      <option name="PACKAGE_NAME" value="Databas" />
-      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareInsertsTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnvändareTest.hämtaAnvändarID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaIIProjekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Entiteter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Entiteter" />
-      <option name="MAIN_CLASS_NAME" value="Entiteter.AnvändareTest" />
-      <option name="METHOD_NAME" value="hämtaAnvändarID" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BokTest.hämtaKategoriSQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaIIProjekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Objekt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Objekt" />
-      <option name="MAIN_CLASS_NAME" value="Objekt.BokTest" />
-      <option name="METHOD_NAME" value="hämtaKategoriSQL" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <configuration name="LånTest.skapalån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -190,7 +64,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Databas" />
       <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
-      <option name="METHOD_NAME" value="hämtaDatum" />
+      <option name="METHOD_NAME" value="skapalån" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -198,131 +72,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.NewMain" />
-      <item itemvalue="JUnit.AnvändareTest" />
-      <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
+      <item itemvalue="JUnit.LånTest.skapalån" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
-        <item itemvalue="JUnit.BokTest.hämtaKategoriSQL" />
+        <item itemvalue="JUnit.LånTest.skapalån" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="" />
-      <created>1618228913295</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1618228913295</updated>
-      <workItem from="1618228916922" duration="776000" />
-      <workItem from="1618573986195" duration="641000" />
-      <workItem from="1620646249802" duration="1124000" />
-      <workItem from="1620647992882" duration="10575000" />
-      <workItem from="1620714284335" duration="20000" />
-      <workItem from="1620719846852" duration="1142000" />
-      <workItem from="1620747318583" duration="3130000" />
-      <workItem from="1620823544924" duration="617000" />
-      <workItem from="1620896257246" duration="17596000" />
-      <workItem from="1620979514065" duration="21752000" />
-      <workItem from="1621151168954" duration="2411000" />
-      <workItem from="1621288790752" duration="119000" />
-      <workItem from="1621318040333" duration="16595000" />
-    </task>
-    <task id="LOCAL−00001" summary="Adding javafx to project. Created first .fxml file with Controller //DJ">
-      <created>1619965739765</created>
-      <option name="number" value="LOCAL−00001" />
-      <option name="presentableId" value="LOCAL−00001" />
-      <updated>1619965739765</updated>
-    </task>
-    <task id="LOCAL−00002" summary="Skapat sql connection klass med metod//DJ">
-      <created>1620023483478</created>
-      <option name="number" value="LOCAL−00002" />
-      <option name="presentableId" value="LOCAL−00002" />
-      <updated>1620023483478</updated>
-    </task>
-    <task id="LOCAL−00003" summary="Updateringar 2021-05-03">
-      <created>1620061296231</created>
-      <option name="number" value="LOCAL−00003" />
-      <option name="presentableId" value="LOCAL−00003" />
-      <updated>1620061296232</updated>
-    </task>
-    <task id="LOCAL−00004" summary="May the 4th be with you//Laget">
-      <created>1620205243831</created>
-      <option name="number" value="LOCAL−00004" />
-      <option name="presentableId" value="LOCAL−00004" />
-      <updated>1620205243832</updated>
-    </task>
-    <task id="LOCAL−00005" summary="Updates 2021-05-05">
-      <created>1620288267572</created>
-      <option name="number" value="LOCAL−00005" />
-      <option name="presentableId" value="LOCAL−00005" />
-      <updated>1620288267572</updated>
-    </task>
-    <task id="LOCAL−00006" summary="Fixat sökklassen//DJ">
-      <created>1620720047473</created>
-      <option name="number" value="LOCAL−00006" />
-      <option name="presentableId" value="LOCAL−00006" />
-      <updated>1620720047473</updated>
-    </task>
-    <task id="LOCAL−00007" summary="Skapat Lån, Lånkvitto//DJ">
-      <created>1620911579347</created>
-      <option name="number" value="LOCAL−00007" />
-      <option name="presentableId" value="LOCAL−00007" />
-      <updated>1620911579347</updated>
-    </task>
-    <task id="LOCAL−00008" summary="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ">
-      <created>1620912032033</created>
-      <option name="number" value="LOCAL−00008" />
-      <option name="presentableId" value="LOCAL−00008" />
-      <updated>1620912032033</updated>
-    </task>
-    <task id="LOCAL−00009" summary="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ">
-      <created>1620984165068</created>
-      <option name="number" value="LOCAL−00009" />
-      <option name="presentableId" value="LOCAL−00009" />
-      <updated>1620984165068</updated>
-    </task>
-    <task id="LOCAL−00010" summary="Tillagt funktioner för biblioteksanställda//DJ">
-      <created>1620994574917</created>
-      <option name="number" value="LOCAL−00010" />
-      <option name="presentableId" value="LOCAL−00010" />
-      <updated>1620994574917</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Updates 2021-05-06">
-      <created>1621333726293</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1621333726294</updated>
-    </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tagit bort klasser AnvändareInserts, SessionsAnvändare/Objekt. Flyttat metoder till Användare och Bok//DJ" />
-    <MESSAGE value="Flyttat metoder till relevanta klasser, städat upp i koden//DJ" />
-    <MESSAGE value="Lagt till att ålder uppdateras automatiskt i Användare.uppdateraAnvändareSQL//DJ" />
-    <MESSAGE value="Skapat fxml och controller för skapa film lån//DJ" />
-    <MESSAGE value="Fixat sökklassen//DJ" />
-    <MESSAGE value="Skapat Lån, Lånkvitto//DJ" />
-    <MESSAGE value="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ" />
-    <MESSAGE value="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ" />
-    <MESSAGE value="Tillagt funktioner för biblioteksanställda//DJ" />
   </component>
 </project>

@@ -3,6 +3,7 @@ package Objekt;
 import Databas.DatabasConnector;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -11,6 +12,10 @@ public class FysiskKopia {
     private String status;
     private String ISBN;
     private String filmID;
+
+    public FysiskKopia() {
+
+    }
 
     public FysiskKopia(String ISBN, String FilmID, String plats, String status) {
         this.plats = plats;
@@ -52,15 +57,15 @@ public class FysiskKopia {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(String fysiskKopiaID, String status) {
         this.status = status;
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
-            String sqlUpdateStatusQuery = "UPDATE fysiskkopia SET  " +
-                    "";
-            statement.executeUpdate(sqlUpdateStatusQuery);
+            String fysiskKopiaIdUpdate = "UPDATE FysiskKopia SET status = '" + status + "' WHERE FysiskKopiaId = '" + fysiskKopiaID + "'";
+
+            statement.executeUpdate(fysiskKopiaIdUpdate);
         }catch (SQLException e) {
             e.getCause();
             e.getStackTrace();

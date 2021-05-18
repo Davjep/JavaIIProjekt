@@ -2,11 +2,14 @@ package Databas;
 
 import Entiteter.Användare;
 import Objekt.Bok;
+import Objekt.FysiskKopia;
+import Objekt.Objekt;
 import org.junit.jupiter.api.Test;
 
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -49,6 +52,16 @@ class LånTest {
             e.getStackTrace();
         }
     }
+    @Test
+    void skapalån() {
+        Lån lån = new Lån();
+        System.out.println(LocalDate.now());
+        System.out.println(lån.beräknaÅterlämningsDatum(7));
+        //lån.skapaLån("123", "7", 7);
+
+        FysiskKopia fysiskKopia = new FysiskKopia();
+        fysiskKopia.setStatus("7","Utlånad");
+    }
 
     @Test
     void taBortLån() {
@@ -63,11 +76,12 @@ class LånTest {
         System.out.println(lån.hämtaStartDatum());
         Calendar c = Calendar.getInstance();
         System.out.println(lån.hämtaStartDatum());
-        c.setTime(lån.hämtaStartDatum());
+        //c.setTime(lån.hämtaStartDatum());
         c.add(Calendar.DAY_OF_MONTH, 25);
         Date newDate = c.getTime();
         System.out.println(newDate);
         System.out.println(lån.beräknaÅterlämningsDatum(25));
+
 
     }
     @Test

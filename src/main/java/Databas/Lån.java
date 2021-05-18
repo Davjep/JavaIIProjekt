@@ -7,8 +7,10 @@ import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class Lån {
     private static String låneTyp;
@@ -22,11 +24,14 @@ public class Lån {
     }
 
     public void skapaLån(String AnvändarID, String fysiskKopiaID, int låneDagar) {
+
         try {
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement sqlSkapaLån = connection.createStatement();
-            String insertLån = "INSERT INTO lån (StartDatum, AnvändarId, Återlämningsdatum, FysiskkopiaID) VALUES ('" + LocalDate.now() + "', " + AnvändarID + ", '" + beräknaÅterlämningsDatum(låneDagar) + "', '" + fysiskKopiaID + "');";
+
+            String insertLån = "INSERT INTO lån (StartDatum, AnvändarId, Återlämningsdatum, FysiskkopiaID) " +
+                    "VALUES ('" + LocalDate.now() + "', " + AnvändarID + ", '" + beräknaÅterlämningsDatum(låneDagar) + "', " + fysiskKopiaID + ");";
 
             sqlSkapaLån.executeUpdate(insertLån);
 
@@ -62,12 +67,11 @@ public class Lån {
         return null;
     }
 
-    public Date hämtaStartDatum (){
-        //TODO Måste fixa så att man får rätt datum. Idag får man endast datumet för det första lånet som skapades
+    public String hämtaStartDatum (){
 
         try{
             Användare användare = new Användare();
-            String sqlSök = "SELECT LåneId, StartDatum FROM lån WHERE användarId = " + användare.hämtaAnvändarID() + "";
+            String sqlSök = "SELECT StartDatum FROM lån WHERE användarId = " + användare.hämtaAnvändarID() + "";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             PreparedStatement statement = connection.prepareStatement(sqlSök);
@@ -77,13 +81,26 @@ public class Lån {
             while (sqlQuery.next()) {
                 date = new SimpleDateFormat("yyyy-MM-dd").parse(sqlQuery.getString("StartDatum"));
             }
-            return date;
+            SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+            return format1.format(date);
 
         } catch (SQLException | ParseException e) {
             e.getCause();
             e.getStackTrace();
         }
         return null;
+    }
+
+    public String beräknaÅterlämningsDatum (int days) {
+
+        Calendar c = Calendar.getInstance();
+        Date date = new Date();
+        c.setTime(date);
+        c.add(Calendar.DAY_OF_MONTH, days);
+        Date nyDate = c.getTime();
+        SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+
+        return format1.format(nyDate);
     }
 
     public String hämtaAnvändarID (){
@@ -105,14 +122,6 @@ public class Lån {
         return null;
     }
 
-    public Date beräknaÅterlämningsDatum (int days) {
-
-        Calendar c = Calendar.getInstance();
-        Date date = new Date();
-        c.setTime(date);
-        c.add(Calendar.DAY_OF_MONTH, days);
-        return c.getTime();
-    }
 
     public String hämtaLåneStatus() {
 
