@@ -44,6 +44,7 @@ public class ÅterlämnaLånController {
         Connection connection = databasConnector.getConnection();
 
 // TODO: Vad händer om den är reserverad , behöver ändra status
+        //Behöver även göra ett felmeddelande ifall att man skriver in fel fysiskaKopiaId
 
         String fysiskKopiaId = textFält.getText();
         String fysiskKopiaIdUpdate = "UPDATE FysiskKopia SET status = 'Tillgänglig' WHERE FysiskKopiaId = '" + fysiskKopiaId + "'";
@@ -52,6 +53,7 @@ public class ÅterlämnaLånController {
 try {
     Statement fysiskKopiaIdStatement = connection.createStatement();
    fysiskKopiaIdStatement.executeUpdate(fysiskKopiaIdUpdate);
+
 
     ControllerConnector controllerConnector = new ControllerConnector();
     controllerConnector.popupConnector("successPopup");

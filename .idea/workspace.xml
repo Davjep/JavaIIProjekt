@@ -23,13 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Updates 2021-05-06">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/återlämnaLån.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/StartsidaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/StartsidaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/VäljFysiskKopiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/VäljFysiskKopiaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/startsida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/startsida.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +289,14 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1620994574917</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updates 2021-05-06">
+      <created>1621333726293</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621333726294</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,28 +324,33 @@
     <MESSAGE value="Uppdaterat bokdetaljer så att referenslitteratur och tidsskrift ej kan lånas ut//DJ" />
     <MESSAGE value="Introducerat polymorfism samt lagt till val att logga in som anställd//DJ" />
     <MESSAGE value="Tillagt funktioner för biblioteksanställda//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tillagt funktioner för biblioteksanställda//DJ" />
+    <MESSAGE value="Updates 2021-05-06" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates 2021-05-06" />
   </component>
   <component name="WindowStateProjectService">
     <state x="277" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621333436384">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="277" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1621333436384" />
-    <state width="1326" height="145" key="GridCell.Tab.0.bottom" timestamp="1621333282866">
+    <state width="1326" height="145" key="GridCell.Tab.0.bottom" timestamp="1621338993395">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="145" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1621333282866" />
-    <state width="1326" height="145" key="GridCell.Tab.0.center" timestamp="1621333282866">
+    <state width="1326" height="145" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1621338993395" />
+    <state width="1326" height="145" key="GridCell.Tab.0.center" timestamp="1621338993394">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="145" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1621333282866" />
-    <state width="1326" height="145" key="GridCell.Tab.0.left" timestamp="1621333282866">
+    <state width="1326" height="145" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1621338993394" />
+    <state width="1326" height="145" key="GridCell.Tab.0.left" timestamp="1621338993394">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="145" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1621333282866" />
-    <state width="1326" height="145" key="GridCell.Tab.0.right" timestamp="1621333282866">
+    <state width="1326" height="145" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1621338993394" />
+    <state width="1326" height="145" key="GridCell.Tab.0.right" timestamp="1621338993395">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="145" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1621333282866" />
+    <state width="1326" height="145" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1621338993395" />
+    <state x="277" y="169" key="Vcs.Push.Dialog.v2" timestamp="1621333733554">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="277" y="169" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1621333733554" />
   </component>
 </project>
