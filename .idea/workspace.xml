@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/ReservationPopUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Databas/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/reservationPopUp.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Databas/ReservationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/EjTillgängligPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/EjTillgängligPopUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MinaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinaLånController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/minalån.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/minaLån.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +86,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LånTest.skapalån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnvändareTest.hämtaAnvändarID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Databas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
+      <option name="METHOD_NAME" value="hämtaAnvändarID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LånTest.låneLista" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -93,7 +112,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="Databas" />
       <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
-      <option name="METHOD_NAME" value="skapalån" />
+      <option name="METHOD_NAME" value="låneLista" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LånTest.taBortLån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Databas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
+      <option name="METHOD_NAME" value="taBortLån" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,14 +152,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.NewMain" />
-      <item itemvalue="JUnit.LånTest.skapalån" />
       <item itemvalue="JUnit.ReservationTest.skapaReservationSQL" />
+      <item itemvalue="JUnit.LånTest.taBortLån" />
+      <item itemvalue="JUnit.AnvändareTest.hämtaAnvändarID" />
+      <item itemvalue="JUnit.LånTest.låneLista" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
+        <item itemvalue="JUnit.LånTest.låneLista" />
+        <item itemvalue="JUnit.AnvändareTest.hämtaAnvändarID" />
+        <item itemvalue="JUnit.LånTest.taBortLån" />
         <item itemvalue="JUnit.ReservationTest.skapaReservationSQL" />
-        <item itemvalue="JUnit.LånTest.skapalån" />
       </list>
     </recent_temporary>
   </component>
@@ -142,9 +181,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621409678619</updated>
-      <workItem from="1621409685884" duration="3003000" />
+      <workItem from="1621409685884" duration="16392000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Skapat klasser för att lägga en reservation//DJ">
+      <created>1621414026242</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1621414026242</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +200,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Uppdaterat låneklassen//David" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uppdaterat låneklassen//David" />
+    <MESSAGE value="Skapat klasser för att lägga en reservation//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat klasser för att lägga en reservation//DJ" />
   </component>
 </project>

@@ -45,7 +45,21 @@ public class Lån {
 
     }
 
-    public void taBortLån() {
+    public void taBortLån(String fysiskKopiaID) {
+        try{
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            String sqlQuery = "DELETE FROM lån WHERE FysiskkopiaID = " + fysiskKopiaID + ";";
+
+            statement.executeUpdate(sqlQuery);
+        } catch (SQLException e ) {
+            e.getCause();
+            e.getStackTrace();
+        }
+
+
 
     }
     public String hämtaLåneID (){

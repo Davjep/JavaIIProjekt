@@ -137,9 +137,9 @@ public class Bok extends Objekt {
         return null;
     }
 
-    public String hämtaISBNSQL() {
+    public String hämtaISBNSQL(String ISBN) {
         try{
-            String sqlSök = "SELECT ISBN FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
+            String sqlSök = "SELECT ISBN FROM bok WHERE ISBN = '" + ISBN + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();

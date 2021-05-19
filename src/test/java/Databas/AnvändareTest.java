@@ -44,4 +44,12 @@ public class AnvändareTest {
 
     }
 
+    @Test
+    public void hämtaAnvändarID() {
+        Användare användare = new Användare();
+        Användare.setInloggadEmail("Jorsan");
+
+        System.out.println(användare.hämtaAnvändarID());
+    }
+
 }
