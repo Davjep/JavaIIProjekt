@@ -1,5 +1,6 @@
 package Databas;
 
+import Controllers.ÅterlämnaLånController;
 import Entiteter.Användare;
 import Objekt.Bok;
 
@@ -45,7 +46,21 @@ public class Lån {
 
     }
 
-    public void taBortLån() {
+    public void taBortLån(String fysiskKopiaID) {
+        try{
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            String sqlQuery = "DELETE FROM lån WHERE FysiskkopiaID = " + fysiskKopiaID + ";";
+
+            statement.executeUpdate(sqlQuery);
+        } catch (SQLException e ) {
+            e.getCause();
+            e.getStackTrace();
+        }
+
+
 
     }
     public String hämtaLåneID (){
@@ -142,6 +157,33 @@ public class Lån {
             e.getStackTrace();
         }
         return null;
+    }
+
+    public boolean kanAnvändareLåna() {
+        //Hämtar användartyp och kallar sedan på räknaantallån metoden
+        Användare användare = new Användare();
+
+        if (användare.hämtaAnvändarTypSQL().equalsIgnoreCase("Student")) {
+            return räknaAntalLån(10);
+        } else if (användare.hämtaAnvändarTypSQL().equalsIgnoreCase("Forskare")) {
+            return räknaAntalLån(20);
+        } else if (användare.hämtaAnvändarTypSQL().equalsIgnoreCase("Övriga Universitetsanställda")) {
+            return räknaAntalLån(15);
+        } else if (användare.hämtaAnvändarTypSQL().equalsIgnoreCase("Allmänheten")) {
+            return räknaAntalLån(5);
+        } else {
+            return false;
+        }
+    }
+    public boolean räknaAntalLån(int maxAntal) {
+        //Kollar hur många objekt som användaren just nu lånar, och jämför med max antal
+        Användare användare = new Användare();
+
+        if (användare.hämtaAntalLåneObjekt() < maxAntal) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

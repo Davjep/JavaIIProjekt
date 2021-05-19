@@ -7,27 +7,55 @@
     <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LåneKvittoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LåneKvittoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/DatabasConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MinaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinaLånController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databas/Lån.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/låneKvitto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/låneKvitto.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/fxml/lånaBekräftelsePopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/lånaBekräftelsePopUp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/AnvändareTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1skHSKy7QIK3aFNugLZRoG9Zv9A" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Databas" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.NewMain">
     <configuration name="NewMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -43,18 +71,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="AnvändareTest.getObjektNr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Databas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
+      <option name="METHOD_NAME" value="getObjektNr" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LånTest.skapalån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnvändareTest.hämtaAnvändarID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Databas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.AnvändareTest" />
+      <option name="METHOD_NAME" value="hämtaAnvändarID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LånTest.låneLista" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaIIProjekt" />
       <extension name="coverage">
         <pattern>
@@ -64,7 +113,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="Databas" />
       <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
-      <option name="METHOD_NAME" value="skapalån" />
+      <option name="METHOD_NAME" value="låneLista" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LånTest.taBortLån" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaIIProjekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Databas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Databas" />
+      <option name="MAIN_CLASS_NAME" value="Databas.LånTest" />
+      <option name="METHOD_NAME" value="taBortLån" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,19 +137,62 @@
     </configuration>
     <list>
       <item itemvalue="Application.NewMain" />
-      <item itemvalue="JUnit.LånTest.skapalån" />
+      <item itemvalue="JUnit.LånTest.taBortLån" />
+      <item itemvalue="JUnit.AnvändareTest.hämtaAnvändarID" />
+      <item itemvalue="JUnit.LånTest.låneLista" />
+      <item itemvalue="JUnit.AnvändareTest.getObjektNr" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnvändareTest.getObjektNr" />
         <item itemvalue="Application.NewMain" />
-        <item itemvalue="JUnit.LånTest.skapalån" />
+        <item itemvalue="JUnit.LånTest.låneLista" />
+        <item itemvalue="JUnit.AnvändareTest.hämtaAnvändarID" />
+        <item itemvalue="JUnit.LånTest.taBortLån" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL−00001" summary="Uppdaterat låneklassen//David">
+      <created>1621345325964</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1621345325964</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="" />
+      <created>1621409678619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621409678619</updated>
+      <workItem from="1621409685884" duration="20819000" />
+    </task>
+    <task id="LOCAL−00002" summary="Skapat klasser för att lägga en reservation//DJ">
+      <created>1621414026242</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1621414026242</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Uppdaterat mina lån//DJ">
+      <created>1621430502412</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1621430502412</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Uppdaterat låneklassen//David" />
+    <MESSAGE value="Skapat klasser för att lägga en reservation//DJ" />
+    <MESSAGE value="Uppdaterat mina lån//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uppdaterat mina lån//DJ" />
   </component>
 </project>

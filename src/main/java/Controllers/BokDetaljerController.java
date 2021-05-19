@@ -47,7 +47,7 @@ public class BokDetaljerController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         Bok bok = new Bok();
-        ISBNTextFält.setText(bok.hämtaISBNSQL());
+        ISBNTextFält.setText(bok.hämtaISBNSQL(Bok.getISBN()));
         titelTextFält.setText(bok.hämtaTitelSQL());
         författareTextFält.setText(bok.hämtaFörfattareSQL());
         ämnesordTextFält.setText(bok.hämtaÄmnesordSQL());

@@ -26,6 +26,12 @@ class LånTest {
     }
 
     @Test
+    void taBortLån() {
+        Lån lån = new Lån();
+        lån.taBortLån("9");
+    }
+
+    @Test
     void låna() {
 
         try {
@@ -61,10 +67,6 @@ class LånTest {
 
         FysiskKopia fysiskKopia = new FysiskKopia();
         fysiskKopia.setStatus("7","Utlånad");
-    }
-
-    @Test
-    void taBortLån() {
     }
 
     @Test
@@ -112,6 +114,71 @@ class LånTest {
         } catch (SQLException | ParseException e) {
             e.getCause();
             e.getStackTrace();
+        }
+    }
+    @Test
+    public void låneLista() {
+        DatabasConnector databasConnector = new DatabasConnector();
+
+        Connection connection = databasConnector.getConnection();
+
+
+        Användare.setInloggadEmail("Jorsan");
+
+        try {
+
+            Användare användare = new Användare();
+            System.out.println(användare.hämtaAnvändarID());
+            String hämtaLån = "SELECT * from biblioteket.lån WHERE användarId = " + användare.hämtaAnvändarID() + ";";
+            PreparedStatement statement = connection.prepareStatement(hämtaLån);
+            ResultSet resultSet = statement.executeQuery(hämtaLån);
+
+            while(resultSet.next()) {
+                String titel;
+                String låneID = resultSet.getString("LåneID");
+                System.out.println("1: " + låneID);
+                String startDatum = resultSet.getString("startdatum");
+                System.out.println("2: " + startDatum);
+                String användarID = resultSet.getString("användarID");
+                System.out.println("3: " + användarID);
+                String återlämningsDatum = resultSet.getString("återlämningsDatum");
+                System.out.println("4: " + återlämningsDatum);
+                String fysiskKopiaID = resultSet.getString("fysiskKopiaID");
+                System.out.println("5: " + fysiskKopiaID);
+
+                String getTitelBok = "SELECT Titel from bok WHERE ISBN = (SELECT ISBN FROM fysiskkopia WHERE FysiskKopiaID = " + fysiskKopiaID + ");";
+                String getTitelFilm = "SELECT Titel from film WHERE FilmId = (SELECT FilmID FROM fysiskkopia WHERE FysiskKopiaID = " + fysiskKopiaID + ");";
+
+
+
+                PreparedStatement titelBokStatement = connection.prepareStatement(getTitelBok);
+                ResultSet titelBokResult = titelBokStatement.executeQuery(getTitelBok);
+                titelBokResult.next();
+                System.out.println("6: " + titelBokResult.getString("titel"));
+
+
+
+                if (!titelBokResult.getString("titel").equals("")) {
+                    titel = titelBokResult.getString("Titel");
+                    System.out.println("8: " + titel);
+                    titelBokResult.close();
+                } else {
+                    PreparedStatement titelFilmStatement = connection.prepareStatement(getTitelFilm);
+                    ResultSet titelFilmResult = titelFilmStatement.executeQuery(getTitelFilm);
+                    System.out.println("7: " + titelFilmResult.getString("titel"));
+                    titelFilmResult.next();
+                    titel = titelFilmResult.getString("Titel");
+                    System.out.println("9: " + titel);
+                    titelFilmResult.close();
+                }
+
+
+                System.out.println(" LåneID: " + låneID + ", titel: " + titel + ", startdatum: " + startDatum + ", användarID: " + användarID +
+                        ", återlämningsdatum: " + återlämningsDatum + ", fysiskKopiaID: " + fysiskKopiaID);
+            }
+        } catch (SQLException e) {
+            e.getStackTrace();
+            e.getCause();
         }
     }
 }

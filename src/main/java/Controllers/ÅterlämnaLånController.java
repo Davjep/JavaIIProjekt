@@ -2,6 +2,7 @@ package Controllers;
 
 
 import Databas.DatabasConnector;
+import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.FysiskKopia;
 import javafx.event.ActionEvent;
@@ -49,8 +50,13 @@ public class ÅterlämnaLånController {
 
         String fysiskKopiaId = textFält.getText();
 
+        // kolla fysisk kopia id på reservation och se ifall de finns någon reservation som har samma fysiska kopia. Isåfall, sätt status till reserverad.
+
         FysiskKopia fysiskKopia = new FysiskKopia();
+        Lån lån = new Lån();
+
         fysiskKopia.setStatus(fysiskKopiaId,"Tillgänglig");
+        lån.taBortLån(fysiskKopiaId);
     }
 
     @FXML
