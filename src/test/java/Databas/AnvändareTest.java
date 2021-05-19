@@ -52,4 +52,11 @@ public class AnvändareTest {
         System.out.println(användare.hämtaAnvändarID());
     }
 
+    @Test
+    public void getObjektNr() {
+        Användare användare = new Användare();
+        Användare.setInloggadEmail("Jorsan");
+        System.out.println(användare.hämtaAntalLåneObjekt());
+    }
+
 }

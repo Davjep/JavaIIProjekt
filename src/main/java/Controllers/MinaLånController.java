@@ -31,6 +31,8 @@ public class MinaLånController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //Optional TODO Fixa så att titel på objektet läggs till
+
         hämtaLån();
         hämtaReservationer();
     }

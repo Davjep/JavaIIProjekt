@@ -329,6 +329,25 @@ public class Användare extends Entitet {
         return null;
     }
 
+    public int hämtaÅlderSQL() {
+        try{
+            String sqlSök = "SELECT Ålder FROM användare WHERE email = '" + email + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return Integer.parseInt(sqlQuery.getString("ålder"));
+
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return 0;
+    }
+
     public int beräknaÅlder(String personnummer){
         //Metod som tar 4 första av personnumret, omvandlar till int, tar dagens årtal minus födelseår.
         String årtal = personnummer.substring(0,4);
@@ -340,5 +359,25 @@ public class Användare extends Entitet {
 
     public String getTyp() {
         return typ;
+    }
+
+    public int hämtaAntalLåneObjekt() {
+
+        try{
+            String sqlSök = "SELECT AntalLåneObjekt FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return Integer.parseInt(sqlQuery.getString("AntalLåneObjekt"));
+
+        }catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return 0;
     }
 }
