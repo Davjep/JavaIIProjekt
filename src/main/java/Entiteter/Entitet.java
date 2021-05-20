@@ -1,5 +1,9 @@
 package Entiteter;
 
+import Objekt.Bok;
+import Objekt.Film;
+import Objekt.Objekt;
+
 public abstract class Entitet {
 
     protected String förNamn;
@@ -50,6 +54,9 @@ public abstract class Entitet {
         inloggad = false;
         Entitet.setInloggadEmail(null);
         Anställd.setAnställd(false);
+        Bok.setISBN(null);
+        Film.setFilmID(null);
+        Objekt.setFysiskKopiaID(null);
     }
 
     public String getFörNamn() {

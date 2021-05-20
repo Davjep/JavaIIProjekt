@@ -44,6 +44,19 @@ public class FysiskKopia {
             e.getStackTrace();
         }
     }
+    public void uppdateraFysiskKopiaSQL(String plats, String status, String ISBN, String filmID) {
+        try {
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+            String sqlUpdateQuery = "UPDATE biblioteket.fysiskkopia SET Plats = '" + plats + "' , Status = '" + status + "' , ISBN = " + ISBN +
+                    " , FilmID = " + filmID + " WHERE FysiskKopiaID = " + Objekt.getFysiskKopiaID();
+            statement.executeUpdate(sqlUpdateQuery);
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+    }
 
     public String getPlats() {
         return plats;

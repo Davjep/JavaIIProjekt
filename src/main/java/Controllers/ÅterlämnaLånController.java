@@ -35,9 +35,20 @@ public class ÅterlämnaLånController {
     private Button avbrytKnapp;
 
     @FXML
+    private Button gåTillbakaKnapp;
+
+    @FXML
     void avbrytKnappTryck(ActionEvent event) {
         System.exit(0);
 
+    }
+
+    @FXML
+    void gåTillbakaKnappTryck(ActionEvent event) {
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("startsida");
+        Stage stage = (Stage) gåTillbakaKnapp.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

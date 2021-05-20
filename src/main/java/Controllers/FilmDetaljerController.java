@@ -1,12 +1,14 @@
 package Controllers;
 
 import Databas.Lån;
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Film;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -42,6 +44,9 @@ public class FilmDetaljerController implements Initializable {
     @FXML
     private TextField utgivningsÅrTextFält;
 
+    @FXML
+    private Label errorText;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Film film = new Film();
@@ -65,11 +70,16 @@ public class FilmDetaljerController implements Initializable {
 
     @FXML
     void lånaFilmKnappTryck(ActionEvent event) {
-        Lån.setLåneTyp("Film");
-        ControllerConnector controllerConnector = new ControllerConnector();
-        controllerConnector.connector("väljfysiskkopia");
-        Stage stage = (Stage) lånaFilmKnapp.getScene().getWindow();
-        stage.close();
+        if (Användare.getInloggad()) {
+            Lån.setLåneTyp("Film");
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("väljfysiskkopia");
+            Stage stage = (Stage) lånaFilmKnapp.getScene().getWindow();
+            stage.close();
+        } else {
+            errorText.setText("Du måste logga in innan du kan låna");
+        }
+
 
     }
 }

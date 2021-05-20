@@ -42,6 +42,11 @@ public class LåneKvittoController implements Initializable {
             återlämningsdatumFält.setText(lån.beräknaÅterlämningsDatum(7));
         }
 
+        titelFält.setEditable(false);
+        IDfält.setEditable(false);
+        lånedatumFält.setEditable(false);
+        återlämningsdatumFält.setEditable(false);
+
     }
 
     @FXML

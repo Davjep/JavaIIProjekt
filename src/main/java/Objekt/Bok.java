@@ -41,14 +41,29 @@ public class Bok extends Objekt {
             String sqlInsertQuery = "INSERT INTO bok (Titel, Författare, ÄmnesOrd, Kategori, UtgivningsÅr) " +
                     "VALUES ('" + getTitel() + "','" + getFörfattare() + "','" + getÄmnesord() + "','" + getKategori() + "','" + getUtgivningsÅr() + "' )";
             statement.executeUpdate(sqlInsertQuery);
-        }catch (SQLException e) {
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+    }
+
+    public void uppdateraBokSQL(String titel, String författare, String ämnesord, String kategori, String utgivningsÅr) {
+        try {
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+            String sqlUpdateQuery = "UPDATE biblioteket.bok SET Titel = '" + titel + "' , biblioteket.bok.Författare = '" + författare + "' , ÄmnesOrd = '"
+                    + ämnesord + "' , biblioteket.bok.Kategori = '" + kategori + "' , biblioteket.bok.UtgivningsÅr = " + utgivningsÅr + " WHERE ISBN = " + Bok.getISBN() ;
+
+            statement.executeUpdate(sqlUpdateQuery);
+        } catch (SQLException e) {
             e.getCause();
             e.getStackTrace();
         }
     }
 
     public String hämtaTitelSQL() {
-        try{
+        try {
             String sqlSök = "SELECT Titel FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
@@ -58,7 +73,7 @@ public class Bok extends Objekt {
             sqlQuery.next();
 
             return sqlQuery.getString("titel");
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.getCause();
             e.getStackTrace();
         }
@@ -66,7 +81,7 @@ public class Bok extends Objekt {
     }
 
     public String hämtaFörfattareSQL() {
-        try{
+        try {
             String sqlSök = "SELECT Författare FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
@@ -76,7 +91,7 @@ public class Bok extends Objekt {
             sqlQuery.next();
 
             return sqlQuery.getString("författare");
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.getCause();
             e.getStackTrace();
         }
@@ -84,7 +99,7 @@ public class Bok extends Objekt {
     }
 
     public String hämtaÄmnesordSQL() {
-        try{
+        try {
             String sqlSök = "SELECT ÄmnesOrd FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
@@ -94,7 +109,7 @@ public class Bok extends Objekt {
             sqlQuery.next();
 
             return sqlQuery.getString("ämnesord");
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.getCause();
             e.getStackTrace();
         }
@@ -102,7 +117,7 @@ public class Bok extends Objekt {
     }
 
     public String hämtaKategoriSQL() {
-        try{
+        try {
             String sqlSök = "SELECT Kategori FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
@@ -112,7 +127,7 @@ public class Bok extends Objekt {
             sqlQuery.next();
 
             return sqlQuery.getString("kategori");
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.getCause();
             e.getStackTrace();
         }
@@ -120,7 +135,7 @@ public class Bok extends Objekt {
     }
 
     public String hämtaUtgivningsårSQL() {
-        try{
+        try {
             String sqlSök = "SELECT UtgivningsÅr FROM bok WHERE ISBN = '" + Bok.getISBN() + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
@@ -130,7 +145,7 @@ public class Bok extends Objekt {
             sqlQuery.next();
 
             return sqlQuery.getString("utgivningsår");
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.getCause();
             e.getStackTrace();
         }
@@ -138,7 +153,7 @@ public class Bok extends Objekt {
     }
 
     public String hämtaISBNSQL(String ISBN) {
-        try{
+        try {
             String sqlSök = "SELECT ISBN FROM bok WHERE ISBN = '" + ISBN + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
@@ -148,7 +163,7 @@ public class Bok extends Objekt {
             sqlQuery.next();
 
             return sqlQuery.getString("ISBN");
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.getCause();
             e.getStackTrace();
         }

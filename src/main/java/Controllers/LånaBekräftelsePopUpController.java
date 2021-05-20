@@ -26,7 +26,6 @@ public class LånaBekräftelsePopUpController {
 
     @FXML
     void jaKnappTryck(ActionEvent event) {
-        //TODO Testa max begränsningar för ålder och antal lån
 
         //Skapar ett nytt lån i databasen sålänge användaren kan låna fler.
         // Om det är bok räknar vi ut hur många dagar den får lånas. Annars 1 vecka, alltid samma för film.
@@ -43,7 +42,7 @@ public class LånaBekräftelsePopUpController {
                 slutför();
             } else {
                 Film film = new Film();
-                if (Integer.parseInt(film.getÅldersBegränsning()) < användare.hämtaÅlderSQL()) {
+                if (Integer.parseInt(film.hämtaÅldersBegränsningSQL()) < användare.hämtaÅlderSQL()) {
                     lån.skapaLån(användare.hämtaAnvändarID(), Objekt.getFysiskKopiaID(), 7);
                     slutför();
                 } else {
@@ -54,7 +53,9 @@ public class LånaBekräftelsePopUpController {
         } else {
             meddelande.setText("Du kan ej låna denna film då du har nått max antal lånade objekt");
         }
-
+        //TODO this might break the system, keep in check
+        Film.setFilmID("0");
+        Bok.setISBN("0");
 
     }
 

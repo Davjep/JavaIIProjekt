@@ -330,8 +330,9 @@ public class Användare extends Entitet {
     }
 
     public int hämtaÅlderSQL() {
+
         try{
-            String sqlSök = "SELECT Ålder FROM användare WHERE email = '" + email + "'";
+            String sqlSök = "SELECT Ålder FROM användare WHERE email = '" + Användare.getInloggadEmail() + "'";
             DatabasConnector databasConnector = new DatabasConnector();
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
