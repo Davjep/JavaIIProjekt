@@ -53,7 +53,7 @@ public class Film extends Objekt {
             Connection connection = databasConnector.getConnection();
             Statement statement = connection.createStatement();
             String sqlUpdateQuery = "UPDATE biblioteket.film SET Titel = '" + titel + "' , Regissör = '" + regissör + "' , Genre = '" + genre +
-                    "' , ProduktionsLand = " + produktionsland + ", UtgivningsÅr = " + utgivningsÅr + " , ÅldersBegränsning = " + åldersBegränsning +
+                    "' , ProduktionsLand = '" + produktionsland + "' , UtgivningsÅr = " + utgivningsÅr + " , ÅldersBegränsning = " + åldersBegränsning +
                     " WHERE FilmId = " + Film.getFilmID();
 
             statement.executeUpdate(sqlUpdateQuery);

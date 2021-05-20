@@ -4,30 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/HanteraObjektController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/VäljObjektController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/hanteraObjekt.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/fxml/väljObjekt.fxml" afterDir="false" />
+    <list default="true" id="6c4de7b4-2820-4364-ada6-eb62b3531b4d" name="Default Changelist" comment="Lagt till funktion för att hantera objekt//DJ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/BokDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/FilmDetaljerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LäggTillObjektController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LäggTillObjektController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LånaBekräftelsePopUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LåneKvittoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LåneKvittoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MinaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MinaLånController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RegistreraController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ÅterlämnaLånController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Användare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entiteter/Entitet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Bok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/HanteraObjektController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/HanteraObjektController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/VäljObjektController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/VäljObjektController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objekt/FysiskKopia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/filmDetaljer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/filmDetaljer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/lånaBekräftelsePopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/lånaBekräftelsePopUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/fxml/återlämnaLån.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fxml/återlämnaLån.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Databas/LånTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +177,7 @@
       <updated>1621409678619</updated>
       <workItem from="1621409685884" duration="20819000" />
       <workItem from="1621436670940" duration="713000" />
-      <workItem from="1621501250997" duration="15749000" />
+      <workItem from="1621501250997" duration="17384000" />
     </task>
     <task id="LOCAL−00002" summary="Skapat klasser för att lägga en reservation//DJ">
       <created>1621414026242</created>
@@ -216,7 +197,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1621436741224</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Lagt till funktion för att hantera objekt//DJ">
+      <created>1621520386063</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1621520386063</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +217,7 @@
     <MESSAGE value="Skapat klasser för att lägga en reservation//DJ" />
     <MESSAGE value="Uppdaterat mina lån//DJ" />
     <MESSAGE value="Lägt till checkar på ålder och antallån//DJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lägt till checkar på ålder och antallån//DJ" />
+    <MESSAGE value="Lagt till funktion för att hantera objekt//DJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lagt till funktion för att hantera objekt//DJ" />
   </component>
 </project>
