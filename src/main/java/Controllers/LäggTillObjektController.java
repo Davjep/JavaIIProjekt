@@ -103,7 +103,10 @@ public class LäggTillObjektController implements Initializable {
 
     @FXML
     void avbrytKnappTryck(ActionEvent event) {
-
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("admin");
+        Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

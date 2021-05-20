@@ -47,6 +47,21 @@ public class Film extends Objekt {
             e.getStackTrace();
         }
     }
+    public void uppdateraFilmSQL(String titel, String regissör, String genre, String produktionsland, String utgivningsÅr, String åldersBegränsning) {
+        try {
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+            String sqlUpdateQuery = "UPDATE biblioteket.film SET Titel = '" + titel + "' , Regissör = '" + regissör + "' , Genre = '" + genre +
+                    "' , ProduktionsLand = " + produktionsland + ", UtgivningsÅr = " + utgivningsÅr + " , ÅldersBegränsning = " + åldersBegränsning +
+                    " WHERE FilmId = " + Film.getFilmID();
+
+            statement.executeUpdate(sqlUpdateQuery);
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+    }
 
     public String hämtaFilmIDSQL() {
         try{

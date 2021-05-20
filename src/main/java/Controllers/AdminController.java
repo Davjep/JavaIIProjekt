@@ -35,8 +35,11 @@ public class AdminController {
 
     @FXML
     void hanteraObjektKnappTryck(ActionEvent event) {
-
-
+        //TODO Skapa!
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("väljObjekt");
+        Stage stage = (Stage) hanteraAnvändareKnapp.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

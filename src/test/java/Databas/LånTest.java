@@ -2,6 +2,7 @@ package Databas;
 
 import Entiteter.Användare;
 import Objekt.Bok;
+import Objekt.Film;
 import Objekt.FysiskKopia;
 import Objekt.Objekt;
 import org.junit.jupiter.api.Test;
@@ -179,6 +180,19 @@ class LånTest {
         } catch (SQLException e) {
             e.getStackTrace();
             e.getCause();
+        }
+    }
+    @Test
+    public void testaÅldersbegränsning() {
+        Film film = new Film();
+        Användare användare = new Användare();
+        Film.setFilmID("2");
+        Användare.setInloggadEmail("Baby@driver.com");
+
+        if (Integer.parseInt(film.hämtaÅldersBegränsningSQL()) < användare.hämtaÅlderSQL()) {
+            System.out.println("du kan låna");
+        } else {
+            System.out.println("Du är för ung");
         }
     }
 }

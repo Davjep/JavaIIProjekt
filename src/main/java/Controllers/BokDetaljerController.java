@@ -1,6 +1,7 @@
 package Controllers;
 
 import Databas.Lån;
+import Entiteter.Användare;
 import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import javafx.event.ActionEvent;
@@ -66,33 +67,24 @@ public class BokDetaljerController implements Initializable {
 
     @FXML
     void lånaBokKnappTryck(ActionEvent event) {
-        Bok bok = new Bok();
-        if (bok.hämtaKategoriSQL().equalsIgnoreCase("Referenslitteratur")) {
-            errorText.setText("Referenslitteratur kan ej lånas ut! ");
-        } else if (bok.hämtaKategoriSQL().equalsIgnoreCase("Tidsskrift")) {
-            errorText.setText("Tidsskrifter kan ej lånas ut! ");
-        } else {
-            errorText.setText("");
-            Lån.setLåneTyp("Bok");
-            ControllerConnector controllerConnector = new ControllerConnector();
-            controllerConnector.connector("väljfysiskkopia");
-            Stage stage = (Stage) gåTillbakaKnapp.getScene().getWindow();
-            stage.close();
-            /*
-            Lån lån = new Lån();
-            if (!lån.hämtaLåneStatus().equalsIgnoreCase("Tillgänglig")) {
-                ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.popupConnector("ejTillgängligPopUp");
-                Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
-                stage.close();
+        if (Användare.getInloggad()) {
+            Bok bok = new Bok();
+            if (bok.hämtaKategoriSQL().equalsIgnoreCase("Referenslitteratur")) {
+                errorText.setText("Referenslitteratur kan ej lånas ut! ");
+            } else if (bok.hämtaKategoriSQL().equalsIgnoreCase("Tidsskrift")) {
+                errorText.setText("Tidsskrifter kan ej lånas ut! ");
             } else {
+                errorText.setText("");
                 Lån.setLåneTyp("Bok");
                 ControllerConnector controllerConnector = new ControllerConnector();
-                controllerConnector.popupConnector("lånaBekräftelsePopUp");
-                Stage stage = (Stage) lånaBokKnapp.getScene().getWindow();
+                controllerConnector.connector("väljfysiskkopia");
+                Stage stage = (Stage) gåTillbakaKnapp.getScene().getWindow();
                 stage.close();
-            }*/
+            }
+        } else {
+            errorText.setText("Du måste logga in innan du kan låna");
         }
+
     }
 
 }

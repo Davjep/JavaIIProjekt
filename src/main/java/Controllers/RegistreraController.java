@@ -136,11 +136,13 @@ public class RegistreraController {
             controllerConnector.connector("admin");
             Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
             stage.close();
+        } else {
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("startsida");
+            Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
+            stage.close();
         }
-        ControllerConnector controllerConnector = new ControllerConnector();
-        controllerConnector.connector("startsida");
-        Stage stage = (Stage) avbrytKnapp.getScene().getWindow();
-        stage.close();
+
     }
 
     @FXML

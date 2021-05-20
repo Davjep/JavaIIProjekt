@@ -64,7 +64,7 @@ public class MinaLånController implements Initializable {
                 String återlämningsDatum = resultSet.getString("återlämningsDatum");
                 String fysiskKopiaID = resultSet.getString("fysiskKopiaID");
 
-                lånTabell.getItems().add(" LåneID: " + låneID + ", startdatum: " + startDatum + ", användarID: " + användarID +
+                lånTabell.getItems().add("LåneID: " + låneID + ", startdatum: " + startDatum + ", användarID: " + användarID +
                         ", återlämningsdatum: " + återlämningsDatum + ", fysiskKopiaID: " + fysiskKopiaID);
             }
         } catch (SQLException e) {
