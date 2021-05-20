@@ -4,6 +4,7 @@ import JavaFXConnector.ControllerConnector;
 import Objekt.Bok;
 import Objekt.Film;
 import Objekt.FysiskKopia;
+import Objekt.Objekt;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -87,12 +88,20 @@ public class HanteraObjektController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if (Bok.getISBN() != null) {
+            Bok bok = new Bok();
             text1.setText("ISBN");
             text2.setText("Titel");
             text3.setText("Författare");
             text4.setText("Ämnesord");
             text5.setText("Kategori");
             text6.setText("Utgivningsår");
+
+            text1TextFält.setText(Bok.getISBN());
+            text2TextFält.setText(bok.hämtaTitelSQL());
+            text3TextFält.setText(bok.hämtaFörfattareSQL());
+            text4TextFält.setText(bok.hämtaÄmnesordSQL());
+            text5TextFält.setText(bok.hämtaKategoriSQL());
+            text6TextFält.setText(bok.hämtaUtgivningsårSQL());
 
             for (TextField textField : Arrays.asList(text1TextFält, text2TextFält, text3TextFält, text4TextFält, text5TextFält, text6TextFält)) {
                 textField.setEditable(false);
@@ -103,6 +112,8 @@ public class HanteraObjektController implements Initializable {
             text7ÄndraKnapp.setVisible(false);
 
         } else if (Film.getFilmID() != null) {
+            Film film = new Film();
+
             text1.setText("FilmID");
             text2.setText("Titel");
             text3.setText("Regissör");
@@ -111,16 +122,32 @@ public class HanteraObjektController implements Initializable {
             text6.setText("Utgivningsår");
             text7.setText("Åldersbegränsning");
 
+            text1TextFält.setText(Film.getFilmID());
+            text2TextFält.setText(film.hämtaTitelSQL());
+            text3TextFält.setText(film.hämtaRegissörSQL());
+            text4TextFält.setText(film.hämtaGenreSQL());
+            text5TextFält.setText(film.hämtaProduktionslandSQL());
+            text6TextFält.setText(film.hämtaUtgivningsårSQL());
+            text7TextFält.setText(film.hämtaÅldersBegränsningSQL());
+
             for (TextField textField : Arrays.asList(text1TextFält, text2TextFält, text3TextFält, text4TextFält, text5TextFält, text6TextFält, text7TextFält)) {
                 textField.setEditable(false);
             }
 
         } else {
-            text1.setText("Fysisk KopiaID");
+            FysiskKopia fysiskKopia = new FysiskKopia();
+
+            text1.setText("Fysisk Kopia ID");
             text2.setText("Plats");
             text3.setText("Status");
             text4.setText("ISBN");
             text5.setText("FilmID");
+
+            text1TextFält.setText(Objekt.getFysiskKopiaID());
+            text2TextFält.setText(fysiskKopia.hämtaPlatsSQL());
+            text3TextFält.setText(fysiskKopia.hämtaStatusSQL());
+            text4TextFält.setText(fysiskKopia.hämtaISBNSQL());
+            text5TextFält.setText(fysiskKopia.hämtaFilmIDSQL());
 
             for (TextField textField : Arrays.asList(text1TextFält, text2TextFält, text3TextFält, text4TextFält, text5TextFält)) {
                 textField.setEditable(false);
@@ -132,7 +159,6 @@ public class HanteraObjektController implements Initializable {
             text7TextFält.setVisible(false);
             text6ÄndraKnapp.setVisible(false);
             text7ÄndraKnapp.setVisible(false);
-
         }
     }
 

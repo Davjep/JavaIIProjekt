@@ -58,6 +58,96 @@ public class FysiskKopia {
         }
     }
 
+    public String hämtaFysiskKopiaIDSQL() {
+        try {
+            String sqlSök = "SELECT FysiskKopiaID FROM fysiskkopia WHERE FysiskKopiaID = " + Objekt.getFysiskKopiaID();
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("fysiskkopiaid");
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
+    }
+
+    public String hämtaPlatsSQL() {
+        try {
+            String sqlSök = "SELECT Plats FROM fysiskkopia WHERE FysiskKopiaID = " + Objekt.getFysiskKopiaID();
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("plats");
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
+    }
+
+    public String hämtaStatusSQL() {
+        try {
+            String sqlSök = "SELECT Status FROM fysiskkopia WHERE FysiskKopiaID = " + Objekt.getFysiskKopiaID();
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("status");
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
+    }
+
+    public String hämtaISBNSQL() {
+        try {
+            String sqlSök = "SELECT ISBN FROM fysiskkopia WHERE FysiskKopiaID = " + Objekt.getFysiskKopiaID();
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("ISBN");
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
+    }
+
+    public String hämtaFilmIDSQL() {
+        try {
+            String sqlSök = "SELECT FilmID FROM fysiskkopia WHERE FysiskKopiaID = " + Objekt.getFysiskKopiaID();
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            Statement statement = connection.createStatement();
+
+            ResultSet sqlQuery = statement.executeQuery(sqlSök);
+            sqlQuery.next();
+
+            return sqlQuery.getString("filmID");
+        } catch (SQLException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+        return null;
+    }
+
     public String getPlats() {
         return plats;
     }

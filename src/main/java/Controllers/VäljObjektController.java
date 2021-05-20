@@ -73,6 +73,7 @@ public class VäljObjektController {
     void sökKnappTryck(ActionEvent event) {
         DatabasConnector databasConnector = new DatabasConnector();
         Connection connection = databasConnector.getConnection();
+        resultatLista.getItems().clear();
 
         if (kategoriValDropDown.getText().equalsIgnoreCase("Bok")) {
             try {
@@ -126,7 +127,7 @@ public class VäljObjektController {
                     String ISBN = resultSet.getString("ISBN");
                     String filmID = resultSet.getString("filmID");
 
-                    resultatLista.getItems().add("Fysisk KopiaID: " + ID + ", Plats: " + plats + ", Status: " + status + ", ISBN: " + ISBN + ", FilmID: " + filmID);
+                    resultatLista.getItems().add("FysiskKopiaID: " + ID + ", Plats: " + plats + ", Status: " + status + ", ISBN: " + ISBN + ", FilmID: " + filmID);
                 }
             } catch (SQLException e) {
                 e.getCause();
