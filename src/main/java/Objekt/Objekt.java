@@ -1,6 +1,7 @@
 package Objekt;
 
 import Databas.DatabasConnector;
+import Entiteter.Användare;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,7 +14,6 @@ public abstract class Objekt {
     protected boolean tillgänglig;
     protected String status;
 
-    protected static String ID;
     protected static String fysiskKopiaID;
 
    public Objekt() {
@@ -52,20 +52,33 @@ public abstract class Objekt {
         return null;
     }
 
+    public void taBortObjektSQL (String objekt) {
+        try {
+            DatabasConnector databasConnector = new DatabasConnector();
+            Connection connection = databasConnector.getConnection();
+            String sqlTaBortObjekt;
+            if (objekt.equalsIgnoreCase("bok")) {
+                sqlTaBortObjekt = "DELETE FROM biblioteket.bok WHERE ISBN = " + Bok.getISBN() + ";";
+            } else if (objekt.equalsIgnoreCase("film")) {
+                sqlTaBortObjekt = "DELETE FROM biblioteket.film WHERE FilmId = " + Film.getFilmID() + ";";
+            } else {
+                sqlTaBortObjekt = "DELETE FROM biblioteket.fysiskkopia WHERE FysiskKopiaID = " + Objekt.getFysiskKopiaID() + ";";
+            }
+
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sqlTaBortObjekt);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
     public String getStatus() {
         return status;
     }
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public static String getID() {
-        return ID;
-    }
-
-    public static void setID(String ID) {
-        Objekt.ID = ID;
     }
 
     public void setTitel(String titel) {

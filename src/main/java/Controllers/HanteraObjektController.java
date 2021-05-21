@@ -5,6 +5,7 @@ import Objekt.Bok;
 import Objekt.Film;
 import Objekt.FysiskKopia;
 import Objekt.Objekt;
+import Verktyg.VäljIListan;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -84,6 +85,9 @@ public class HanteraObjektController implements Initializable {
 
     @FXML
     private Button text7ÄndraKnapp;
+
+    @FXML
+    private Button taBortKnapp;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -199,6 +203,14 @@ public class HanteraObjektController implements Initializable {
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.popupConnector("successPopUp");
         Stage stage = (Stage) sparaKnapp.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    void taBortKnappTryck(ActionEvent event) {
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.popupConnector("taBortObjektPopUp");
+        Stage stage = (Stage) taBortKnapp.getScene().getWindow();
         stage.close();
     }
 

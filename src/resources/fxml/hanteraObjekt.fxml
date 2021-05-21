@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HanteraObjektController">
    <children>
       <GridPane layoutX="7.0" layoutY="41.0" prefHeight="366.0" prefWidth="600.0">
@@ -88,6 +87,7 @@
             <Button fx:id="text5ÄndraKnapp" mnemonicParsing="false" onAction="#text5ÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <Button fx:id="text6ÄndraKnapp" mnemonicParsing="false" onAction="#text6ÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <Button fx:id="text7ÄndraKnapp" mnemonicParsing="false" onAction="#text7ÄndraKnappTryck" text="Ändra" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button fx:id="taBortKnapp" mnemonicParsing="false" onAction="#taBortKnappTryck" text="Ta bort" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
          </children>
       </GridPane>
       <Label alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="253.0" layoutY="21.0" text="Hantera Objekt">

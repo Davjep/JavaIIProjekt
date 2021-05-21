@@ -25,7 +25,7 @@ public class HanteraAnvändareController implements Initializable {
     private ListView<String> resultatLista;
 
     @FXML
-    private Button väljKnapp;
+    private Button uppdateraKnapp;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -50,13 +50,13 @@ public class HanteraAnvändareController implements Initializable {
     }
 
     @FXML
-    void väljKnappTryck(ActionEvent event) {
+    void uppdateraKnappTryck(ActionEvent event) {
         VäljIListan valdRad = new VäljIListan();
         Anställd.setID(valdRad.väljValdRad(resultatLista.getSelectionModel().getSelectedItem()));
 
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("uppdateraprofil");
-        Stage stage = (Stage) väljKnapp.getScene().getWindow();
+        Stage stage = (Stage) uppdateraKnapp.getScene().getWindow();
         stage.close();
 
     }
