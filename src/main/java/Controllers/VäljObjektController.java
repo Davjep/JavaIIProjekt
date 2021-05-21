@@ -151,6 +151,7 @@ public class VäljObjektController {
 
 
     private void setID(String val, String ID) {
+        //metod som sätter ID för att använda vidare i hanteraObjekt
         if (val.equals("Bok")) {
             Bok.setISBN(ID);
         } else if (val.equals("Film")) {
