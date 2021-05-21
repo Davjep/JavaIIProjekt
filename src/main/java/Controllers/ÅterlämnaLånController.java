@@ -5,9 +5,11 @@ import Databas.DatabasConnector;
 import Databas.Lån;
 import JavaFXConnector.ControllerConnector;
 import Objekt.FysiskKopia;
+import Objekt.Objekt;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -38,6 +40,9 @@ public class ÅterlämnaLånController {
     private Button gåTillbakaKnapp;
 
     @FXML
+    private Label errorText;
+
+    @FXML
     void avbrytKnappTryck(ActionEvent event) {
         System.exit(0);
 
@@ -53,17 +58,18 @@ public class ÅterlämnaLånController {
 
     @FXML
     void återlämnaKnappTryck(ActionEvent event) {
-        DatabasConnector databasConnector = new DatabasConnector();
-        Connection connection = databasConnector.getConnection();
 
-        // TODO: Behöver även göra ett felmeddelande ifall att man skriver in fel fysiskaKopiaId
-        //TODO lägg till koppling till success
+        if (ärIDkorrekt(textFält.getText())) {
+            Lån lån = new Lån();
+            lån.taBortLån(textFält.getText());
 
-        String fysiskKopiaId = textFält.getText();
-
-        Lån lån = new Lån();
-        lån.taBortLån(fysiskKopiaId);
-
+            ControllerConnector controllerConnector = new ControllerConnector();
+            controllerConnector.connector("successPopUp");
+            Stage stage = (Stage) återlämnaKnapp.getScene().getWindow();
+            stage.close();
+        } else {
+            errorText.setText("Inkorrekt ID!");
+        }
     }
 
     @FXML
@@ -72,5 +78,12 @@ public class ÅterlämnaLånController {
         assert återlämnaKnapp != null : "fx:id=\"återlämnaKnapp\" was not injected: check your FXML file 'återlämnaLån.fxml'.";
         assert avbrytKnapp != null : "fx:id=\"avbrytKnapp\" was not injected: check your FXML file 'återlämnaLån.fxml'.";
 
+    }
+
+    private boolean ärIDkorrekt(String ID) {
+        FysiskKopia fysiskKopia = new FysiskKopia();
+        Objekt.setFysiskKopiaID(ID);
+
+        return fysiskKopia.hämtaFysiskKopiaIDSQL().equalsIgnoreCase(ID);
     }
 }
