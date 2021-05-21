@@ -18,7 +18,6 @@ public abstract class Entitet {
 
     private static boolean inloggad = false;
     private static String inloggadEmail;
-    private static String setID;
 
     public Entitet() {
     }

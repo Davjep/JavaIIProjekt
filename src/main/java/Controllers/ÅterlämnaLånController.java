@@ -56,18 +56,14 @@ public class ÅterlämnaLånController {
         DatabasConnector databasConnector = new DatabasConnector();
         Connection connection = databasConnector.getConnection();
 
-        // TODO: Vad händer om den är reserverad , behöver ändra status
-        //Behöver även göra ett felmeddelande ifall att man skriver in fel fysiskaKopiaId
+        // TODO: Behöver även göra ett felmeddelande ifall att man skriver in fel fysiskaKopiaId
+        //TODO lägg till koppling till success
 
         String fysiskKopiaId = textFält.getText();
 
-        // kolla fysisk kopia id på reservation och se ifall de finns någon reservation som har samma fysiska kopia. Isåfall, sätt status till reserverad.
-
-        FysiskKopia fysiskKopia = new FysiskKopia();
         Lån lån = new Lån();
-
-        fysiskKopia.setStatus(fysiskKopiaId,"Tillgänglig");
         lån.taBortLån(fysiskKopiaId);
+
     }
 
     @FXML

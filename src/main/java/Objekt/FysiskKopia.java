@@ -7,9 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class FysiskKopia {
+public class FysiskKopia extends Objekt {
     private String plats;
-    private String status;
     private String ISBN;
     private String filmID;
 
@@ -19,7 +18,7 @@ public class FysiskKopia {
 
     public FysiskKopia(String ISBN, String FilmID, String plats, String status) {
         this.plats = plats;
-        this.status = status;
+        super.status = status;
         this.ISBN = ISBN;
         this.filmID = FilmID;
     }
@@ -154,10 +153,6 @@ public class FysiskKopia {
 
     public void setPlats(String plats) {
         this.plats = plats;
-    }
-
-    public String getStatus() {
-        return status;
     }
 
     public void setStatus(String fysiskKopiaID, String status) {

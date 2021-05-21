@@ -44,7 +44,8 @@ public class VäljObjektController {
     private ListView<String> resultatLista;
 
     @FXML
-    private Button väljKnapp;
+    private Button uppdateraKnapp;
+
 
     @FXML
     void bokKategoriVal(ActionEvent event) {
@@ -137,22 +138,26 @@ public class VäljObjektController {
     }
 
     @FXML
-    void väljKnappTryck(ActionEvent event) {
+    void uppdateraKnappTryck(ActionEvent event) {
         VäljIListan valdRad = new VäljIListan();
         String fullID = valdRad.väljValdRad(resultatLista.getSelectionModel().getSelectedItem());
-
-        if (kategoriValDropDown.getText().equals("Bok")) {
-            Bok.setISBN(fullID);
-        } else if (kategoriValDropDown.getText().equals("Film")) {
-            Film.setFilmID(fullID);
-        } else {
-            Objekt.setFysiskKopiaID(fullID);
-        }
+        setID(kategoriValDropDown.getText(), fullID);
 
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("hanteraObjekt");
-        Stage stage = (Stage) resultatLista.getScene().getWindow();
+        Stage stage = (Stage) uppdateraKnapp.getScene().getWindow();
         stage.close();
+    }
+
+
+    private void setID(String val, String ID) {
+        if (val.equals("Bok")) {
+            Bok.setISBN(ID);
+        } else if (val.equals("Film")) {
+            Film.setFilmID(ID);
+        } else {
+            Objekt.setFysiskKopiaID(ID);
+        }
     }
 
 }

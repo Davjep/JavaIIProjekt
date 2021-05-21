@@ -6,16 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HanteraAnvändareController">
    <children>
       <ListView fx:id="resultatLista" layoutX="94.0" layoutY="59.0" prefHeight="292.0" prefWidth="414.0" />
-      <Label layoutX="194.0" layoutY="14.0" text="Välj Användare">
+      <Label layoutX="164.0" layoutY="17.0" text="Hantera Användare">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="väljKnapp" layoutX="472.0" layoutY="356.0" mnemonicParsing="false" onAction="#väljKnappTryck" text="Välj" />
+      <Button fx:id="uppdateraKnapp" layoutX="435.0" layoutY="351.0" mnemonicParsing="false" onAction="#uppdateraKnappTryck" text="Uppdatera" />
       <Button fx:id="gåTillbakaKnapp" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#gåTillbakaKnappTryck" text="Gå Tillbaka" />
    </children>
 </AnchorPane>
