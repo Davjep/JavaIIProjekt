@@ -185,5 +185,4 @@ public class Lån {
             return false;
         }
     }
-
 }

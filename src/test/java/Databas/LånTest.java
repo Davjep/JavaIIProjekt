@@ -195,4 +195,32 @@ class LånTest {
             System.out.println("Du är för ung");
         }
     }
+    @Test
+    public void kollaÅterlämningTest() {
+        DatabasConnector databasConnector = new DatabasConnector();
+        Connection connection = databasConnector.getConnection();
+
+        try {
+            String sqlSök = "SELECT * FROM biblioteket.lån;";
+            PreparedStatement statement = connection.prepareStatement(sqlSök);
+            ResultSet resultSet = statement.executeQuery(sqlSök);
+            while (resultSet.next()) {
+                Date dagensDatum = new Date();
+                //System.out.println(dagensDatum);
+                Date återlämningsdatum = new SimpleDateFormat("yyyy-MM-dd").parse(resultSet.getString("återlämningsdatum"));
+                //System.out.println(återlämningsdatum);
+                if (återlämningsdatum.after(dagensDatum)) {
+                    System.out.println(återlämningsdatum + " is after " + dagensDatum);
+                } else {
+                    System.out.println(återlämningsdatum + " is before " + dagensDatum);
+                }
+            }
+
+
+
+        }catch (SQLException | ParseException e) {
+            e.getCause();
+            e.getStackTrace();
+        }
+    }
 }

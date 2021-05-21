@@ -25,6 +25,9 @@ public class AdminController {
     private Button loggaUtKnapp;
 
     @FXML
+    private Button kollaFörseningarKnapp;
+
+    @FXML
     void hanteraAnvändareKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("hanteraAnvändare");
@@ -37,7 +40,7 @@ public class AdminController {
     void hanteraObjektKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("väljObjekt");
-        Stage stage = (Stage) hanteraAnvändareKnapp.getScene().getWindow();
+        Stage stage = (Stage) hanteraObjektKnapp.getScene().getWindow();
         stage.close();
     }
 
@@ -65,6 +68,14 @@ public class AdminController {
     void läggTillObjektKnappTryck(ActionEvent event) {
         ControllerConnector controllerConnector = new ControllerConnector();
         controllerConnector.connector("läggtillobjekt");
+        Stage stage = (Stage) läggTillAnvändareKnapp.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    void kollaFörseningarKnappTryck(ActionEvent event) {
+        ControllerConnector controllerConnector = new ControllerConnector();
+        controllerConnector.connector("förseningar");
         Stage stage = (Stage) läggTillAnvändareKnapp.getScene().getWindow();
         stage.close();
     }
