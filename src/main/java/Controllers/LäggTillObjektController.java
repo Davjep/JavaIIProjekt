@@ -120,7 +120,6 @@ public class LäggTillObjektController implements Initializable {
                     textFält3.getText(),
                     textFält4.getText(),
                     textFält5.getText(),
-                    textFält6.getText(),
             };
 
             if (!isEmpty(dataInputBok)) {
