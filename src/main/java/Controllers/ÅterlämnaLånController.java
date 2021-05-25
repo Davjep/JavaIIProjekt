@@ -64,7 +64,7 @@ public class ÅterlämnaLånController {
             lån.taBortLån(textFält.getText());
 
             ControllerConnector controllerConnector = new ControllerConnector();
-            controllerConnector.connector("successPopUp");
+            controllerConnector.popupConnector("successPopUp");
             Stage stage = (Stage) återlämnaKnapp.getScene().getWindow();
             stage.close();
         } else {
