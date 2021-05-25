@@ -72,7 +72,7 @@ public class LoggaInController {
                 String emailResultat = sqlQueryEmail.getString("email");
                 if (sqlQueryLösenord.next()) {
                     String lösenordResultat = sqlQueryLösenord.getString("lösenord");
-                    if (email.equals(emailResultat) && lösenord.equals(lösenordResultat)) {
+                    if (email.equalsIgnoreCase(emailResultat) && lösenord.equals(lösenordResultat)) {
                         Användare.setInloggadEmail(emailResultat);
                         if (anställd) {
                             Användare användare = new Användare();
